@@ -1,0 +1,2080 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5B535162-10C2-4238-BC56-193B968E1834}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vline.Web</RootNamespace>
+    <AssemblyName>Vline.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxPro.2">
+      <HintPath>..\..\..\未来项目\西双版纳项目\调度\chinaRailwayV1.2\Web\bin\AjaxPro.2.dll</HintPath>
+    </Reference>
+    <Reference Include="Maticsoft.Common, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Maticsoft.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.UI.WebControls">
+      <HintPath>..\Lib\LTP.Accounts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Vline.DBUtility, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VlineCode\chinaRailwayV1.2\DBUtility\bin\Debug\Vline.DBUtility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\BlueTheme\Default.css" />
+    <Content Include="App_Themes\Green2Theme\Default.css" />
+    <Content Include="App_Themes\GreenTheme\Default.css" />
+    <Content Include="App_Themes\PurpleTheme\Default.css" />
+    <Content Include="App_Themes\RedTheme\Default.css" />
+    <Content Include="bin\Maticsoft.Common.dll" />
+    <Content Include="bin\Microsoft.Web.UI.WebControls.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\System.Data.SQLite.dll" />
+    <Content Include="bin\Vline.BLL.dll" />
+    <Content Include="bin\Vline.BLL.pdb" />
+    <Content Include="bin\Vline.DAL.dll" />
+    <Content Include="bin\Vline.DAL.pdb" />
+    <Content Include="bin\Vline.DBUtility.dll" />
+    <Content Include="bin\Vline.DBUtility.pdb" />
+    <Content Include="bin\Vline.Model.dll" />
+    <Content Include="bin\Vline.Model.pdb" />
+    <Content Include="bin\Vline.Web.dll" />
+    <Content Include="bin\Vline.Web.pdb" />
+    <Content Include="Global.asax" />
+    <Content Include="html\anquan.html" />
+    <Content Include="html\chenben.html" />
+    <Content Include="html\css\ft-carousel.css" />
+    <Content Include="html\css\reset.css" />
+    <Content Include="html\czbycb\AgreementBycb.htm" />
+    <Content Include="html\czbycb\InspectionBycb.htm" />
+    <Content Include="html\czbyjd\ConSitePictByjdEdit.htm" />
+    <Content Include="html\czbyjd\ConSitePictByjdList.htm" />
+    <Content Include="html\czbyjd\jdList.htm" />
+    <Content Include="html\czbyjd\OutputValueByjd.htm" />
+    <Content Include="html\czbyjd\BigPhyWorkByjd.htm" />
+    <Content Include="html\czbyjd\ConSitePictByjd.htm" />
+    <Content Include="html\czbyjd\TodayPlanByjd.htm" />
+    <Content Include="html\czbyjd\ConSitePictByjds.htm" />
+    <Content Include="html\datajs\databyAnquan.js" />
+    <Content Include="html\datajs\dataBycb.js" />
+    <Content Include="html\datajs\dataByfc - 副本.js" />
+    <Content Include="html\datajs\dataByfc.js" />
+    <Content Include="html\datajs\dataByzn - 副本.js" />
+    <Content Include="html\datajs\dataByzn.js" />
+    <Content Include="html\datajs\dataVywork.js" />
+    <Content Include="html\datajs\ezuikit.js" />
+    <Content Include="html\datajs\jquery.min.js" />
+    <Content Include="html\datajs\dataByjd.js" />
+    <Content Include="html\diaoxuanAdd.htm" />
+    <Content Include="html\easyui\easyui-lang-zh_CN.js" />
+    <Content Include="html\easyui\easyui.css" />
+    <Content Include="html\easyui\icon.css" />
+    <Content Include="html\easyui\icons\back.png" />
+    <Content Include="html\easyui\icons\blank.gif" />
+    <Content Include="html\easyui\icons\cancel.png" />
+    <Content Include="html\easyui\icons\cut.png" />
+    <Content Include="html\easyui\icons\edit_add.png" />
+    <Content Include="html\easyui\icons\edit_remove.png" />
+    <Content Include="html\easyui\icons\filesave.png" />
+    <Content Include="html\easyui\icons\filter.png" />
+    <Content Include="html\easyui\icons\generate.png" />
+    <Content Include="html\easyui\icons\generate1.png" />
+    <Content Include="html\easyui\icons\help.png" />
+    <Content Include="html\easyui\icons\icon1.png" />
+    <Content Include="html\easyui\icons\large_chart.png" />
+    <Content Include="html\easyui\icons\large_clipart.png" />
+    <Content Include="html\easyui\icons\large_picture.png" />
+    <Content Include="html\easyui\icons\large_shapes.png" />
+    <Content Include="html\easyui\icons\large_smartart.png" />
+    <Content Include="html\easyui\icons\mini_add.png" />
+    <Content Include="html\easyui\icons\mini_edit.png" />
+    <Content Include="html\easyui\icons\mini_refresh.png" />
+    <Content Include="html\easyui\icons\more.png" />
+    <Content Include="html\easyui\icons\more1.png" />
+    <Content Include="html\easyui\icons\more2.png" />
+    <Content Include="html\easyui\icons\more3.png" />
+    <Content Include="html\easyui\icons\no.png" />
+    <Content Include="html\easyui\icons\ok.png" />
+    <Content Include="html\easyui\icons\pencil.png" />
+    <Content Include="html\easyui\icons\print.png" />
+    <Content Include="html\easyui\icons\quest_add.png" />
+    <Content Include="html\easyui\icons\redo.png" />
+    <Content Include="html\easyui\icons\reload.png" />
+    <Content Include="html\easyui\icons\search.png" />
+    <Content Include="html\easyui\icons\sum.png" />
+    <Content Include="html\easyui\icons\tip.png" />
+    <Content Include="html\easyui\icons\undo.png" />
+    <Content Include="html\easyui\icons\view.png" />
+    <Content Include="html\easyui\icons\yy.png" />
+    <Content Include="html\easyui\jquery.easyui.min.js" />
+    <Content Include="html\easyui\jquery.min.js" />
+    <Content Include="html\equipment.html" />
+    <Content Include="html\images\a2.mp4" />
+    <Content Include="html\images\bg.jpg" />
+    <Content Include="html\images\图片4.png" />
+    <Content Include="html\img\images\333.jpg" />
+    <Content Include="html\img\images\camerTotal.png" />
+    <Content Include="html\img\images\date.png" />
+    <Content Include="html\img\images\green.png" />
+    <Content Include="html\img\images\red.png" />
+    <Content Include="html\img\images\tips1.png" />
+    <Content Include="html\img\images\tips2.png" />
+    <Content Include="html\img\images\tj.png" />
+    <Content Include="html\img\images\tj3.png" />
+    <Content Include="html\img\images\tj4.png" />
+    <Content Include="html\img\images\tj5.png" />
+    <Content Include="html\img\images\yellow.png" />
+    <Content Include="html\img\images\zt1.png" />
+    <Content Include="html\img\images\zt2.png" />
+    <Content Include="html\img\images\zt3.png" />
+    <Content Include="html\img\images\产值.png" />
+    <Content Include="html\img\images\合同额2.png" />
+    <Content Include="html\img\images\工程.png" />
+    <Content Include="html\img\images\摄像头.png" />
+    <Content Include="html\img\images\消息.png" />
+    <Content Include="html\img\images\火车.png" />
+    <Content Include="html\img\images\计划.png" />
+    <Content Include="html\img\images\里程.png" />
+    <Content Include="html\img\images\金额.png" />
+    <Content Include="html\img\images\钟表.png" />
+    <Content Include="html\img\img4\油桶.jpg" />
+    <Content Include="html\img\img4\电压.png" />
+    <Content Include="html\img\img4\电机转速.png" />
+    <Content Include="html\img\next.png" />
+    <Content Include="html\img\prev.png" />
+    <Content Include="html\img\sbtp.jpg" />
+    <Content Include="html\img\top.png" />
+    <Content Include="html\img\人员.png" />
+    <Content Include="html\img\设备.png" />
+    <Content Include="html\index.htm" />
+    <Content Include="html\jindu.html" />
+    <Content Include="html\js\bmap.js" />
+    <Content Include="html\js\echarts-wordcloud.js" />
+    <Content Include="html\js\echarts.min.js" />
+    <Content Include="html\js\ezuikit.js" />
+    <Content Include="html\js\ft-carousel.min.js" />
+    <Content Include="html\js\layui.js" />
+    <Content Include="html\js\miaov.js" />
+    <Content Include="html\js\shine.js" />
+    <Content Include="html\test.htm" />
+    <Content Include="html\video\test.mp4" />
+    <Content Include="html\wanbiAdd.htm" />
+    <Content Include="html\css\BigData.css" />
+    <Content Include="html\css\index.css" />
+    <Content Include="html\css\index01.css" />
+    <Content Include="html\css\lay_out_01.css" />
+    <Content Include="html\css\Security_operation.css" />
+    <Content Include="html\css\table.css" />
+    <Content Include="html\css\table1.css" />
+    <Content Include="html\css\zTreeStyle\img\cc.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\2.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\3.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\4.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\5.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\6.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\7.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\8.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\9.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\cc.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\zclose.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\zopen.png" />
+    <Content Include="html\css\zTreeStyle\img\diy\ztop.png" />
+    <Content Include="html\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="html\css\zTreeStyle\img\loading.gif" />
+    <Content Include="html\css\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="html\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="html\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="html\datajs\dataBydx.js" />
+    <Content Include="html\datajs\dataBywb.js" />
+    <Content Include="html\diaoxuan.html" />
+    <Content Include="html\images\00.png" />
+    <Content Include="html\images\01.png" />
+    <Content Include="html\images\02.png" />
+    <Content Include="html\images\03.png" />
+    <Content Include="html\images\04.png" />
+    <Content Include="html\images\1.jpg" />
+    <Content Include="html\images\2Dmap.png" />
+    <Content Include="html\images\a1.mp4" />
+    <Content Include="html\images\map.png" />
+    <Content Include="html\images\mapIcon\event.png" />
+    <Content Include="html\images\mapIcon\huoche.png" />
+    <Content Include="html\images\mapIcon\MapLocation.png" />
+    <Content Include="html\images\mapIcon\policeCar32.png" />
+    <Content Include="html\images\mapIcon\policeman32.png" />
+    <Content Include="html\images\mapIcon\publicCamera.png" />
+    <Content Include="html\images\mapIcon\枪机32.png" />
+    <Content Include="html\images\mapIcon\球机32.png" />
+    <Content Include="html\images\Satellite_cloud_map.png" />
+    <Content Include="html\images\Vector_map.png" />
+    <Content Include="html\images\图片1.png" />
+    <Content Include="html\images\图片2.png" />
+    <Content Include="html\images\图片3.png" />
+    <Content Include="html\img\1_03.png" />
+    <Content Include="html\img\bg.png" />
+    <Content Include="html\img\bg01.png" />
+    <Content Include="html\img\car_guiji.png" />
+    <Content Include="html\img\chose_btn.png" />
+    <Content Include="html\img\data_bg - 副本 - 副本.png" />
+    <Content Include="html\img\data_bg.png" />
+    <Content Include="html\img\first_title.png" />
+    <Content Include="html\img\i01.png" />
+    <Content Include="html\img\i02.png" />
+    <Content Include="html\img\images\pic_ico_01.png" />
+    <Content Include="html\img\images\pic_ico_02.png" />
+    <Content Include="html\img\images\pic_ico_03.png" />
+    <Content Include="html\img\images\圆点.png" />
+    <Content Include="html\img\img4\人物.png" />
+    <Content Include="html\img\img4\切割机.png" />
+    <Content Include="html\img\img4\平腕臂.png" />
+    <Content Include="html\img\img4\握力器.png" />
+    <Content Include="html\img\img4\气压.png" />
+    <Content Include="html\img\img4\灯1.png" />
+    <Content Include="html\img\img4\灯2.png" />
+    <Content Include="html\img\img4\灯3.png" />
+    <Content Include="html\img\img4\管道.png" />
+    <Content Include="html\img\img4\线材3.png" />
+    <Content Include="html\img\img4\线索.png" />
+    <Content Include="html\img\img4\线索库.png" />
+    <Content Include="html\img\img4\线路.png" />
+    <Content Include="html\img\img4\编号.png" />
+    <Content Include="html\img\img4\设备.png" />
+    <Content Include="html\img\img4\长度.png" />
+    <Content Include="html\img\leftbg01.png" />
+    <Content Include="html\img\left_nav.png" />
+    <Content Include="html\img\map_tool_bg.png" />
+    <Content Include="html\img\map_tool_re.png" />
+    <Content Include="html\img\pic0.png" />
+    <Content Include="html\img\pic_ico.png" />
+    <Content Include="html\img\pushmessage_class.png" />
+    <Content Include="html\img\pushmessage_level01.png" />
+    <Content Include="html\img\pushmessage_level02.png" />
+    <Content Include="html\img\pushmessage_level03.png" />
+    <Content Include="html\img\pushmessage_localize_01.png" />
+    <Content Include="html\img\pushmessage_localize_02.png" />
+    <Content Include="html\img\search_eddit.png" />
+    <Content Include="html\img\search_location.png" />
+    <Content Include="html\img\second_title.png" />
+    <Content Include="html\img\tit01s.png" />
+    <Content Include="html\img\tool.png" />
+    <Content Include="html\img\tool_bg.png" />
+    <Content Include="html\img\WechatIMG1.jpg" />
+    <Content Include="html\img\WechatIMG2.jpg" />
+    <Content Include="html\img\WechatIMG5.jpg" />
+    <Content Include="html\img\weher01.png" />
+    <Content Include="html\img\zoom_inon_01.png" />
+    <Content Include="html\img\zoom_inon_02.png" />
+    <Content Include="html\img\临时.png" />
+    <Content Include="html\index.html" />
+    <Content Include="html\index2.html" />
+    <Content Include="html\jiechuwan4c.html" />
+    <Content Include="html\jiechuwancar.html" />
+    <Content Include="html\js\artDialog\artDialog.js" />
+    <Content Include="html\js\artDialog\artDialog.source.js" />
+    <Content Include="html\js\artDialog\jquery.artDialog.js" />
+    <Content Include="html\js\artDialog\jquery.artDialog.source.js" />
+    <Content Include="html\js\artDialog\plugins\iframeTools.js" />
+    <Content Include="html\js\artDialog\plugins\iframeTools.source.js" />
+    <Content Include="html\js\artDialog\skins\aero.css" />
+    <Content Include="html\js\artDialog\skins\aero\aero_s.png" />
+    <Content Include="html\js\artDialog\skins\aero\aero_s2.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_close.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_e.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_n.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_ne.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_nw.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_s.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_se.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_sw.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="html\js\artDialog\skins\aero\ie6\aui_w.png" />
+    <Content Include="html\js\artDialog\skins\black.css" />
+    <Content Include="html\js\artDialog\skins\black\bg.png" />
+    <Content Include="html\js\artDialog\skins\black\bg2.png" />
+    <Content Include="html\js\artDialog\skins\black\bg_css3.png" />
+    <Content Include="html\js\artDialog\skins\black\bg_css3_2.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\close.hover.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\close.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\e.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\n.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\ne.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\nw.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\s.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\se.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\sw.png" />
+    <Content Include="html\js\artDialog\skins\black\ie6\w.png" />
+    <Content Include="html\js\artDialog\skins\blue.css" />
+    <Content Include="html\js\artDialog\skins\blue\bg.png" />
+    <Content Include="html\js\artDialog\skins\blue\bg2.png" />
+    <Content Include="html\js\artDialog\skins\blue\bg_css3.png" />
+    <Content Include="html\js\artDialog\skins\blue\bg_css3_2.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\close.hover.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\close.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\e.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\n.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\ne.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\nw.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\s.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\se.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\sw.png" />
+    <Content Include="html\js\artDialog\skins\blue\ie6\w.png" />
+    <Content Include="html\js\artDialog\skins\chrome.css" />
+    <Content Include="html\js\artDialog\skins\chrome\border.png" />
+    <Content Include="html\js\artDialog\skins\chrome\chrome_s.png" />
+    <Content Include="html\js\artDialog\skins\default.css" />
+    <Content Include="html\js\artDialog\skins\green.css" />
+    <Content Include="html\js\artDialog\skins\green\bg.png" />
+    <Content Include="html\js\artDialog\skins\green\bg2.png" />
+    <Content Include="html\js\artDialog\skins\green\bg_css3.png" />
+    <Content Include="html\js\artDialog\skins\green\bg_css3_2.png" />
+    <Content Include="html\js\artDialog\skins\green\color_bg.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\close.hover.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\close.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\e.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\n.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\ne.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\nw.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\s.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\se.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\sw.png" />
+    <Content Include="html\js\artDialog\skins\green\ie6\w.png" />
+    <Content Include="html\js\artDialog\skins\icons\error.png" />
+    <Content Include="html\js\artDialog\skins\icons\face-sad.png" />
+    <Content Include="html\js\artDialog\skins\icons\face-smile.png" />
+    <Content Include="html\js\artDialog\skins\icons\loading.gif" />
+    <Content Include="html\js\artDialog\skins\icons\question.png" />
+    <Content Include="html\js\artDialog\skins\icons\succeed.png" />
+    <Content Include="html\js\artDialog\skins\icons\warning.png" />
+    <Content Include="html\js\artDialog\skins\idialog.css" />
+    <Content Include="html\js\artDialog\skins\idialog\idialog_s.png" />
+    <Content Include="html\js\artDialog\skins\idialog\idialog_s2.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_close.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_e.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_n.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_s.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_se.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="html\js\artDialog\skins\idialog\ie6\aui_w.png" />
+    <Content Include="html\js\artDialog\skins\opera.css" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_close.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_e.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_n.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_ne.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_nw.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_s.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_se.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_sw.png" />
+    <Content Include="html\js\artDialog\skins\opera\ie6\aui_w.png" />
+    <Content Include="html\js\artDialog\skins\opera\s1.png" />
+    <Content Include="html\js\artDialog\skins\opera\s2.png" />
+    <Content Include="html\js\artDialog\skins\simple.css" />
+    <Content Include="html\js\artDialog\skins\twitter.css" />
+    <Content Include="html\js\bstable\.idea\encodings.xml" />
+    <Content Include="html\js\bstable\.idea\misc.xml" />
+    <Content Include="html\js\bstable\.idea\modules.xml" />
+    <Content Include="html\js\bstable\.idea\workspace.xml" />
+    <Content Include="html\js\bstable\css\bootstrap-table.css" />
+    <Content Include="html\js\bstable\css\bootstrap.min.css" />
+    <Content Include="html\js\bstable\datel\encodings.xml" />
+    <Content Include="html\js\bstable\datel\misc.xml" />
+    <Content Include="html\js\bstable\datel\modules.xml" />
+    <Content Include="html\js\bstable\datel\workspace.xml" />
+    <Content Include="html\js\bstable\fonts\fontawesome-webfont.svg" />
+    <Content Include="html\js\bstable\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="html\js\bstable\js\bootstrap-table-zh-CN.min.js" />
+    <Content Include="html\js\bstable\js\bootstrap-table.js" />
+    <Content Include="html\js\bstable\js\bootstrap.min.js" />
+    <Content Include="html\js\bstable\js\jquery-2.2.0.min.js" />
+    <Content Include="html\js\bstable\js\js-2.1.4.min.js" />
+    <Content Include="html\js\bstable\table_t.js" />
+    <Content Include="html\js\chartData.js" />
+    <Content Include="html\js\demo\jquery.ztree.core-3.5.js" />
+    <Content Include="html\js\echarts-all.js" />
+    <Content Include="html\js\Home_page.js" />
+    <Content Include="html\js\index.js" />
+    <Content Include="html\js\index01.js" />
+    <Content Include="html\js\jquery.js" />
+    <Content Include="html\js\jquery.leoweather.min.js" />
+    <Content Include="html\js\jquery.pagination.js" />
+    <Content Include="html\js\laydate.js" />
+    <Content Include="html\js\MainMap.js" />
+    <Content Include="html\js\need\laydate.css" />
+    <Content Include="html\js\organize.js" />
+    <Content Include="html\js\skins\dahong\icon.png" />
+    <Content Include="html\js\skins\dahong\laydate.css" />
+    <Content Include="html\js\skins\danlan\icon.png" />
+    <Content Include="html\js\skins\danlan\laydate.css" />
+    <Content Include="html\js\skins\default\icon.png" />
+    <Content Include="html\js\skins\default\laydate.css" />
+    <Content Include="html\js\skins\molv\icon.png" />
+    <Content Include="html\js\skins\molv\laydate.css" />
+    <Content Include="html\js\skins\qianhuang\icon.png" />
+    <Content Include="html\js\skins\qianhuang\laydate.css" />
+    <Content Include="html\js\skins\yahui\icon.png" />
+    <Content Include="html\js\skins\yahui\laydate.css" />
+    <Content Include="html\js\skins\yalan\icon.png" />
+    <Content Include="html\js\skins\yalan\laydate.css" />
+    <Content Include="html\js\tdlib\TDTAnnoLayer.js" />
+    <Content Include="html\js\tdlib\TDTLayer.js" />
+    <Content Include="html\js\tdlib\TDTRasterLayer.js" />
+    <Content Include="html\js\ztree\jquery.ztree.all-3.5.js" />
+    <Content Include="html\js\ztree\jquery.ztree.all-3.5.min.js" />
+    <Content Include="html\js\ztree\jquery.ztree.core-3.5.js" />
+    <Content Include="html\js\ztree\jquery.ztree.core-3.5.min.js" />
+    <Content Include="html\js\ztree\jquery.ztree.excheck-3.5.js" />
+    <Content Include="html\js\ztree\jquery.ztree.excheck-3.5.min.js" />
+    <Content Include="html\js\ztree\jquery.ztree.exedit-3.5.js" />
+    <Content Include="html\js\ztree\jquery.ztree.exedit-3.5.min.js" />
+    <Content Include="html\js\ztree\jquery.ztree.exedit.js" />
+    <Content Include="html\wanbi.html" />
+    <Content Include="html\work.html" />
+    <Content Include="html\wuzi.html" />
+    <Content Include="html\yuanh.html" />
+    <Content Include="Images\top1.gif" />
+    <Content Include="lurudata\BigDataAnQuan\dataBylb.js" />
+    <Content Include="lurudata\BigDataAnQuan\NewYhgs.htm" />
+    <Content Include="lurudata\BigDataAnQuan\NewYhlb.htm" />
+    <Content Include="lurudata\BigDataAnQuan\NewYhqs.htm" />
+    <Content Include="lurudata\BigDataAnQuan\NewYhsj.htm" />
+    <Content Include="lurudata\BigDataAnQuan\NewYhsl.htm" />
+    <Content Include="lurudata\BigDataWuZi\Bxbl.htm" />
+    <Content Include="lurudata\BigDataWuZi\Cght.htm" />
+    <Content Include="lurudata\BigDataWuZi\Dhqk.htm" />
+    <Content Include="lurudata\BigDataWuZi\Jcwz.htm" />
+    <Content Include="lurudata\BigDataWuZi\Jqwzyj.htm" />
+    <Content Include="lurudata\BigDataWuZi\Llqk.htm" />
+    <Content Include="lurudata\BigDataWuZi\Wzsj.htm" />
+    <Content Include="lurudata\BigDataZH\NewZHZYPTSubmit.htm" />
+    <Content Include="lurudata\BigDataZH\LBSYSubmit.htm" />
+    <Content Include="lurudata\BigDataZH\WBDXSubmit.htm" />
+    <Content Include="lurudata\BigDataZH\Sgtj.htm" />
+    <Content Include="lurudata\ext\bootstrap.js" />
+    <Content Include="lurudata\ext\ext-all.css" />
+    <Content Include="lurudata\ext\ext-all.js" />
+    <Content Include="lurudata\IndexBySuperAdminManage.aspx" />
+    <Content Include="lurudata\Js\jquery.liMarquee.js" />
+    <Content Include="lurudata\Left\index.html" />
+    <Content Include="lurudata\Left\index.js" />
+    <Content Include="lurudata\Left\jquery.min.js" />
+    <Content Include="lurudata\Left\Left.css" />
+    <Content Include="lurudata\TLMessage\css\backHome.css" />
+    <Content Include="lurudata\TLMessage\css\base.css" />
+    <Content Include="lurudata\TLMessage\css\base_fontSize.css" />
+    <Content Include="lurudata\TLMessage\css\complexForm.css" />
+    <Content Include="lurudata\TLMessage\css\dropSort.css" />
+    <Content Include="lurudata\TLMessage\css\errorPage.css" />
+    <Content Include="lurudata\TLMessage\css\formRL.css" />
+    <Content Include="lurudata\TLMessage\css\frameStyle.css" />
+    <Content Include="lurudata\TLMessage\css\iconfontStyle.css" />
+    <Content Include="lurudata\TLMessage\css\jquery.mCustomScrollbar.css" />
+    <Content Include="lurudata\TLMessage\css\login.css" />
+    <Content Include="lurudata\TLMessage\css\login1.css" />
+    <Content Include="lurudata\TLMessage\css\reportForm.css" />
+    <Content Include="lurudata\TLMessage\css\timePage.css" />
+    <Content Include="lurudata\TLMessage\css\ySearchSelect.css" />
+    <Content Include="lurudata\TLMessage\css\zTreeStyle\img\line_conn.gif" />
+    <Content Include="lurudata\TLMessage\css\zTreeStyle\img\loading.gif" />
+    <Content Include="lurudata\TLMessage\css\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="lurudata\TLMessage\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\bootstrap-theme.min.css" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\bootstrap.min.css" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\cssPersonTable.css" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\default.css" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\content\dotted.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\activeManage.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\activeManage1.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\app.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\app_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\BugaoManage.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\channel.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\channel_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\cloud.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\cloud_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\custom.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\custom_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\dateImport.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\dateImport1.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\dateManage.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\dateSearch.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\dateTotal.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\Denglu.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\DGaojie.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\DLizhi.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\DNianjian.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\DRuzhi.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\Gonggao.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\home.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\home_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\hospManage.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\Jiankang.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\line_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\Liuyan.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\mailManage.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\new.gif" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\new.jpg" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\new.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\QHuodong.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\QHuodongTotal.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\QJiangzuo.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\QJiangzuoTotal.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\QTijian.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\QTijiantotal.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\select_xl.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\select_xl01.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\source.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\source_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\ss.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\statistics.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\statistics_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\SWenjuan.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\SXinxi.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\syetem_management.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\syetem_management_c.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\sysManag.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\sysManage1.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\system.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\system_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\TotalJianjian.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\TotalRenyuan.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\TotalYichang.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\TotalYichangByYear.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\TotalYichangTop5.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\Yixue.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\images\left\Yonghu.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\content\dotted.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\app.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\app_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\channel.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\channel_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\cloud.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\cloud_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\custom.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\custom_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\home.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\home_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\line_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\select_xl.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\select_xl01.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\source.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\source_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\statistics.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\statistics_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\syetem_management.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\syetem_management_c.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\system.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\left\system_current.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\images\logo.png" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\LeftCss\LeftMenu.css" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\liMarquee.css" />
+    <Content Include="lurudata\TLMessage\demo\CSS3\normalize.css" />
+    <Content Include="lurudata\TLMessage\demo\css\960.css" />
+    <Content Include="lurudata\TLMessage\demo\css\bootstrap-theme.min.css" />
+    <Content Include="lurudata\TLMessage\demo\css\bootstrap.min.css" />
+    <Content Include="lurudata\TLMessage\demo\css\cssPersonTable.css" />
+    <Content Include="lurudata\TLMessage\demo\css\default.css" />
+    <Content Include="lurudata\TLMessage\demo\css\facebox.css" />
+    <Content Include="lurudata\TLMessage\demo\css\fancy-button\fancy-button.css" />
+    <Content Include="lurudata\TLMessage\demo\css\gallery.css" />
+    <Content Include="lurudata\TLMessage\demo\css\grid.css" />
+    <Content Include="lurudata\TLMessage\demo\css\grumble\grumble.min.css" />
+    <Content Include="lurudata\TLMessage\demo\css\ie.css" />
+    <Content Include="lurudata\TLMessage\demo\css\ie6.css" />
+    <Content Include="lurudata\TLMessage\demo\css\images\content\dotted.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\activeManage.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\activeManage1.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\app.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\app_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\BugaoManage.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\channel.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\channel_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\cloud.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\cloud_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\custom.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\custom_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\dateImport.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\dateImport1.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\dateManage.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\dateSearch.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\dateTotal.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\Denglu.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\DGaojie.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\DLizhi.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\DNianjian.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\DRuzhi.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\Gonggao.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\home.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\home_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\hospManage.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\Jiankang.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\line_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\Liuyan.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\mailManage.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\new.gif" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\new.jpg" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\new.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\QHuodong.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\QHuodongTotal.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\QJiangzuo.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\QJiangzuoTotal.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\QTijian.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\QTijiantotal.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\select_xl.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\select_xl01.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\source.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\source_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\ss.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\statistics.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\statistics_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\SWenjuan.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\SXinxi.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\syetem_management.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\syetem_management_c.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\sysManag.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\sysManage1.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\system.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\system_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\TotalJianjian.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\TotalRenyuan.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\TotalYichang.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\TotalYichangByYear.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\TotalYichangTop5.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\Yixue.png" />
+    <Content Include="lurudata\TLMessage\demo\css\images\left\Yonghu.png" />
+    <Content Include="lurudata\TLMessage\demo\css\jquery.jqplot.min.css" />
+    <Content Include="lurudata\TLMessage\demo\css\layout.css" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\content\dotted.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\app.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\app_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\channel.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\channel_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\cloud.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\cloud_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\custom.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\custom_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\home.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\home_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\line_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\select_xl.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\select_xl01.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\source.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\source_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\statistics.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\statistics_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\syetem_management.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\syetem_management_c.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\system.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\left\system_current.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\images\logo.png" />
+    <Content Include="lurudata\TLMessage\demo\css\LeftCss\LeftMenu.css" />
+    <Content Include="lurudata\TLMessage\demo\css\liMarquee.css" />
+    <Content Include="lurudata\TLMessage\demo\css\nav.css" />
+    <Content Include="lurudata\TLMessage\demo\css\normalize.css" />
+    <Content Include="lurudata\TLMessage\demo\css\prettyPhoto.css" />
+    <Content Include="lurudata\TLMessage\demo\css\reset.css" />
+    <Content Include="lurudata\TLMessage\demo\css\table\demo_page.css" />
+    <Content Include="lurudata\TLMessage\demo\css\table\demo_table.css" />
+    <Content Include="lurudata\TLMessage\demo\css\table\demo_table_jui.css" />
+    <Content Include="lurudata\TLMessage\demo\css\tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\css\text.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.all.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.base.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.button.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.core.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.resizable.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.selectable.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.slider.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\base\jquery.ui.theme.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-bg_glass_75_ffffff_1x400.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery-ui-1.8.16.custom.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.all.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.autocomplete.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.base.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.button.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.core.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.datepicker.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.resizable.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.selectable.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.slider.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\css\themes\custom-theme\jquery.ui.theme.css" />
+    <Content Include="lurudata\TLMessage\demo\ext\basic.css" />
+    <Content Include="lurudata\TLMessage\demo\ext\basic.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\bootstrap.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\example-data.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\example.css" />
+    <Content Include="lurudata\TLMessage\demo\ext\ext-all.css" />
+    <Content Include="lurudata\TLMessage\demo\ext\ext-all.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\ext.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\Pie.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\basic.css" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\example.css" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\examples.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\extjs\App.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\extjs\css\extjs.css" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\extjs\images\c-sep-l.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\extjs\images\extanim32.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\extjs\images\sample-over.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\extjs\site.js" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\accept.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\accept.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\add.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\add.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\application_go.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\application_view_list.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\book.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\cog.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\cog.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\cog_edit.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\connect.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\connect.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\control_rewind.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\cross.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\delete.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\error.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\error.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\feed_add.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\feed_delete.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\feed_error.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\folder_go.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\folder_go.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\folder_wrench.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\grid.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\image_add.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\information.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\plugin.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\plugin_add.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\rss_go.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\SILK.txt" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\table_refresh.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_add.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_add.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_comment.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_delete.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_delete.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_edit.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_female.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_female.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_gray.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_green.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_green.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_orange.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_red.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_suit.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\icons\fam\user_suit.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\acc-tree.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\actions-grid.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\actions.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\advanced-dataview.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\air.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\anchor.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\animated-dataview.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\app-simple.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\area-browsers.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\border-layout.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\buffer-grid.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\buttons.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\calendar.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-area-browser.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-area.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-bar-renderer.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-bar-stacked.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-bar.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-column.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-line.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-mixed.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-pie-renderer.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-pie.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-radar-fill.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-radar.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-reload.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-scatter.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-stacked.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chart-themed.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\charts.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\chooser.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\column2.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\combo-custom.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\combo.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\complex-layout.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\data-associations.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\data-view.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\dd-fieldtogrid.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\dd-gridtoformpanel.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\dd-gridtogrid.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\dd-zones.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\debug-console.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\desktop.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\direct.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\docs.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\draw-logos.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\draw-rotate-text.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\draw-sencha.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\draw-tiger.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\editor.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\feeds.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\field-container.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-absolute.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-adv-vtypes.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-check-radio.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-checkout.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-contact.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-custom-access.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-custom.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-dashboard.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-dynamic.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-field-layout.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-field-types.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-fieldcontainer.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-file-upload.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-grid-binding-access.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-grid-binding.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-hbox.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-multiselect.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-registration.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-slider.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-spinner.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-vbox.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\form-xml.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\forum.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\gauge.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\gmap-panel.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-array.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-buffer.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-cell-editing.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-columngrouping.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-data-binding.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-edit.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-filter.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-from-markup.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-group-summaries.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-grouped-headers.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-grouping.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-infinite-scroll.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-live-search.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-locking.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-multiple-sorting.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-multiple-sorting.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-paging.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-plugins.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-property.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-row-editor.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-summary.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-transform.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grid-xml.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\group-tabs.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grouped-bar.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\grouped-tab.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\history.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\keyboard.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\layout-absolute.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\layout-accordion.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\layout-anchor.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\layout-browser.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\layout-column.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\layout-form.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\layout-table.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\layout-vbox.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\list-view.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\live-animated.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\live-updated.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\locale-dutch.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\locale-switch.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\msg-box.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\multisort-dataview.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\nested-loading.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\organizer.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\panel-bubble.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\panel.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\pivotgrid-cellcls.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\pivotgrid-people.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\pivotgrid.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\portal.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\progress-bar-pager.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\progress.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\qtips.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\reload-chart.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\resizable.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\restful-thumb.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\rich-tips.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\sandbox.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\slider-pager.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\slider.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\spotlight.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\state-saving.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\statusbar-adv.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\statusbar-demo.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tab-panel-scroller-menu.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tabs-adv.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tabs.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tasks.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\templates.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\themes.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\toolbar-actions.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\toolbar-button-groups.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\toolbar-droppable.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\toolbar-overflow.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\toolbar-reorderable.png" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\toolbar.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tree-check.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tree-columns.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tree-reorder.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tree-two.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\tree-xml-loader.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\window-layout.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\window.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\screens\writer-thumb.gif" />
+    <Content Include="lurudata\TLMessage\demo\ext\shared\states.js" />
+    <Content Include="lurudata\TLMessage\demo\img\fancy-button\chekbox_off.png" />
+    <Content Include="lurudata\TLMessage\demo\img\fancy-button\chekbox_on.png" />
+    <Content Include="lurudata\TLMessage\demo\img\fancy-button\radio_off.png" />
+    <Content Include="lurudata\TLMessage\demo\img\fancy-button\radio_on.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\default\default_thumb.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\default\loader.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\default\sprite.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\default\sprite_next.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\default\sprite_x.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\default\sprite_y.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\loader.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\facebook\sprite.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_square\loader.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\prettyPhoto\light_square\sprite.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\flash-logo.png" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item1.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item10.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item11.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item12.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item13.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item2.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item3.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item4.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item5.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item6.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item7.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item8.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\item9.jpg" />
+    <Content Include="lurudata\TLMessage\demo\img\pretty-photo\thumbnails\quicktime-logo.gif" />
+    <Content Include="lurudata\TLMessage\demo\img\table\back_disabled.png" />
+    <Content Include="lurudata\TLMessage\demo\img\table\back_enabled.png" />
+    <Content Include="lurudata\TLMessage\demo\img\table\favicon.ico" />
+    <Content Include="lurudata\TLMessage\demo\img\table\forward_disabled.png" />
+    <Content Include="lurudata\TLMessage\demo\img\table\forward_enabled.png" />
+    <Content Include="lurudata\TLMessage\demo\img\table\sort_asc.png" />
+    <Content Include="lurudata\TLMessage\demo\img\table\sort_asc_disabled.png" />
+    <Content Include="lurudata\TLMessage\demo\img\table\sort_both.png" />
+    <Content Include="lurudata\TLMessage\demo\img\table\sort_desc.png" />
+    <Content Include="lurudata\TLMessage\demo\img\table\sort_desc_disabled.png" />
+    <Content Include="lurudata\TLMessage\demo\JS3\bootstrap.min.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\datagrid-detailview.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\easyloader.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\easyui-lang-zh_CN.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\jquery.easyui.min.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\jquery.liMarquee.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\jquery.min.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\LodopFuncs.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\calendar.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\lang\en.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\skin\default\img.gif" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\WdatePicker.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\lang\en.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\readme.txt" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="lurudata\TLMessage\demo\JS3\My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="lurudata\TLMessage\demo\JS3\PCASClass.js" />
+    <Content Include="lurudata\TLMessage\demo\JS3\PrintDetail.js" />
+    <Content Include="lurudata\TLMessage\demo\js\bootstrap.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\datagrid-detailview.js" />
+    <Content Include="lurudata\TLMessage\demo\js\easyloader.js" />
+    <Content Include="lurudata\TLMessage\demo\js\easyui-lang-zh_CN.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-1.6.4.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\external\jquery.bgiframe-2.1.2.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\external\jquery.cookie.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\external\jquery.metadata.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\external\qunit.css" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\external\qunit.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.blind.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.bounce.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.clip.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.core.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.drop.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.explode.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.fade.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.fold.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.highlight.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.pulsate.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.scale.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.shake.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.slide.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.effects.transfer.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.accordion.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.autocomplete.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.button.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.core.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.datepicker.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.dialog.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.draggable.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.droppable.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.mouse.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.position.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.progressbar.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.resizable.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.selectable.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.slider.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.sortable.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.tabs.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery-ui\jquery.ui.widget.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery.easyui.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery.liMarquee.js" />
+    <Content Include="lurudata\TLMessage\demo\js\jquery.min.js" />
+    <Content Include="lurudata\TLMessage\demo\js\LodopFuncs.js" />
+    <Content Include="lurudata\TLMessage\demo\js\PCASClass.js" />
+    <Content Include="lurudata\TLMessage\demo\js\PrintDetail.js" />
+    <Content Include="lurudata\TLMessage\demo\js\setup.js" />
+    <Content Include="lurudata\TLMessage\demo\PlanManage\Add.htm" />
+    <Content Include="lurudata\TLMessage\demo\PlanManage\PlanAdd.htm" />
+    <Content Include="lurudata\TLMessage\demo\PlanManage\YearPlanAdd.htm" />
+    <Content Include="lurudata\TLMessage\demo\Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="lurudata\TLMessage\demo\Scripts\jquery-1.4.1.js" />
+    <Content Include="lurudata\TLMessage\demo\Scripts\jquery-1.4.1.min.js" />
+    <Content Include="lurudata\TLMessage\demo\Styles\Site.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\calendar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\combo.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\combobox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\datagrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\datebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\easyui.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\accordion_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\calendar_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\combo_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\datagrid_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\datebox_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\layout_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\linkbutton_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\loading.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\menu_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\messager_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\pagination_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\panel_tools.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\searchbox_button.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\slider_handle.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\sorter.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\spinner_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\tabs_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\tree_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\images\validatebox_warning.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\layout.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\linkbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\menu.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\menubutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\messager.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\numberbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\pagination.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\panel.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\propertygrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\searchbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\slider.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\spinner.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\splitbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\textbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\tooltip.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\tree.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\validatebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\black\window.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\calendar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\combo.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\combobox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\datagrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\datebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\easyui.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\loading.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\layout.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\linkbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\menu.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\menubutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\messager.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\numberbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\pagination.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\panel.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\propertygrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\searchbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\slider.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\spinner.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\splitbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\textbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\tooltip.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\tree.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\validatebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\bootstrap\window.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\calendar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\combo.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\combobox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\datagrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\datalist.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\datebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\filebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\accordion_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\calendar_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\combo_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\datagrid_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\datebox_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\layout_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\linkbutton_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\loading.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\menu_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\messager_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\pagination_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\panel_tools.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\passwordbox_close.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\passwordbox_open.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\searchbox_button.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\slider_handle.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\spinner_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\tabs_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\tagbox_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\tree_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\images\validatebox_warning.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\layout.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\linkbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\menu.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\menubutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\messager.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\numberbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\pagination.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\panel.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\passwordbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\propertygrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\searchbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\slider.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\spinner.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\splitbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\switchbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\tagbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\textbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\tooltip.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\tree.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\validatebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default3356\window.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\calendar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\combo.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\combobox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\datagrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\datalist.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\datebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\easyui.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\filebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\accordion_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\calendar_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\combo_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\datagrid_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\datebox_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\layout_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\linkbutton_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\loading.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\menu.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\menu_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\messager_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\pagination_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\panel_tools.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\passwordbox_close.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\passwordbox_open.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\searchbox_button.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\slider_handle.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\spinner_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\tabs_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\tagbox_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\treeIndex1.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\tree_file1.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\tree_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\images\validatebox_warning.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\layout.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\linkbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\menu.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\menubutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\messager.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\numberbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\pagination.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\panel.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\passwordbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\propertygrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\searchbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\slider.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\spinner.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\splitbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\switchbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\tagbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\textbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\tooltip.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\tree.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\validatebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\default\window.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\calendar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\combo.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\combobox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\datagrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\datebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\easyui.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\accordion_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\calendar_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\combo_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\datagrid_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\datebox_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\layout_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\loading.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\menu_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\messager_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\pagination_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\panel_tools.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\searchbox_button.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\slider_handle.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\spinner_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\tabs_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\tree_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\images\validatebox_warning.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\layout.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\linkbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\menu.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\menubutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\messager.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\numberbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\pagination.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\panel.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\propertygrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\searchbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\slider.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\spinner.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\splitbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\textbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\tooltip.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\tree.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\validatebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\gray\window.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\icon.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\back.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\cancel.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\cut.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\edit_add.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\edit_remove.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\filesave.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\filter.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\generate.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\generate1.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\help.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\icon1.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\large_chart.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\large_clipart.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\large_picture.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\large_shapes.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\large_smartart.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\mini_add.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\mini_edit.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\mini_refresh.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\more.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\more1.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\more2.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\more3.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\no.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\ok.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\pencil.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\print.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\quest_add.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\redo.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\reload.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\search.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\sum.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\tip.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\undo.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\view.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\icons\yy.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\calendar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\combo.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\combobox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\datagrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\datalist.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\datebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\easyui.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\filebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\accordion_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\calendar_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\combo_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\datagrid_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\datebox_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\layout_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\linkbutton_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\loading.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\menu_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\messager_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\pagination_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\panel_tools.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\passwordbox_close.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\passwordbox_open.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\searchbox_button.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\slider_handle.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\spinner_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\tabs_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\tagbox_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\tree_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\images\validatebox_warning.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\layout.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\linkbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\menu.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\menubutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\messager.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\numberbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\pagination.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\panel.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\passwordbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\propertygrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\searchbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\slider.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\spinner.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\splitbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\switchbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\tagbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\textbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\tooltip.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\tree.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\validatebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\material\window.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\accordion.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\calendar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\combo.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\combobox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\datagrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\datebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\dialog.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\easyui.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\accordion_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\blank.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\calendar_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\combo_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\datagrid_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\datebox_arrow.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\layout_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\loading.gif" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\menu_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\messager_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\pagination_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\panel_tools.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\searchbox_button.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\slider_handle.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\sorter.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\spinner_arrows.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\tabs_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\tree_icons.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\images\validatebox_warning.png" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\layout.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\linkbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\menu.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\menubutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\messager.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\numberbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\pagination.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\panel.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\progressbar.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\propertygrid.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\searchbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\slider.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\spinner.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\splitbutton.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\tabs.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\textbox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\tooltip.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\tree.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\validatebox.css" />
+    <Content Include="lurudata\TLMessage\demo\themes\metro\window.css" />
+    <Content Include="lurudata\TLMessage\fonts\iconfont.css" />
+    <Content Include="lurudata\TLMessage\fonts\iconfont.svg" />
+    <Content Include="lurudata\TLMessage\images\cardFMImgError.png" />
+    <Content Include="lurudata\TLMessage\images\cardZMImgError.png" />
+    <Content Include="lurudata\TLMessage\images\favicon.ico" />
+    <Content Include="lurudata\TLMessage\images\fullScreenBut_BG.png" />
+    <Content Include="lurudata\TLMessage\images\goodsPIC1.png" />
+    <Content Include="lurudata\TLMessage\images\goodsPIC2.png" />
+    <Content Include="lurudata\TLMessage\images\goodsPIC3.png" />
+    <Content Include="lurudata\TLMessage\images\goodsPIC4.png" />
+    <Content Include="lurudata\TLMessage\images\ico_duigou.png" />
+    <Content Include="lurudata\TLMessage\images\iphone_bg.png" />
+    <Content Include="lurudata\TLMessage\images\login_admin_bg.jpg" />
+    <Content Include="lurudata\TLMessage\images\login_bg1.jpg" />
+    <Content Include="lurudata\TLMessage\images\login_bg2.jpg" />
+    <Content Include="lurudata\TLMessage\images\login_fj_bg.jpg" />
+    <Content Include="lurudata\TLMessage\images\login_logo.png" />
+    <Content Include="lurudata\TLMessage\images\login_sh_bg.jpg" />
+    <Content Include="lurudata\TLMessage\images\logo.png" />
+    <Content Include="lurudata\TLMessage\images\menuShrink.png" />
+    <Content Include="lurudata\TLMessage\images\menuShrink_hover.png" />
+    <Content Include="lurudata\TLMessage\images\menuShrink_z.png" />
+    <Content Include="lurudata\TLMessage\images\menuShrink_z_hover.png" />
+    <Content Include="lurudata\TLMessage\images\other\maintain_bottom.png" />
+    <Content Include="lurudata\TLMessage\images\other\maintain_pic.png" />
+    <Content Include="lurudata\TLMessage\images\other\maintain_pic_bg.png" />
+    <Content Include="lurudata\TLMessage\images\phone_banner.jpg" />
+    <Content Include="lurudata\TLMessage\images\yyzzImgError.png" />
+    <Content Include="lurudata\TLMessage\js\backHome.js" />
+    <Content Include="lurudata\TLMessage\js\base.js" />
+    <Content Include="lurudata\TLMessage\js\login.js" />
+    <Content Include="lurudata\TLMessage\js\login1.js" />
+    <Content Include="lurudata\TLMessage\js\out_intoData.js" />
+    <Content Include="lurudata\TLMessage\js\timePage.js" />
+    <Content Include="lurudata\TLMessage\js\treetable.js" />
+    <Content Include="lurudata\TLMessage\js\ySearchSelect.js" />
+    <Content Include="lurudata\TLMessage\layui\css\layui.css" />
+    <Content Include="lurudata\TLMessage\layui\css\layui.mobile.css" />
+    <Content Include="lurudata\TLMessage\layui\css\modules\code.css" />
+    <Content Include="lurudata\TLMessage\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="lurudata\TLMessage\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="lurudata\TLMessage\layui\css\modules\layer\default\icon.png" />
+    <Content Include="lurudata\TLMessage\layui\css\modules\layer\default\layer.css" />
+    <Content Include="lurudata\TLMessage\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="lurudata\TLMessage\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="lurudata\TLMessage\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="lurudata\TLMessage\layui\font\iconfont.svg" />
+    <Content Include="lurudata\TLMessage\layui\images\face\0.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\1.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\10.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\11.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\12.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\13.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\14.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\15.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\16.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\17.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\18.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\19.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\2.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\20.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\21.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\22.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\23.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\24.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\25.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\26.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\27.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\28.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\29.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\3.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\30.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\31.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\32.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\33.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\34.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\35.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\36.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\37.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\38.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\39.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\4.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\40.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\41.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\42.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\43.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\44.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\45.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\46.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\47.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\48.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\49.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\5.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\50.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\51.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\52.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\53.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\54.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\55.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\56.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\57.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\58.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\59.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\6.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\60.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\61.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\62.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\63.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\64.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\65.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\66.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\67.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\68.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\69.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\7.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\70.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\71.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\8.gif" />
+    <Content Include="lurudata\TLMessage\layui\images\face\9.gif" />
+    <Content Include="lurudata\TLMessage\layui\layui.all.js" />
+    <Content Include="lurudata\TLMessage\layui\layui.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\carousel.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\code.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\element.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\flow.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\form.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\jquery.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\laydate.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\layedit.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\layer.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\laypage.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\laytpl.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\mobile.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\table.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\tree.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\upload.js" />
+    <Content Include="lurudata\TLMessage\layui\lay\modules\util.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="databyanquan\GetPCLB.ashx.cs">
+      <DependentUpon>GetPCLB.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyanquan\GetYhgs.ashx.cs">
+      <DependentUpon>GetYhgs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyanquan\GetYhlb.ashx.cs">
+      <DependentUpon>GetYhlb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyanquan\GetYhqs.ashx.cs">
+      <DependentUpon>GetYhqs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyanquan\GetYhsj.ashx.cs">
+      <DependentUpon>GetYhsj.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyanquan\GetYhsl.ashx.cs">
+      <DependentUpon>GetYhsl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databycb\AgreementBycb.ashx.cs">
+      <DependentUpon>AgreementBycb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databycb\GetAgreementBycb.ashx.cs">
+      <DependentUpon>GetAgreementBycb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databycb\GetInspectionBycb.ashx.cs">
+      <DependentUpon>GetInspectionBycb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databycb\InspectionBycb.ashx.cs">
+      <DependentUpon>InspectionBycb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databydx\GetCurrProDataBydx.ashx.cs">
+      <DependentUpon>GetCurrProDataBydx.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databydx\GetDayProDetailsBydx.ashx.cs">
+      <DependentUpon>GetDayProDetailsBydx.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databydx\GetDeviceFilesBydx.ashx.cs">
+      <DependentUpon>GetDeviceFilesBydx.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databydx\GetDeviceRunInfBydx.ashx.cs">
+      <DependentUpon>GetDeviceRunInfBydx.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databydx\GetProDataByBIMdx.ashx.cs">
+      <DependentUpon>GetProDataByBIMdx.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databydx\GetWarnInfBydx.ashx.cs">
+      <DependentUpon>GetWarnInfBydx.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyfc\GetDeviceRunInfByfc.ashx.cs">
+      <DependentUpon>GetDeviceRunInfByfc.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyfc\GetGeometric.ashx.cs">
+      <DependentUpon>GetGeometric.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyfc\GetPictureNum.ashx.cs">
+      <DependentUpon>GetPictureNum.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyfc\GetPictureUp.ashx.cs">
+      <DependentUpon>GetPictureUp.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyjd\BigPhyWorkByjd.ashx.cs">
+      <DependentUpon>BigPhyWorkByjd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyjd\ConSitePictByjd.ashx.cs">
+      <DependentUpon>ConSitePictByjd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyjd\ConSitePictByjds.ashx.cs">
+      <DependentUpon>ConSitePictByjds.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyjd\GetOutputValueByjd.ashx.cs">
+      <DependentUpon>GetOutputValueByjd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyjd\OutputValueByjd.ashx.cs">
+      <DependentUpon>OutputValueByjd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyjd\TodayPlanByjd.ashx.cs">
+      <DependentUpon>TodayPlanByjd.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywb\GetCurrProDataBywb.ashx.cs">
+      <DependentUpon>GetCurrProDataBywb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywb\GetDayProDetailsBywb.ashx.cs">
+      <DependentUpon>GetDayProDetailsBywb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywb\GetDeviceFilesBywb.ashx.cs">
+      <DependentUpon>GetDeviceFilesBywb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywb\GetDeviceRunInfBywb.ashx.cs">
+      <DependentUpon>GetDeviceRunInfBywb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywb\GetProDataByBIMwb.ashx.cs">
+      <DependentUpon>GetProDataByBIMwb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywb\GetWarnInfBywb.ashx.cs">
+      <DependentUpon>GetWarnInfBywb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywork\GetDeviceFilesByWork.ashx.cs">
+      <DependentUpon>GetDeviceFilesByWork.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywork\GetDM_BUSI_AlarmDataByWork.ashx.cs">
+      <DependentUpon>GetDM_BUSI_AlarmDataByWork.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywork\GetDM_BUSI_DeviceWorkByWork.ashx.cs">
+      <DependentUpon>GetDM_BUSI_DeviceWorkByWork.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywork\GetDM_BUSI_ProduceQuantityByWork.ashx.cs">
+      <DependentUpon>GetDM_BUSI_ProduceQuantityByWork.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databywork\GetDM_BUSI_WorkDataByWork.ashx.cs">
+      <DependentUpon>GetDM_BUSI_WorkDataByWork.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyzn\GetDeviceRunInfByzn.ashx.cs">
+      <DependentUpon>GetDeviceRunInfByzn.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyzn\GetGeometric.ashx.cs">
+      <DependentUpon>GetGeometric.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyzn\GetPictureNum.ashx.cs">
+      <DependentUpon>GetPictureNum.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="databyzn\GetPictureUp.ashx.cs">
+      <DependentUpon>GetPictureUp.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataAnQuan\GetPCLB.ashx.cs">
+      <DependentUpon>GetPCLB.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataAnQuan\NewGetYhgs.ashx.cs">
+      <DependentUpon>NewGetYhgs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataAnQuan\NewGetYhlb.ashx.cs">
+      <DependentUpon>NewGetYhlb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataAnQuan\NewGetYhqs.ashx.cs">
+      <DependentUpon>NewGetYhqs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataAnQuan\NewGetYhsj.ashx.cs">
+      <DependentUpon>NewGetYhsj.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataAnQuan\NewGetYhsl.ashx.cs">
+      <DependentUpon>NewGetYhsl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataAnQuan\SavePic.ashx.cs">
+      <DependentUpon>SavePic.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataWuZi\GetBxbl.ashx.cs">
+      <DependentUpon>GetBxbl.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataWuZi\GetCght.ashx.cs">
+      <DependentUpon>GetCght.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataWuZi\GetDhqk.ashx.cs">
+      <DependentUpon>GetDhqk.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataWuZi\GetJcwz.ashx.cs">
+      <DependentUpon>GetJcwz.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataWuZi\GetJqwzyj.ashx.cs">
+      <DependentUpon>GetJqwzyj.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataWuZi\GetLlqk.ashx.cs">
+      <DependentUpon>GetLlqk.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataWuZi\GetWzsj.ashx.cs">
+      <DependentUpon>GetWzsj.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataZH\NewGetZHZYPTSubmit.ashx.cs">
+      <DependentUpon>NewGetZHZYPTSubmit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataZH\GetLBSYSubmit.ashx.cs">
+      <DependentUpon>GetLBSYSubmit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataZH\GetWBDXSubmit.ashx.cs">
+      <DependentUpon>GetWBDXSubmit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\BigDataZH\GetSgtj.ashx.cs">
+      <DependentUpon>GetSgtj.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="lurudata\IndexBySuperAdminManage.aspx.cs">
+      <DependentUpon>IndexBySuperAdminManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lurudata\IndexBySuperAdminManage.aspx.designer.cs">
+      <DependentUpon>IndexBySuperAdminManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serialize.cs" />
+    <Compile Include="status.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Global.asax.resx">
+      <DependentUpon>Global.asax.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{38D7AA58-C95B-449B-86C6-A8073A56E11F}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lurudata\TLMessage\demo\Demo\" />
+    <Folder Include="lurudata\TLMessage\demo\img\gallery\thumbs\" />
+    <Folder Include="lurudata\TLMessage\demo\img\gallery\thumbs_small\" />
+    <Folder Include="lurudata\TLMessage\demo\img\pretty-photo\fullscreen\" />
+    <Folder Include="lurudata\TLMessage\demo\themes\default23\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\BlueTheme\Control.skin" />
+    <Content Include="App_Themes\Green2Theme\Control.skin" />
+    <Content Include="App_Themes\GreenTheme\Control.skin" />
+    <Content Include="App_Themes\PurpleTheme\Control.skin" />
+    <Content Include="App_Themes\RedTheme\Control.skin" />
+    <Content Include="databywb\GetDeviceFilesBywb.ashx" />
+    <Content Include="databywb\GetDayProDetailsBywb.ashx" />
+    <Content Include="databywb\GetDeviceRunInfBywb.ashx" />
+    <Content Include="databywb\GetWarnInfBywb.ashx" />
+    <Content Include="databywb\GetCurrProDataBywb.ashx" />
+    <Content Include="databydx\GetDeviceFilesBydx.ashx" />
+    <Content Include="databydx\GetDayProDetailsBydx.ashx" />
+    <Content Include="databydx\GetWarnInfBydx.ashx" />
+    <Content Include="databydx\GetCurrProDataBydx.ashx" />
+    <Content Include="databydx\GetDeviceRunInfBydx.ashx" />
+    <Content Include="databywb\GetProDataByBIMwb.ashx" />
+    <Content Include="databydx\GetProDataByBIMdx.ashx" />
+    <Content Include="databyfc\GetDeviceRunInfByfc.ashx" />
+    <Content Include="databyfc\GetGeometric.ashx" />
+    <Content Include="databyfc\GetPictureNum.ashx" />
+    <Content Include="databyfc\GetPictureUp.ashx" />
+    <Content Include="databyzn\GetDeviceRunInfByzn.ashx" />
+    <Content Include="databyzn\GetGeometric.ashx" />
+    <Content Include="databyzn\GetPictureNum.ashx" />
+    <Content Include="databyzn\GetPictureUp.ashx" />
+    <Content Include="databywork\GetDeviceFilesByWork.ashx" />
+    <Content Include="databywork\GetDM_BUSI_AlarmDataByWork.ashx" />
+    <Content Include="databywork\GetDM_BUSI_DeviceWorkByWork.ashx" />
+    <Content Include="databywork\GetDM_BUSI_ProduceQuantityByWork.ashx" />
+    <Content Include="databywork\GetDM_BUSI_WorkDataByWork.ashx" />
+    <Content Include="databyjd\OutputValueByjd.ashx" />
+    <Content Include="databyjd\BigPhyWorkByjd.ashx" />
+    <Content Include="databyjd\TodayPlanByjd.ashx" />
+    <Content Include="databyjd\GetOutputValueByjd.ashx" />
+    <Content Include="databyjd\ConSitePictByjd.ashx" />
+    <Content Include="databyjd\ConSitePictByjds.ashx" />
+    <Content Include="databycb\AgreementBycb.ashx" />
+    <Content Include="databycb\InspectionBycb.ashx" />
+    <Content Include="databycb\GetAgreementBycb.ashx" />
+    <Content Include="databycb\GetInspectionBycb.ashx" />
+    <Content Include="databyanquan\GetPCLB.ashx" />
+    <Content Include="databyanquan\GetYhgs.ashx" />
+    <Content Include="databyanquan\GetYhlb.ashx" />
+    <Content Include="databyanquan\GetYhqs.ashx" />
+    <Content Include="databyanquan\GetYhsj.ashx" />
+    <Content Include="databyanquan\GetYhsl.ashx" />
+    <None Include="html\fonts\data_number.ttf" />
+    <None Include="html\json\carmes.json" />
+    <None Include="html\json\DGCar.json" />
+    <None Include="html\json\note.json" />
+    <None Include="html\json\note1.json" />
+    <None Include="html\json\note2.json" />
+    <None Include="html\json\index.json" />
+    <None Include="html\json\tzgg.json" />
+    <None Include="html\js\bstable\.idea\.name" />
+    <None Include="html\js\bstable\.idea\ss.iml" />
+    <None Include="html\js\bstable\datel\.name" />
+    <None Include="html\js\bstable\datel\table.iml" />
+    <None Include="html\js\bstable\fonts\fontawesome-webfont.eot" />
+    <None Include="html\js\bstable\fonts\fontawesome-webfont.ttf" />
+    <None Include="html\js\bstable\fonts\fontawesome-webfont.woff" />
+    <None Include="html\js\bstable\fonts\fontawesome-webfont.woff2" />
+    <None Include="html\js\bstable\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="html\js\bstable\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="html\js\bstable\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="html\js\bstable\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="html\js\bstable\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lurudata\BigDataAnQuan\GetPCLB.ashx" />
+    <Content Include="lurudata\BigDataAnQuan\NewGetYhgs.ashx" />
+    <Content Include="lurudata\BigDataAnQuan\NewGetYhlb.ashx" />
+    <Content Include="lurudata\BigDataAnQuan\NewGetYhqs.ashx" />
+    <Content Include="lurudata\BigDataAnQuan\NewGetYhsj.ashx" />
+    <Content Include="lurudata\BigDataAnQuan\NewGetYhsl.ashx" />
+    <Content Include="lurudata\BigDataAnQuan\SavePic.ashx" />
+    <Content Include="lurudata\BigDataWuZi\GetBxbl.ashx" />
+    <Content Include="lurudata\BigDataWuZi\GetCght.ashx" />
+    <Content Include="lurudata\BigDataWuZi\GetDhqk.ashx" />
+    <Content Include="lurudata\BigDataWuZi\GetJcwz.ashx" />
+    <Content Include="lurudata\BigDataWuZi\GetJqwzyj.ashx" />
+    <Content Include="lurudata\BigDataWuZi\GetLlqk.ashx" />
+    <Content Include="lurudata\BigDataWuZi\GetWzsj.ashx" />
+    <Content Include="lurudata\BigDataZH\NewGetZHZYPTSubmit.ashx" />
+    <Content Include="lurudata\BigDataZH\GetLBSYSubmit.ashx" />
+    <Content Include="lurudata\BigDataZH\GetWBDXSubmit.ashx" />
+    <None Include="html\js\theme.json" />
+    <Content Include="lurudata\BigDataZH\GetSgtj.ashx" />
+    <None Include="lurudata\TLMessage\demo\img\pretty-photo\.DS_Store" />
+    <None Include="lurudata\TLMessage\demo\PlanManage\PlanAdd.json" />
+    <None Include="lurudata\TLMessage\demo\PlanManage\PlanByFirst.json" />
+    <None Include="lurudata\TLMessage\demo\PlanManage\PlanBySecond.json" />
+    <None Include="lurudata\TLMessage\demo\PlanManage\PlanByThird.json" />
+    <None Include="lurudata\TLMessage\demo\PlanManage\PlanByYear.json" />
+    <None Include="lurudata\TLMessage\demo\PlanManage\PlanByYearDetail.json" />
+    <None Include="lurudata\TLMessage\demo\themes\material\images\Thumbs.db" />
+    <None Include="lurudata\TLMessage\fonts\iconfont.eot" />
+    <None Include="lurudata\TLMessage\fonts\iconfont.ttf" />
+    <None Include="lurudata\TLMessage\fonts\iconfont.woff" />
+    <None Include="lurudata\TLMessage\fonts\iconfont.woff2" />
+    <None Include="lurudata\TLMessage\layui\font\iconfont.eot" />
+    <None Include="lurudata\TLMessage\layui\font\iconfont.ttf" />
+    <None Include="lurudata\TLMessage\layui\font\iconfont.woff" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9658</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

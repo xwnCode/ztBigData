@@ -1,0 +1,935 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <meta charset="UTF-8">
+    <title>中铁武汉电气化局调度指挥大数据平台-玉磨项目</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="data_bodey">
+        <div class="nav" style="font-size: 23px; letter-spacing: 0px">中铁武汉电气化局调度指挥大数据平台-玉磨项目</div>
+        <div class="nav_btn">
+       
+            <div class="btn_left">
+                <a href="">
+                    <div class="btn_list ">首页</div>
+                </a>
+                <a href="">
+                    <div class="btn_list">调度</div>
+                </a>
+                <a href="jindu.html">
+                    <div class="btn_list">进度</div>
+                </a>
+                <a href="anquan.html">
+                    <div class="btn_list">安全质量</div>
+                </a>
+                <a href="wuzi.html">
+                    <div class="btn_list">物资</div>
+                </a>
+            </div>
+            <div class="btn_right">
+                <a href="equipment.html">
+                    <div class="btn_list">机械设备</div>
+                </a>
+                <a href="wanbi.html">
+                    <div class="btn_list listActive">腕臂预配</div>
+                </a>
+                <a href="diaoxuan.html">
+                    <div class="btn_list">接触网吊弦</div>
+                </a>
+                <a href="chenben.html">
+                    <div class="btn_list">成本</div>
+                </a>
+                <a href="work.html">
+                    <div class="btn_list">综合作业</div>
+                </a>
+            </div>
+        </div>
+        <div class="index_tabs" style="margin-top:-50px">
+            <!--安防运作-->
+            <div class="inner" style="height: 109%;">
+                <div class="left_cage">
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 5.5% !important; height: 47%;">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);font-size: 18px;">
+                                        设备档案</div>
+                                </div>
+                            </div>
+                            <!--<div class="analysis">
+                                设备档案</div>-->
+                            <div class="danger_depart_box" id="sbda" style="margin-top: -7px;">
+                                <ul class="danger_depart" style="height: 80%;width:100%;">
+                                    <!--  <li class="danger_ico" style="background-image: url(img/sbxx.png); background-position-x: 0px">
+                                    </li>-->
+                                    <li class="data data01" style="margin-top: 2px; font-size: 18px; height: 30%">设备名称:<span
+                                        id="Devicename"></span></li>
+                                    <li class="data data01" style="font-size: 18px; width: 100%; height: 30%">设备编号:<span
+                                        id="Devicenumber"></span></li>
+                                    <li class="data data01" style="font-size: 18px; width: 100%; height: 30%">负责人:<span
+                                        id="Charger"></span></li>
+                                    <li class="data data01" style="font-size: 18px;height: 30%">电话:<span id="Phone"></span></li>
+                                    <li class="danger_ico" style="background-image: url(img/sbtp.jpg); background-position-x: 0px;height: 150%;
+                                        width: 80%;
+                                        margin-left: 40px;
+                                        margin-top: -6px;
+                                        "></li>
+                                </ul>
+                                <!--<ul class="danger_depart">
+                                    <li class="danger_ico" style="background-image: url(img/sbda.jpg); background-position-x: 0px;
+                                        width: 100%; height: 300%;"></li>
+                                </ul>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 47%;
+                        position: relative;" id="zylz">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);font-size: 18px;">
+                                        作业参数</div>
+                                </div>
+                            </div>
+                            <div class="analysis" style="height: 10%;font-size: 18px;margin-left: 25px;">
+                                作业类型：<span id="Worktype" style="font-size: 18px;"></span>
+                            </div>
+                            <!--<table id="table" style="width: 100%">
+                            </table>-->
+                            <table id="table1"  
+    
+       data-show-columns="true"  
+       data-height="3000px"  
+       data-card-view="true" style="margin-top:80%"></table> 
+                        </div>
+                    </div>
+                </div>
+                <div class="center_cage">
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 3.6% !important; height: 28%;
+                        position: relative;">
+                        <div id="playWind">
+                        </div>
+                        <div id="playWind2">
+                        </div>
+                        </div>
+                    
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.3% !important; height: 14%;">
+                        <div class="dataAllBorder02" >
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);font-size: 18px;">
+                                        报警信息</div>
+                                </div>
+                            </div>
+                            <!--<div style="color: White; font-size: 17px;line-height:6">
+                                报警时间：<span id="Alarmdate"></span>
+                            </div>-->
+                            <div style="color: White; font-size: 19px;line-height:2;margin-top: 12px;margin-left: 20px;margin-right: 20px;">
+                                <span id="Alarmcontent"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.6% !important; height: 51%;">
+                    </div>
+                    <!--                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.6% !important; height: 29.5%;">
+                    </div>-->
+                </div>
+                <div class="right_cage">
+                    <!--顶部切换位置-->
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 5.5% !important; height: 34%">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);font-size: 18px;">
+                                        设备运转信息</div>
+                                </div>
+                            </div>
+                            <!--  <div class="analysis">
+                                设备运转信息：</div>-->
+                            <div style="color: White; float: left;margin-left: 13%;">
+                                运行速度：<span id="Enginespeed"></span>&nbsp;转/s</div>
+                            <div style="color: White; float: left; margin-left: 125px">
+                                剩余油量：<span id="Fueltank"></span>&nbsp;%</div>
+                                <div class="img" style="height: 45%; margin-top: 40%; margin-left: -35%;"><img src="img/img4/电机转速.png" style="height: 60%; margin-top: -25%; margin-left: 38%;" /></div>
+                            <!--<div class="data_chart" id="buyTime1" style="height: 70%; margin-top: -15%; margin-left: -30%;">
+                            </div>-->
+                            <!--<div class="img" style="height: 70%; margin-top: -80%; margin-left: 26%;"><img src="img/img4/油桶.png" style="" /></div>-->
+                            <div class="img" id="" style="height: 70%; margin-top: -80%; margin-left: 26%;"><img src="img/img4/油桶.jpg" style="
+    width: 20%;
+    height: 30%;
+    margin-top: 22px;
+    margin-left: 200px;" />
+                            </div>
+                            <div style="color: White; float: left; margin-top: -2.5%;;margin-left: 13%;">
+                                输出电压：<span id="Alternator"></span>&nbsp;伏</div>
+                            <div style="color: White; float: left; margin-top: -2.5%; margin-left: 140px">
+                                油泵压力：<span id="Deblockpre"></span>&nbsp;mPa</div>
+                                <div class="img" style="height: 45%; margin-top: 38%; margin-left: -30%;"><img src="img/img4/电压.png" style="height: 60%; margin-top: -25%; margin-left: 36%;" /></div>
+                            <!--<div class="data_chart" id="buyTime3" style="height: 70%; margin-top: -15%; margin-left: -30%;">
+                            </div>-->
+                            <div class="img" style="height: 43%; margin-top: -44%; margin-left: 57%;"><img src="img/img4/气压.png" style="height: 60%; margin-top: -40.5%; margin-left: 21%;" /></div>
+                            <!--<div class="data_chart" id="buyTime4" style="height: 70%; margin-top: -40.5%; margin-left: 30%;">
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 1.5% !important;
+                        height: 29.5%; position: relative;">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);font-size: 18px;">
+                                        月施工数量统计</div>
+                                </div>
+                            </div>
+                            <!--<div class="analysis">
+                                月施工数量统计：</div>-->
+                            <p class="data_chart" id="bookAret1" style="height: 80%;">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 1.5% !important;
+                        height: 29.5%; position: relative;">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);font-size: 18px;">
+                                        今日施工数量统计</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="container_huan" style="height: 70%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../../html/js/echarts-all.js" type="text/javascript"></script>
+        <script src="../../html/js/bstable/js/bootstrap-table.js" type="text/javascript"></script>
+        <script src="../../html/js/shine.js" type="text/javascript"></script>
+        <script src="datajs/dataVywork.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+
+
+            //BootstrapTable();
+            GetSbxx();
+            Getbjxx();
+            GetEchartLines();
+            EchartBars();
+            Echarts();
+            Getzycslx();
+            Getyzxx();
+            
+            //初始化列表数据
+            //initTable($table, $defaultOptions);
+            //EchartMains(); 
+
+            //这里用setTimeout代替ajax请求进行演示
+//            window.setInterval(function () {
+//                GetSbxx();  
+//                Getbjxx();
+//                GetEchartLines();
+//                EchartBars();
+//                Echarts();
+//                Getzycslx();
+//                Getyzxx();
+//            }, 8000);
+            
+           
+           //获取设备档案
+            function GetSbxx() {
+                $.ajax({
+                    url: '../databywork/GetDeviceFilesByWork.ashx',
+                    type: "get",
+                    contentType: "application/x-www-form-urlencoded; ", //默认，表单提交格式
+                    dataType: "json",
+                    data: {},
+                    success: function (data) {
+                        var datas = JSON.stringify(data);
+                        $("#Devicename").html("SZP-I型隧道综合智能作业平台");
+                        $("#Charger").html(data[0].Charger);
+                        $("#Phone").html(data[0].Phone);
+                        $("#Devicenumber").html(data[0].Devicenumber);
+                    }
+                });
+                //$('#table1').removeClass("table table-hover");
+   }
+
+   //获取报警信息
+   function Getbjxx() {
+       $.ajax({
+           url: '../databywork/GetDM_BUSI_AlarmDataByWork.ashx',
+           type: "get",
+           contentType: "application/x-www-form-urlencoded; ", //默认，表单提交格式
+           dataType: "json",
+           data: {},
+           success: function (data) {
+               var datas = JSON.stringify(data);
+               $("#Alarmcontent").html(data[0].Alarmcontent);
+           }
+       });
+   }
+
+   
+
+   //获取运转信息
+   function Getyzxx() {
+       $.ajax({
+           url: '../databywork/GetDM_BUSI_DeviceWorkByWork.ashx',
+           type: "get",
+           contentType: "application/x-www-form-urlencoded; ", //默认，表单提交格式
+           dataType: "json",
+           data: {},
+           success: function (data) {
+               var datas = JSON.stringify(data);
+               $("#Enginespeed").html(data[0].Enginespeed);
+               $("#Fueltank").html(data[0].Fueltank);
+               $("#Alternator").html(data[0].Alternator);
+               $("#Deblockpre").html(data[0].Deblockpre); 
+           }
+       });
+   }
+
+   //获取作业参数类型
+   function Getzycslx() {
+       $.ajax({
+           url: '../databywork/GetDM_BUSI_WorkDataByWork.ashx',
+           type: "get",
+           contentType: "application/x-www-form-urlencoded; ", //默认，表单提交格式
+           dataType: "json",
+           data: {},
+           success: function (data) {
+               var datas = JSON.stringify(data);
+               $("#Worktype").html(data[0].Worktype);
+               var worktype = data[0].Worktype;
+               if (worktype === "钻孔作业") {
+                   boot1();
+               } else if (worktype === "拉拔试验") {
+                   boot2();
+               }
+               else {
+                   boot3();
+               }
+           }
+       }); 
+   }
+
+   function boot1() {
+       var $table = $('#table1').bootstrapTable({
+           cardView: true, //卡片视图模式
+           columns: [
+        { field: 'Qujian', title: '区间/站' },
+        { field: 'Ganhao', title: '杆号' },
+        { field: 'Site', title: '里程/km' },
+        { title: '孔径/mm', field: 'Kj' },
+        { title: '孔深/mm', field: 'Ks' },
+    ],
+           url: "../databywork/GetDM_BUSI_WorkDataByWork.ashx"
+       });
+   }
+
+   function boot2() {
+       var $table = $('#table1').bootstrapTable({
+           cardView: true, //卡片视图模式
+           columns: [
+        { field: 'Qujian', title: '区间/站' },
+        { field: 'Ganhao', title: '杆号' },
+        { field: 'Site', title: '里程/km' },
+        { title: '设计拉力值/kN', field: 'Lbsyzh' },
+        { title: '停顿时间/s', field: 'Pausetime' },
+    ],
+           url: "../databywork/GetDM_BUSI_WorkDataByWork.ashx"
+       });
+   }
+
+   function boot3() {
+       var $table = $('#table1').bootstrapTable({
+           cardView: true, //卡片视图模式
+           columns: [
+        { field: 'Qujian', title: '区间/站' },
+        { field: 'Ganhao', title: '杆号' },
+        { field: 'Site', title: '里程/km' },
+        { title: '坐标', field: 'Coordinate' },
+        { title: '规格型号', field: 'Type' },
+    ],
+           url: "../databywork/GetDM_BUSI_WorkDataByWork.ashx"
+       });
+   }
+
+   //获取作业参数
+            function BootstrapTable1() {
+                $('#table').bootstrapTable({
+                    method: "get",
+                    striped: true,
+                    singleSelect: false,
+                    url: "../databywork/GetDM_BUSI_WorkDataByWork.ashx",
+                    dataType: "json",
+                    search: false, //显示搜索框
+                    contentType: "application/x-www-form-urlencoded",
+                    //queryParams: null,
+                    columns: [
+                {
+                    title: '序号',
+                    field: 'company',
+                    align: 'center',
+                    valign: 'middle',
+                    formatter: function (value, row, index) {
+                        return index + 1;
+                    }
+                },
+
+                {
+                    title: '区间/站',
+                    field: 'Qujian',
+                    align: 'center'
+                },
+
+                {
+                    title: '杆号',
+                    field: 'Ganhao',
+                    width: 80,
+                    align: 'center'
+                },
+                {
+                    title: '线别',
+                    field: 'Direction',
+                    width: 80,
+                    align: 'center'
+                },
+                 {
+                     title: '里程',
+                     field: 'Site',
+                     width: 80,
+                     align: 'center'
+                 },
+                  {
+                      title: '孔径',
+                      field: 'Kj',
+                      width: 80,
+                      align: 'center'
+                  }
+                  ,
+                  {
+                      title: '孔深',
+                      field: 'Ks',
+                      width: 80,
+                      align: 'center'
+                  }
+            ]
+                });
+            }
+
+            //获取作业参数
+            function BootstrapTable2() {
+                $('#table').bootstrapTable({
+                    method: "get",
+                    striped: true,
+                    singleSelect: false,
+                    url: "../databywork/GetDM_BUSI_WorkDataByWork.ashx",
+                    dataType: "json",
+                    search: false, //显示搜索框
+                    contentType: "application/x-www-form-urlencoded",
+                    //queryParams: null,
+                    columns: [
+                {
+                    title: '序号',
+                    field: 'company',
+                    align: 'center',
+                    valign: 'middle',
+                    formatter: function (value, row, index) {
+                        return index + 1;
+                    }
+                },
+
+                {
+                    title: '区间/站',
+                    field: 'Qujian',
+                    align: 'center'
+                },
+
+                {
+                    title: '杆号',
+                    field: 'Ganhao',
+                    width: 80,
+                    align: 'center'
+                },
+                {
+                    title: '线别',
+                    field: 'Direction',
+                    width: 80,
+                    align: 'center'
+                },
+                 {
+                     title: '里程',
+                     field: 'Site',
+                     width: 80,
+                     align: 'center'
+                 },
+                  {
+                      title: '设计拉力值',
+                      field: 'Lbsyzh',
+                      width: 80,
+                      align: 'center'
+                  }
+                  ,
+                  {
+                      title: '停顿时间',
+                      field: 'Pausetime',
+                      width: 80,
+                      align: 'center'
+                  }
+            ]
+                });
+            }
+
+            //获取作业参数
+            function BootstrapTable3() {
+                $('#table').bootstrapTable({
+                    method: "get",
+                    striped: true,
+                    singleSelect: false,
+                    url: "../databywork/GetDM_BUSI_WorkDataByWork.ashx",
+                    dataType: "json",
+                    search: false, //显示搜索框
+                    contentType: "application/x-www-form-urlencoded",
+                    //queryParams: null,
+                    columns: [
+                {
+                    title: '序号',
+                    field: 'company',
+                    align: 'center',
+                    valign: 'middle',
+                    formatter: function (value, row, index) {
+                        return index + 1;
+                    }
+                },
+
+                {
+                    title: '区间/站',
+                    field: 'Qujian',
+                    align: 'center'
+                },
+
+                {
+                    title: '杆号',
+                    field: 'Ganhao',
+                    width: 80,
+                    align: 'center'
+                },
+                {
+                    title: '线别',
+                    field: 'Direction',
+                    width: 80,
+                    align: 'center'
+                },
+                 {
+                     title: '里程',
+                     field: 'Site',
+                     width: 80,
+                     align: 'center'
+                 },
+                  {
+                      title: '坐标',
+                      field: 'Coordinate',
+                      width: 80,
+                      align: 'center'
+                  }
+                  ,
+                  {
+                      title: '规格型号',
+                      field: 'Type',
+                      width: 80,
+                      align: 'center'
+                  }
+            ]
+                });
+            }
+            
+
+            function GetEchartLines() {
+                $.ajax({
+                    url: '../databywork/GetDM_BUSI_DeviceWorkByWork.ashx',
+                    type: "get",
+                    contentType: "application/x-www-form-urlencoded; ", //默认，表单提交格式
+                    dataType: "json",
+                    data: {},
+                    success: function (data) {
+                        var datas = JSON.stringify(data);
+                        //alert(data[0].Fueltank);
+                        EchartLines(data[0].Fueltank);
+                    }
+                });
+            }
+
+//                $.post("../databywork/GetDM_BUSI_DeviceWorkByWork.ashx", {}, function (data) {
+//                    //debugger;
+//                    var datas = JSON.stringify(data);
+//                    var reg = new RegExp(/\\/g);
+//                    var bb = datas.replace(reg, "");
+//                    var cc = bb.replace('[', '');
+//                    var dd = cc.replace(']', '');
+//                    var ee = dd.replace('"{', '{');
+//                    var ff = ee.replace('}"', '}');
+//                    alert(ff);
+//                    var aaa = bb.Fueltank;
+//                    alert(aaa);
+//                    EchartLines(aaa);
+//                });
+           
+
+            function EchartLines(data) {
+                //debugger;
+                var myChart2 = echarts.init($("#buyTime2")[0]);
+                option = {
+                    series: [{
+                        type: 'gauge',
+                        startAngle: 160,
+                        endAngle: 20,
+                        min: 0,
+                        max: 100,
+                        splitNumber: 5,
+                        axisLine: {
+                            lineStyle: {
+                                width: 3,
+                                color: [
+                    [0.25, '#FF6E76'],
+                    [0.5, '#FDDD60'],
+                    [0.75, '#58D9F9'],
+                    [1, '#7CFFB2']
+                ]
+                            }
+                        },
+                        pointer: {
+                            width: 3,
+                            itemStyle: {
+                                color: 'auto'
+                            }
+                        },
+                        axisTick: {
+                            length: 12,
+                            lineStyle: {
+                                color: 'auto',
+                                width: 2
+                            }
+                        },
+                        splitLine: {
+                            length: 20,
+                            lineStyle: {
+                                color: 'auto',
+                                width: 5
+                            }
+                        },
+                        title: {
+                            offsetCenter: [0, '-20%'],
+                            fontSize: 30
+                        },
+                        detail: {
+                            show: false,
+                            fontSize: 50,
+                            offsetCenter: [0, '0%'],
+                            valueAnimation: true,
+                            color: 'auto'
+                        },
+                        data: [{
+                            value: data
+                        }]
+                    }]
+                };
+                myChart2.setOption(option);
+            }
+
+            
+
+            function EchartBars() {
+            myChart2 = echarts.init($("#bookAret1")[0]);
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: {
+                    x: 46,
+                    y: 30,
+                    x2: 30,
+                    y2: 40,
+                    borderWidth: 0
+                },
+                legend: {
+                    //data: ['开累', '月度生产计划'],
+                    data: ['月度生产计划', '月度开累'],
+                    x: 'right',
+                    textStyle: {
+                        color: "#e9ebee"
+                    }
+                },
+                xAxis: [
+                {
+                    type: 'category',
+                    splitLine: {
+                        show: false
+                    },
+                    //data: xzdata,
+                    data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab',
+                            align: 'center'
+                        },
+                        axisTick: {
+                            show: false
+                        }
+                    }
+                }
+
+            ],
+                yAxis: [
+                {
+                    type: 'value',
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab',
+                            align: 'right'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: false,
+                        lineStyle: {
+                            color: "#57617B"
+                        }
+                    }
+                }
+            ],
+                series: [
+                {
+                    name: '月度生产计划',
+                    //                    name: '开累',
+                    type: 'bar',
+                    data: zzdata,
+                    itemStyle: {        //上方显示数值
+                        normal: {
+                            label: {
+                                show: false, //开启显示
+                                position: 'top', //在上方显示
+                                textStyle: { //数值样式
+                                    color: 'White'
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    name: '月度开累',
+                    type: 'bar',
+                    data: yzdata,
+                    itemStyle: {        //上方显示数值
+                        normal: {
+                            label: {
+                                show: false, //开启显示
+                                position: 'top', //在上方显示
+                                textStyle: { //数值样式
+                                    color: 'White'
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+            }; myChart2.setOption(option);
+        }
+
+        function Echarts() {
+            myChart3 = echarts.init($("#container_huan")[0]);
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                calculable: false,
+                series: [
+        {
+
+            type: 'pie',
+            radius: [40, 60],
+            x: '60%',
+            width: '35%',
+            funnelAlign: 'left',
+            //max: 1048,
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: true,
+                        formatter: '{b} : {c} ({d}%)'
+                    }
+                }
+            },
+            data: xyzdata
+        }
+    ]
+            };
+            myChart3.setOption(option);
+        }
+
+        </script>
+        <script src="datajs/ezuikit.js" type="text/javascript"></script>
+        <script type="text/javascript">
+    var appkey='a41d6ab50c7b470fba85862de67354c8';
+    var appSecret='629f561ed5952ef3489ea02c8fb29bbc';
+        $.ajax({
+            url: "https://open.ys7.com/api/lapp/token/get ",
+            type: "POST",
+            data: {
+                'appKey': 'a41d6ab50c7b470fba85862de67354c8',
+                'appSecret': '629f561ed5952ef3489ea02c8fb29bbc'
+            },
+            dataType: "json",
+// Error Process Handle
+            error: function () {
+// Show Error Message
+            },
+// Success Process Handle
+            success: function (resData) {
+                console.log(resData);
+
+                getPlayUrl(resData.data.accessToken);
+                getPlayUrl2(resData.data.accessToken);
+            }
+        });
+
+
+    function  getPlayUrl(accessToken)
+    {
+        $.ajax({
+            url: "https://open.ys7.com/api/lapp/v2/live/address/get",
+            type: "POST",
+            data: {
+                'accessToken':accessToken,
+                'deviceSerial': 'F53948749',
+                'code':'253948749',
+                'quality':2,
+                'protocol':1
+            },
+            dataType: "json",
+// Error Process Handle
+            error: function () {
+// Show Error Message
+            },
+// Success Process Handle
+            success: function (resData) {
+            debugger;
+            var ccc=JSON.stringify(resData);
+            var aaa=ccc.url;
+            if(aaa!=undefined){
+                var videoUrl=resData.data.url;
+                alert(videoUrl);
+               
+                playvideo(videoUrl,accessToken);
+                }
+                else{
+var jsDiv = document.getElementById("playWind");
+ 
+jsDiv.innerHTML = "<video id='player' style=' height: 100%; width: 50%;float: left;' src='video/test.mp4' type='video/mp4' controls='controls' controlslist='nodownload' autoplay='autoplay' loop='loop'></video>";
+}
+            }
+        });
+
+    }
+
+    function  playvideo(url,accessToken)
+    {
+        var decoder = new EZUIKit.EZUIPlayer({
+            id: 'playWind',
+            autoplay: true,
+            url: url,
+            accessToken: accessToken,
+            decoderPath: '',
+            width: 600,
+            height: 400,
+            handleError: handleError,
+            handleSuccess: handleSuccess
+        });
+
+    }
+
+    function  getPlayUrl2(accessToken){
+        $.ajax({
+            url: "https://open.ys7.com/api/lapp/v2/live/address/get",
+            type: "POST",
+            data: {
+                'accessToken':accessToken,
+                'deviceSerial': 'F53948684',
+                'code':'253948684',
+                'quality':2,
+                'protocol':1
+            },
+            dataType: "json",
+// Error Process Handle
+            error: function () {
+// Show Error Message
+            },
+// Success Process Handle
+            success: function (resData) {
+
+            var ccc=JSON.stringify(resData);
+            var aaa=ccc.url;
+            if(aaa!=undefined){
+                var videoUrl2=resData.data.url;
+                playvideo2(videoUrl2,accessToken);
+                }
+                else{
+var jsDiv = document.getElementById("playWind2");
+ 
+jsDiv.innerHTML = "<video id='player2' style=' height: 100%; width: 50%;float: right;' src='video/test.mp4' type='video/mp4' controls='controls' controlslist='nodownload' autoplay='autoplay' loop='loop'></video>";
+}
+                var videoUrl2=resData.data.url;
+                playvideo2(videoUrl2,accessToken);
+
+
+            }
+        });
+    }
+    function  playvideo2(url,accessToken)
+    {
+        var decoder2 = new EZUIKit.EZUIPlayer({
+            id: 'playWind2',
+            autoplay: true,
+            url: url,
+            accessToken: accessToken,
+            decoderPath: '',
+            width: 600,
+            height: 400,
+            handleError: handleError,
+            handleSuccess: handleSuccess,
+        });
+
+    }
+
+    function handleError(e){
+        console.log('捕获到错误',e)
+        // log(JSON.stringify(e),'error');
+        //alert(e)
+    }
+    function handleSuccess(){
+        console.log("播放成功回调函数，此处可执行播放成功后续动作");
+    }
+
+    function log(str,className) {
+        var div = document.createElement('DIV');
+        div.className=className || 'normal';
+        div.innerHTML = (new Date()).Format('yyyy-MM-dd hh:mm:ss.S') + JSON.stringify(str);
+        document.body.appendChild(div);
+    }
+        </script>
+</body>
+</html>

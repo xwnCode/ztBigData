@@ -1,0 +1,202 @@
+﻿/*.form{font-family:'微软雅黑';font-size:12px;}*/
+            dl,dt,dd{display:block;margin:0;}
+            a{text-decoration:none; cursor:pointer}
+            #bg{background-image:url(images/content/dotted.png);}
+            .container1{width:180px;height:100%;}
+            
+
+
+
+            /*left*/
+            .menus_area{width:180px;height:auto !important;overflow:visible !important;height:100% !important;}
+          /* .line{height:2px;width:100%;background-image:url(images/left/line_bg.png);background-repeat:repeat-x;}*/
+            .menus_area dt{padding-left:40px;padding-right:10px;background-repeat:no-repeat;background-position:10px center; font-weight:bolder; color:#fff;font-size:10px;position:relative;line-height:40px;cursor:pointer;}
+            .menus_area dd{padding-left:40px;display: none}
+            .menus_area dd a{color:#fff;line-height:25px;}
+            .menus_area dt img{position:absolute;right:10px;top:20px;}
+            .system_log dt{background-image:url(images/left/system.png)}
+            .custom dt{background-image:url(images/left/custom.png)}
+            .channel dt{background-image:url(images/left/channel.png)}
+            .app dt{background-image:url(images/left/app.png)}
+            .cloud dt{background-image:url(images/left/cloud.png)}
+            .syetem_management dt{background-image:url(images/left/syetem_management.png)}
+            .source dt{background-image:url(images/left/source.png)}
+            .statistics dt{background-image:url(images/left/statistics.png)}
+            .menus_area dl dd:last-child{padding-bottom:10px;}
+        
+             .yearText
+    {
+        -moz-border-radius:5px;
+        border-radius:5px;
+        height:27px;
+        border:solid 1px #95B8E7;
+        margin-top:5px;
+        width:260px;
+        }
+.Importbutton
+{
+border:1px solid #008ac7;
+border-radius:7px;
+ color:White;
+
+-moz-border-radius:7px; /* Old Firefox */
+ background-color: #008ac7;
+  
+   font-size:11.0pt;
+    width:90px;
+     height:32px;
+  background: -webkit-linear-gradient(top,#008ac7 0,#008ac7 100%);
+  background: -moz-linear-gradient(top,#008ac7 0,#008ac7 100%);
+  background: -o-linear-gradient(top,#008ac7 0,#008ac7 100%);
+  background: linear-gradient(to bottom,#008ac7 0,#008ac7 100%);
+  background-repeat: repeat-x;
+ 
+}
+.selectbutton
+{
+border:1px solid #008ac7;
+border-radius:7px;
+ color:White;
+-moz-border-radius:7px; /* Old Firefox */
+ background-color: #008ac7;
+   padding:8px;
+   font-size:11.0pt;
+     min-width:70px;
+     min-height:35px;
+  background: -webkit-linear-gradient(top,#008ac7 0,#339999 100%);
+  background: -moz-linear-gradient(top,#008ac7 0,#339999 100%);
+  background: -o-linear-gradient(top,#008ac7 0,#339999 100%);
+  background: linear-gradient(to bottom,#008ac7 0,#339999 100%);
+  background-repeat: repeat-x;
+ 
+}
+.inputFileWrapper label{
+            display: block;
+            float: left;
+            position: relative;
+        }
+        .inputFileWrapper input[type="file"]{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            clip:rect(0,0,0,0);
+        }
+        .inputFileWrapper .custorm-style{
+            display: block;
+            width: 390px;
+            height: 30px;
+        }
+        .inputFileWrapper .custorm-style .left-button{
+            width: 80px;
+            line-height: 32px;
+            font-size:10.0pt;
+            background: #008ac7;
+            color: #fff;
+            display: block;
+            text-align: center;
+            float: left;
+        }
+        .inputFileWrapper .custorm-style .right-text{
+            width: 300px;
+            height: 30px;
+            line-height: 40px;
+            display: block;
+            float: left;
+           font-size:10.0pt;
+            border: 1px solid #95B8E7;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+.pheader
+   {
+      
+     border-top-left-radius:15px;
+  border-top-right-radius:15px;
+ 
+ -moz-border-top-left-radius:15px;
+-moz-border-top-right-radius:15px;    
+/*  background-color: #E0ECFF;
+  background: -webkit-linear-gradient(top,#99CC00 0,#339933 100%);
+  background: -moz-linear-gradient(top,#99CC00 0,#339933 100%);
+  background: -o-linear-gradient(top,#99CC00 0,#339933 100%);
+  background: linear-gradient(to bottom,#99CC00 0,#339933 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99CC00,endColorstr=#339933,GradientType=0);*/
+}
+.ExcpResult
+{
+      margin-top:20px;
+      font-size:10px;
+      border:solid 1px #008ac7;
+      padding:10px;
+      letter-spacing:3px;
+    }
+    .Opreatetable
+    {
+         border-top:solid 1px #000000;
+          border-left:solid 1px #000000;
+          width:550px;
+        }
+ .tdleft
+    {
+         border-bottom:solid 1px #000000;
+        width :15%;
+          border-right:solid 1px #000000;
+          text-align:right;
+          padding-right:3px;
+          font-size:10px;
+         
+          height :30px;
+        }
+         .tdright
+    {
+        border-bottom:solid 1px #000000;
+       width :35%;
+          border-right:solid 1px #000000;
+          text-align:left;
+          padding-left:3px;
+           height :30px;
+           padding:5px 3px;
+        }
+        
+    
+        .tableAct
+        {
+            width: 800px;
+            margin: 0px auto;
+            border-top: solid 1px #008ac7;
+            border-left: solid 1px #008ac7;
+        }
+        .tdleftAct
+        {
+            text-align: right;
+            padding-right: 5px;
+            background-color: #E0ECFF;
+            border-right: solid 1px #008ac7;
+            border-bottom: solid 1px #008ac7;
+            font-size: 10px;
+            width: 100px;
+            height: 33px;
+        }
+        .tdleftSwitchAct
+        {
+            text-align: right;
+            padding-right: 5px;
+            border-right: solid 1px #008ac7;
+            border-bottom: solid 1px #008ac7;
+            font-size: 10px;
+            width: 100px;
+            height: 33px;
+        }
+        .tdrightAct
+        {
+            text-align: left;
+            padding-left: 5px;
+            border-right: solid 1px #008ac7;
+            border-bottom: solid 1px #008ac7;
+            width: 700px;
+            height: 33px;
+        }
+    

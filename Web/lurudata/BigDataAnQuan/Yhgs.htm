@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../../Js/easyui/jquery.min.js" type="text/javascript"></script>
+    <script src="../../Js/easyui/jquery.easyui.min.js" type="text/javascript"></script>
+    <link href="../../Js/easyui/icon.css" rel="stylesheet" type="text/css" />
+    <link href="../../Js/easyui/easyui.css" rel="stylesheet" type="text/css" />
+    <script src="../../Js/easyui/easyui-lang-zh_CN.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="divToolFriendLink">
+        <a href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-add'"
+            onclick="append()">添加</a> <a href="javascript:void(0)" class="easyui-linkbutton"
+                data-options="iconCls:'icon-save'" onclick="accept()">保存</a>
+    </div>
+    <table id="tbFriendLink">
+        <thead>
+            <h3 style="text-align: center;">
+                常发隐患公示录入页面</h3>
+            <tr>
+                <!--<th field="ck" checkbox="true">
+                </th>-->
+                <th data-options="field:'YH',editor:'text',width: 240">
+                    隐患内容
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <script type="text/javascript">
+        $('#tbFriendLink').datagrid({
+            iconCls: 'icon-edit', //图标 
+            singleSelect: false, //是否单选 
+            toolbar: '#divToolFriendLink',
+            nowrap: false,
+            striped: true,
+            border: true,
+            collapsible: false, //是否可折叠的               
+            url: '../BigDataAnQuan/NewGetYhgs.ashx',
+            remoteSort: false,
+            rownumbers: true, //行号           
+            queryParams: {
+                operate: 'List'
+            }
+        });
+
+        function date(value, row, index) {
+            var timestamp = value;
+            var date = new Date(parseInt(timestamp.replace("/Updatetime(", "").replace(")/", ""), 10));
+            Y = date.getFullYear() + '-';
+            M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ';
+            h = (date.getHours() < 10 ? '0' + (date.getHours()) : date.getHours()) + ':';
+            m = (date.getMinutes() < 10 ? '0' + (date.getMinutes()) : date.getMinutes()) + ':';
+            s = (date.getSeconds() < 10 ? '0' + (date.getSeconds()) : date.getSeconds());
+            //var NewDtime = Y + M + D + h + m + s;
+            var NewDtime = Y + M + D;
+            return NewDtime;
+        }
+
+
+        var editIndex = undefined;
+        function endEditing() {
+            if (editIndex == undefined) { return true }
+            if ($('#tbFriendLink').datagrid('validateRow', editIndex)) {
+
+                $('#tbFriendLink').datagrid('endEdit', editIndex);
+                editIndex = undefined;
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function onClickRow(index) {
+            if (editIndex != index) {
+                if (endEditing()) {
+                    $('#tbFriendLink').datagrid('selectRow', index)
+							.datagrid('beginEdit', index);
+                    editIndex = index;
+                } else {
+                    $('#tbFriendLink').datagrid('selectRow', editIndex);
+                }
+            }
+        }
+
+        var item = 0;
+        function append() {
+            debugger;
+            if (item == 0) {
+                if (endEditing()) {
+                    debugger;
+                    $('#tbFriendLink').datagrid('appendRow', { IsView: '展示' });
+                    editIndex = $('#tbFriendLink').datagrid('getRows').length - 1;
+                    $('#tbFriendLink').datagrid('selectRow', editIndex)
+						.datagrid('beginEdit', editIndex);
+                }
+                item = item + 1;
+            }
+        }
+
+        function removeit() {
+            debugger;
+            if (editIndex == undefined) { return }
+            $('#tbFriendLink').datagrid('cancelEdit', editIndex)
+					.datagrid('deleteRow', editIndex);
+            editIndex = undefined;
+        }
+
+        function accept() {
+            if (endEditing()) {
+                if ($('#tbFriendLink').datagrid('getChanges').length) {
+                    var updated = $('#tbFriendLink').datagrid('getChanges', "updated");
+                    var inserted = $('#tbFriendLink').datagrid('getChanges', "inserted");
+                    var deleted = $('#tbFriendLink').datagrid('getChanges', "deleted");
+                    var effectRow = new Object();
+                    if (inserted.length) {
+                        effectRow["inserted"] = JSON.stringify(inserted);
+                    }
+                    if (deleted.length) {
+                        effectRow["deleted"] = JSON.stringify(deleted);
+                    }
+                    if (updated.length) {
+                        effectRow["updated"] = JSON.stringify(updated);
+                    }
+                    $.post("../BigDataAnQuan/GetYhgs.ashx", effectRow, function (rsp) {
+                        if (rsp.statu) {
+                            alert(rsp.Message);
+                            item = item - 1;
+                            $('#tbFriendLink').datagrid('acceptChanges');
+                            window.location.reload(); 
+                        } else {
+                            alert(rsp.Message);
+                        }
+                    }, "JSON").error(function () {
+                        $.messager.alert("提示", "提交错误了！");
+                    });
+                }
+            }
+        }
+
+        function reject() {
+            $('#tbFriendLink').datagrid('rejectChanges');
+            editIndex = undefined;
+        }
+
+        function getChanges() {
+            var rows = $('#tbFriendLink').datagrid('getChanges');
+            alert(rows.length + ' rows are changed!');
+        }
+
+        function Search() {
+            var Name = document.getElementById("Name").value;
+            //var LinkUrl = document.getElementById("LinkUrl").value;
+            $('#tbFriendLink').datagrid({
+                url: 'sgzd.ashx',
+                queryParams: {
+                    Name: Name
+                    //LinkUrl: LinkUrl,                   
+                }
+            })
+        }
+
+        function Add() {
+            var rows = $('#tbFriendLink').datagrid('getSelections');
+            var ed = $('#tbFriendLink').data('getSelections');
+            var effectRow = new Object();
+
+            debugger;
+            var edg = JSON.stringify(ed);
+            alert(edg);
+            effectRow["Add"] = JSON.stringify(rows);
+            var aaa = JSON.stringify(rows);
+            alert(aaa);
+            effectRow["operate"] = "Add";
+            if (rows.length >= 1) {
+                $.post("../BigDataAnQuan/GetYhgs.ashx", effectRow, function (rsp) {
+                    if (rsp) {
+                        alert("下发成功");
+                        $('#tbFriendLink').datagrid('reload');
+                    } else {
+                        alert(effectRow);
+                        alert(rsp.Message);
+                    }
+                }, "JSON").error(function () {
+                    alert(effectRow);
+                    $.messager.alert("提示", "下发失败！");
+                });
+            } else {
+                alert('请选择一条数据！');
+            }
+        }
+    </script>
+</body>
+</html>

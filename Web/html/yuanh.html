@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts半圆环形图</title>
+    <script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.bootcss.com/echarts/3.5.4/echarts.min.js"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id='consume_pie' style="width:500px;height:400px;margin-left:20px;"> </div>
+</body>
+</html>
+<script type="text/javascript">
+    loadRingChart();	//加载半圆环形图
+ 
+    //加载半圆环形图
+    function  loadRingChart (){
+        var myChart = echarts.init(document.getElementById( 'consume_pie' ));	//图表的ID
+        var option = {
+            title: {
+                "text": '姓名',
+                subtext:'1516',
+                itemGap:3,
+                "x": '49%',
+                "y": '62%',
+                textAlign: "center",
+                "textStyle": {
+                    "fontWeight": 'normal',
+                    "fontSize": 12,
+                    color:'#aaaaaa'
+                },
+                "subtextStyle": {
+                    "fontWeight": 'normal',
+                    "fontSize": 12,
+                    color:'#aaaaaa',
+                    lineHeight:14
+                }
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)",
+                position: ['10%', '50%']
+            },
+            /*legend: {
+                x: 'left',
+                data:['视频','影院','直播']
+            },*/
+            "color": ["#0696ff","#7ed321","#ffc31a", "transparent"],
+            "startAngle": 180,
+            series: [
+                {
+                    name:'',
+                    type:'pie',
+                    radius: ['45%', '90%'],
+                    avoidLabelOverlap: false,
+                    startAngle: 180,
+                    center:["50%","70%"],
+                    label: {
+                        normal: {
+                            position: 'inner',
+                            textStyle: {
+                                color: '#fff',
+                                fontSize: 12
+                            }
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '12',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data:[{value:335, name:'姓名0'},{value:310, name:'姓名1'},{value:234, name:'姓名2'},{value:879, name:'',tooltip:{formatter:function(a){return ""}}}]
+                }
+            ]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption( option );
+    }
+</script>

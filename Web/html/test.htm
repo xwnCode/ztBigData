@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+<!--<iframe
+  src="https:\/\/open.ys7.com\/ezopen\/h5\/iframe?url=ezopen:\/\/open.ys7.com\/D45486082\/1.live&autoplay=1&accessToken=ra.5rd0f7fq7xq9xw440h3gxqpa7fqw2fmb-3gn3o01q2w-0njfm4k-k4kipcwhi"
+  width="600"
+  height="400"
+  id="3333"
+  allowfullscreen
+  autoplay
+>
+</iframe>-->
+<iframe
+  src="ezopen:\/\/open.ys7.com\/E89793816\/1.live&autoplay=1&accessToken=ra.5rd0f7fq7xq9xw440h3gxqpa7fqw2fmb-3gn3o01q2w-0njfm4k-k4kipcwhi"
+  width="600"
+  height="400"
+  id="ysOpenDevice"
+  
+>
+</iframe>
+<script type="text/javascript">
+/* 获取播放器元素 */
+var player = document.getElementById('ysOpenDevice').contentWindow;
+/* iframe 支持方法 */
+player.postMessage("play", "https://open.ys7.com/ezopen/h5/iframe") /* 播放 */
+player.postMessage("stop", "https://open.ys7.com/ezopen/h5/iframe") /* 结束 */
+player.postMessage("capturePicture", "https://open.ys7.com/ezopen/h5/iframe") /* 截图 */
+player.postMessage("openSound", "https://open.ys7.com/ezopen/h5/iframe") /* 开启声音 */
+player.postMessage("closeSound", "https://open.ys7.com/ezopen/h5/iframe") /* 关闭声音 */
+player.postMessage("startSave", "https://open.ys7.com/ezopen/h5/iframe") /* 开始录制 */
+player.postMessage("stopSave", "https://open.ys7.com/ezopen/h5/iframe") /* 结束录制 */
+</script>
+</body>
+</html>

@@ -1,0 +1,1342 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="js/artDialog/skins/default.css" type="text/css" />
+
+    <script src="js/laydate.js"></script>
+    <script src="js/Home_page.js"></script>
+    <meta charset="UTF-8">
+    <title>中铁武汉电气化局调度指挥大数据平台-玉磨项目</title>
+    <style>
+        .boxRader {
+            position: relative;
+            width: 100%;
+            height: 80%;
+        }
+        .divtips{
+    width: 15%;
+    float:left;
+    margin-left:30px;
+    margin-top:20px;
+    padding-left:1%;
+    font-size:11.0pt;
+    height: 23px;
+    line-height:23px;
+     color:#ffffff;
+    background-image: url("img/images/tips1.png");
+    background-size: 100% 100%;
+   
+
+
+}
+ .divtips2{
+    width: 15%;
+    float:left;
+    margin-left:30px;
+    margin-top:20px;
+     font-size:11.0pt;
+    padding-left:1%;
+    height: 23px;
+    line-height:23px;
+     color:#ffffff;
+    background-image: url("img/images/tips2.png");
+    background-size: 100% 100%;
+   
+
+
+}
+        .centerBox {
+            width: 75%;
+            margin-right: 15px;
+            background: transparent;
+        }
+
+        .boxFont {
+            font-size: 1.2vw;
+        }
+
+        .centerMainBox1 {
+            width: 100%;
+            height: 60.5%;
+        }
+
+        .centerMainBox2 {
+            width: 100%;
+            height: 38.5%;
+            position: relative;
+            margin-top: 15px;
+        }
+
+        .centerMainBox2 img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .boxTitle2 {
+            width: 100%;
+            height: 10%;
+            font-size: .6vw;
+            text-align: center;
+            line-height: 10%;
+            margin-top: 1vw;
+            color: #0efcff;
+        }
+
+        .boxLis {
+            width: 70%;
+            height: 1.5vw;
+            margin-left: 3vw;
+            margin-top: 1vw;
+            border-bottom: .02vw solid rgb(40, 229, 233);
+        }
+
+        .boxLis>li {
+            width: 4vw;
+            height: 1.4vw;
+            display: block;
+            background: rgba(40, 229, 233, .5);
+            margin-right: .5vw;
+            color: #fff;
+            line-height: 1.4vw;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .active {
+            border-bottom: .02vw solid #040A18;
+            border-top: .02vw solid rgb(40, 229, 233);
+            border-right: .02vw solid rgb(40, 229, 233);
+            border-left: .02vw solid rgb(40, 229, 233);
+        }
+
+        .contList {
+            position: relative;
+            width: 70%;
+            height: 7vw;
+            margin: 1vw auto 0;
+
+        }
+
+        .content1 li {
+            display: none;
+        }
+
+        .baseBox {
+            width: 100%;
+            border: none;
+            background: none;
+        }
+
+        .boxTitle {
+            font-size: .8vw;
+            width: 38%;
+            margin-top: 1vw;
+            text-align: center;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .baseBoxLeft {
+            width: 30%;
+            height: 95%;
+            position: relative;
+        }
+
+        .baseBoxRight {
+            width: 68%;
+            height: 75%;
+        }
+
+        .baseBoxLeft img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .maps {
+            width: 100%;
+            height: 95%;
+            margin-top: 2%;
+            background: pink;
+        }
+
+        .baseBox1,
+        .baseBox2,
+        .baseBox3 {
+            position: relative;
+        }
+
+        .baseBox1 img,
+        .baseBox2 img,
+        .baseBox3 img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .csbaseBox1 {
+            position: relative;
+            z-index: 999;
+        }
+    </style>
+    <style>
+        .liSpan {
+            width: 100%;
+            margin-top: 3.2%;
+            text-align: center;
+            color: rgb(40, 229, 233);
+        }
+
+        .liP {
+            width: 66%;
+            margin: .3vw auto 0;
+            text-align: left;
+            font-size: .5vw;
+            color: rgb(40, 229, 233);
+        }
+
+        a:hover {
+            text-decoration: none
+        }
+
+        .titleName {
+            color: #0EFCFF;
+        }
+
+        /* 种植 */
+        .plant {
+            width: 90%;
+            height: 5.5vw;
+            margin: 2% auto 0;
+            display: -webkit-flex;
+            display: -moz-flex;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+        }
+
+        .plant>li {
+            width: 30%;
+            height: 100%;
+            float:left;
+            margin-left:3%;
+        }
+
+        .jumps {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 235, 255, 0.3);
+            display: -webkit-flex;
+            -webkit-flex-direction: column;
+            -webkit-justify-content: space-between;
+            display: -moz-flex;
+            -moz-flex-direction: column;
+            -moz-justify-content: space-between;
+        }
+
+        .jumps>div>img {
+            width: .88vw;
+            height: .88vw;
+            float: right;
+        }
+
+        .jumps>p {
+            width: 90%;
+            float:left;
+            color:Yellow;
+          
+            font-size: 1.3vw;
+           
+             padding-top:10%;
+            padding-left: 9px;
+        }
+
+        .jumps>div {
+            width: 90%;
+            margin: 5% auto 0;
+        }
+
+        .jumps>div>span 
+        { 
+            margin-top:3px;
+            font-size: 0.8vw;
+             color : #0efcff;
+            float: left;
+        }
+
+        .spans0 {
+            width: 80%;
+            height: 5%;
+            float:left;
+            margin-top:5%;
+            background-color: #03DA8D;
+        }
+
+        .spans1 {
+            width: 80%;
+            height: 5%;
+               float:left;
+            margin-top:5%;
+            background-color: #0efcff;
+        }
+
+        .spans2 {
+            width: 80%;
+            height: 5%;
+               float:left;
+            margin-top:5%;
+            background-color: #FE0000;
+        }
+
+        .spans3 {
+            width: 80%;
+            height: 5%;
+               float:left;
+            margin-top:5%;
+            background-color: #F78001;
+        }
+
+        .boxVideo {
+            width: 100%;
+            height: 100%;
+        }
+
+        .boxVideo video {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .baseDatas {
+            width: 70%;
+            height: 2vw;
+            display: -webkit-flex;
+            -webkit-justify-content: space-between;
+            margin: 1vw 0 0 5vw;
+
+        }
+
+        .baseDatas li {
+            width: 10%;
+        }
+
+        .baseDatas li a {
+            color: #fff;
+            font-size: .8vw;
+        }
+
+        .active2 a>span {
+            color: rgb(40, 229, 233);
+        }
+
+        .baseDatas li a:hover>span {
+            color: rgb(40, 229, 233);
+        }
+
+        .baseDatas li a:hover>.borderRight {
+            border-left-color: rgb(40, 229, 233);
+        }
+
+        .tableDetalis {
+            width: 92%;
+            color: #fff;
+            margin-left: 2vw;
+        }
+
+        .tableDetalis tr {
+            height: 1.3vw;
+            font-size: .8vw;
+        }
+
+        .tableDetalis tr>td {
+            text-align: center;
+        }
+
+        .tableDetalis tr>td:nth-child(7) {
+            text-align: right;
+        }
+
+        .borderRight {
+            width: 0;
+            height: 0;
+            float: left;
+            border: .4vw solid transparent;
+            border-left-color: #fff;
+            margin-top: .2vw;
+        }
+
+        .borderActive {
+            border-left-color: rgb(40, 229, 233);
+        }
+
+        .equipment_table {
+            width: 85%;
+            height: 25%;
+            margin: auto;
+            text-align: center;
+            color: #fff;
+            font-size: .5vw;
+        }
+
+        .equipment_table tr:nth-child(1) {
+            color: #0EFCFF;
+        }
+
+        .equipment_table tr {
+            border: 1px solid#0EFCFF;
+        }
+
+        .equipment_table tr:nth-child(1) {
+            font-size: .8vw;
+        }
+
+        .equipment_table img {
+            width: 1vw;
+        }
+
+        .env_table {
+            height: 35%;
+            margin-top: 5%;
+        }
+
+        .env_table td {
+            border: 1px solid#0EFCFF;
+        }
+
+        .env_table tr:nth-child(1) {
+            background: rgba(14, 252, 255, .3);
+        }
+
+        .map img {
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .map img {
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        .mapActived1 {
+            position: absolute;
+            top: 41.5%;
+            left: 61%;
+            width: 3.5vw;
+            height: 5.5vw;
+            border-radius: 90px;
+            cursor: pointer;
+        }
+
+        .mapActived2 {
+            position: absolute;
+            top: 60%;
+            right: 16%;
+            width: 4.5vw;
+            height: 2.5vw;
+            cursor: pointer;
+        }
+
+        .mapActived3 {
+            position: absolute;
+            top: 57%;
+            right: 9%;
+            width: 2.5vw;
+            height: 7vw;
+            cursor: pointer;
+        }
+
+        .mapContent1 {
+            position: absolute;
+            height: 6vw;
+            width: 8vw;
+            left: 65%;
+            top: 33%;
+            background: rgba(255, 255, 255, .2);
+        }
+
+        .mapContent2 {
+            position: absolute;
+            height: 6vw;
+            width: 8vw;
+            left: 70%;
+            top: 35%;
+            background: rgba(255, 255, 255, .2);
+            display: none;
+        }
+
+        .mapContent3 {
+            position: absolute;
+            height: 6vw;
+            width: 8vw;
+            right: 1%;
+            top: 35%;
+            background: rgba(255, 255, 255, .2);
+            display: none;
+        }
+
+
+        .mapContentFont {
+            width: 85%;
+            margin-left: 12%;
+            font-size: .6vw;
+            color: #0efcff;
+            letter-spacing: .05vw;
+            margin-bottom: .3vw;
+        }
+
+        .mapContentFont:nth-child(1) {
+            margin-top: .6vw;
+        }
+
+        .mapContentFont span {
+            color: white;
+        }
+
+        /* lafite video样式 */
+        .video-js {
+            width: 100%;
+            height: 100%;
+        }
+        .video-js:hover .vjs-big-play-button {
+            background: none;
+        }
+        .video-js .vjs-big-play-button:hover {
+            background: none;
+        }
+        .video-js .vjs-big-play-button {
+            border: none;
+            background: none;
+        }
+    </style>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div class="data_bodey">
+        <div class="nav" style="font-size: 23px; letter-spacing: 0px">中铁武汉电气化局调度指挥大数据平台-玉磨项目</div>
+        <div class="nav_btn">
+       
+            <div class="btn_left">
+                <a href="">
+                    <div class="btn_list ">首页</div>
+                </a>
+                <a href="">
+                    <div class="btn_list">调度</div>
+                </a>
+                <a href="jindu.html">
+                    <div class="btn_list">进度</div>
+                </a>
+                <a href="../zrzdata/html/anquan.html">
+                    <div class="btn_list">安全质量</div>
+                </a>
+                <a href="wuzi.html">
+                    <div class="btn_list">物资</div>
+                </a>
+            </div>
+            <div class="btn_right">
+                <a href="equipment.html">
+                    <div class="btn_list listActive">机械设备</div>
+                </a>
+                <a href="wanbi.html">
+                    <div class="btn_list">腕臂预配</div>
+                </a>
+                <a href="diaoxuan.html">
+                    <div class="btn_list">接触网吊弦</div>
+                </a>
+                <a href="chenben.html">
+                    <div class="btn_list">成本</div>
+                </a>
+                <a href="../zrzdata/html/work.html">
+                    <div class="btn_list">综合作业</div>
+                </a>
+            </div>
+        </div>
+        <div class="index_tabs">
+            <div class="inner" style="height: 109%;">
+                <div class="left_cage">
+                    <div class="dataAllBorder01 cage_cl" style=" height: 34%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        项目基本信息</div>
+                                </div>
+                            </div>
+                            <div   style="width:86%; height:72px;margin:50px 7% 10px 7%;  ">
+                            
+                            <table style="width:100%;   height:100%">
+                            <tr>
+                            <td  class="data_cage_bj" style="width:13%; text-align:center" rowspan="2">
+                            <img src="img/images/金额.png" width="48px" />
+                            </td >
+                                <td style="color:#ffffff; width:66%; font-size:12.0pt;  padding-left:8px">合同金额</td>
+                            </tr>
+                              <tr>
+                              <td style="color:Yellow;  width:66%; font-size:25.0pt; font-weight:bold;padding-left:8px">150674万元</td>
+                            
+                            </tr>
+                            </table>
+                            </div>
+                            <div   style="width:86%; height:52px;margin:18px 7%;background-color:#052346; ">
+                            
+                            <table style="width:100%;   height:100%">
+                            <tr>
+                            <td  class="data_cage_bj" style="width:13%; text-align:center" >
+                            <img src="img/images/里程.png" width="48px" />
+                            </td >
+                                <td style="color:#ffffff; width:66%; font-size:12.0pt;  padding-left:8px">开通里程：384.24km</td>
+                            </tr>
+                            
+                            </table>
+                            </div>
+                              <div   style="width:86%; height:52px;margin:12px 7%;background-color:#052346; ">
+                            
+                            <table style="width:100%;   height:100%">
+                            <tr>
+                            <td  class="data_cage_bj" style="width:13%; text-align:center" >
+                            <img src="img/images/消息.png" width="48px" />
+                            </td >
+                                <td style="color:#ffffff; width:66%; font-size:12.0pt;  padding-left:8px">项目负责人及联系电话：</td>
+                            </tr>
+                            
+                            </table>
+                            </div>
+                              <div   style="width:86%; height:52px;margin:12px 7%;background-color:#052346; ">
+                            
+                            <table style="width:100%;   height:100%">
+                            <tr>
+                            <td  class="data_cage_bj" style="width:13%; text-align:center" >
+                            <img src="img/images/钟表.png" width="48px" />
+                            </td >
+                                <td style="color:#ffffff; width:66%; font-size:12.0pt;  padding-left:8px">合同竣工时间：2020-12-11</td>
+                            </tr>
+                            
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 29.5%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        进度</div>
+                                </div>
+                            </div>
+                            <div style="width:100%;   height:90%; ">
+                              <table style="width:70%; height:85%; margin-top:5%; margin-bottom:7%; margin-left:15%; margin-right:15%;  ">
+                            <tr style=" height:40% ; ">
+                            <td   style="width:20%;text-align:center" >
+                           <img src="img/images/合同额2.png" width="48px" />
+                            </td >
+                               <td   style="width:20%; text-align:center" >
+                           
+                            </td >
+                                  <td   style="width:20%; text-align:center" >
+                             <img src="img/images/产值.png" width="48px" />
+                            </td >
+                             <td   style="width:20%; text-align:center" >
+                      
+                            </td >
+                             <td   style="width:20%; text-align:center" >
+                          <img src="img/images/计划.png" width="48px" />
+                            </td >
+                            </tr>
+                              <tr style=" height:10% ;">
+                            <td   style="width:20%;text-align:center" >
+                             <span style="color:Yellow; font:13pt bold">合同额</span>  
+                            </td >
+                               <td   style="width:20%; text-align:center" >
+                           
+                            </td >
+                                  <td   style="width:13%; text-align:center" >
+                   <span style="color:Yellow; font:13pt bold">已完产值</span>  
+                            </td >
+                             <td   style="width:20%; text-align:center" >
+                      
+                            </td >
+                             <td   style="width:20%; text-align:center" >
+                     <span style="color:Yellow; font:13pt bold">今日计划</span>  >  
+                            </td >
+                            </tr>
+                            <tr style=" height:50% ;">
+                        <td   style="width:20%;text-align:center; padding-top:0px" >
+                          <span style="color:Yellow; font:18pt bold">1400</span> <span  style="color:#ffffff; font:10pt bold">万元</span> 
+                            </td >
+                               <td   style="width:20%; text-align:center" >
+                           
+                            </td >
+                                  <td   style="width:20%; text-align:center" >
+                             <span style="color:Yellow; font:18pt bold">670</span> <span  style="color:#ffffff; font:10pt bold">万元</span> 
+                            </td >
+                             <td   style="width:20%; text-align:center" >
+                      
+                            </td >
+                             <td   style="width:20%; text-align:center" >
+                          <span style="color:Yellow; font:18pt bold">67</span> <span  style="color:#ffffff; font:10pt bold">万元</span> 
+                            </td >
+                            </tr>
+                            </table>
+                            </div>
+                          
+                          
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 30%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        安全质量责任落实</div>
+                                </div>
+                            </div>
+                           <div style="width:100%; height :95%">
+                           <img src="img/images/333.jpg" width="100%"  />
+                           </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center_cage">
+                    <div class="dataAllBorder01 cage_cl" style="  height: 95%; ">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <div style="width: 100%; height: 70px; position: absolute ;top: 30px; z-index: 30">
+                             <div   style="width:28%; height:72px;background-color:#3972b5;padding:6px; margin-left:5%;  float:left">
+                            
+                            <table style="width:100%;   height:100%">
+                            <tr>
+                            <td  class="data_cage_bj" style="width:33%; text-align:center" rowspan="2">
+                            <img src="img/images/工程.png" width="48px" />
+                            </td >
+                                <td style="color:#ffffff; width:66%; font-size:12.0pt;  padding-left:8px">关键工程</td>
+                            </tr>
+                              <tr>
+                              <td style="color:Yellow;  width:66%; font-size:15.0pt;padding-left:8px">10个</td>
+                            
+                            </tr>
+                            </table>
+                            </div>
+                                  <div   style="width:28%; height:72px;background-color:#3972b5;padding:6px; margin-left:3%;  float:left">
+                                  
+                                        <table style="width:100%;  height:100%">
+                            <tr>
+                            <td  class="data_cage_bj" style="width:33%;text-align:center" rowspan="2">
+                            <img src="img/images/火车.png"  width="48px"/>
+                            </td>
+                                <td  style="color:#ffffff;  width:66%; font-size:12.0pt; padding-left:8px">轨道车</td>
+                            </tr>
+                              <tr>
+                              <td style="color:Yellow;  width:66%; font-size:15.0pt;padding-left:8px ">5辆</td>
+                            
+                            </tr>
+                            </table>
+                                  </div>
+                                   <div   style="width:28%; height:72px;background-color:#3972b5;padding:6px; margin-left:3%;  float:left">
+                                  
+                                        <table style="width:100%;  height:100%">
+                            <tr>
+                            <td  class="data_cage_bj" style="width:33%;text-align:center" rowspan="2">
+                            <img src="img/images/摄像头.png"  width="48px"/>
+                            </td>
+                                <td  style="color:#ffffff;  width:66%; font-size:12.0pt;padding-left:8px ">摄像头</td>
+                            </tr>
+                              <tr>
+                              <td style="color:Yellow;  width:66%; font-size:15.0pt;padding-left:8px ">100个</td>
+                            
+                            </tr>
+                            </table>
+                                  </div>
+                            </div>
+
+                            <div class="map" id="map">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="right_cage">
+                    <!--顶部切换位置-->
+                    <div class="dataAllBorder01 cage_cl check_decrease" style=" height: 34%">
+                        <div class="dataAllBorder02 over_hide" style="padding: 1.2%;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        通知公告</div>
+                                </div>
+                            </div>
+                            <div style="width: 98%; border:solid 1px transparent; margin-top:20px">
+                                <div class="divtips">
+                                    2021-7-27</div>
+                                <div style="width: 80%; line-height: 23px; color: #ffffff; letter-spacing:2px;margin-top: 20px; margin-left:15px; font-size: 12.0pt">
+                                    集团发布2021年度年度计划</div>
+                            </div>
+                            <div style="width: 98% ;border:solid 1px transparent">
+                                <div class="divtips2">
+                                    2021-7-27</div>
+                                <div style="width: 80%; line-height: 23px; color: #ffffff; letter-spacing:2px;margin-top: 20px;margin-left:15px; font-size: 12.0pt">
+                                    关于下达玉磨项目部2021年7月份施工生产计划</div>
+                            </div>
+                            <div style="width: 98%;border:solid 1px transparent">
+                                <div class="divtips2">
+                                    2021-6-27</div>
+                                <div style="width: 80%; line-height: 23px; color: #ffffff; letter-spacing:2px;margin-top: 20px;margin-left:15px; font-size: 12.0pt">
+                                   关于下达玉磨项目部2021年6月份施工生产计划</div>
+                            </div>
+                            <div style="width: 98%;border:solid 1px transparent">
+                                <div class="divtips2">
+                                    2021-5-27</div>
+                                <div style="width: 80%; line-height: 23px; color: #ffffff;letter-spacing:2px; margin-top: 20px;margin-left:15px; font-size: 12.0pt">
+                                    关于下达玉磨项目部2021年5月份施工生产计划</div>
+                            </div>
+                            <div style="width: 98%;border:solid 1px transparent">
+                                <div class="divtips2">
+                                    2021-4-16</div>
+                                <div style="width: 80%; line-height: 23px; color: #ffffff; letter-spacing:2px;margin-top: 20px;margin-left:15px; font-size: 12.0pt">
+                                  关于下达玉磨项目部2021年4月份施工生产计划</div>
+                            </div>
+                            <div style="width: 98%;border:solid 1px transparent">
+                                <div class="divtips2">
+                                    2021-3-16</div>
+                                <div style="width: 80%; line-height: 23px; color: #ffffff;  letter-spacing:2px; margin-top: 20px;margin-left:15px; font-size: 12.0pt">
+                                  关于下达玉磨项目部2021年3月份施工生产计划</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 1.5% !important;
+                        height: 34%; position: relative;">
+                        <div class="dataAllBorder02 over_hide" style="padding: 1.2%;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%;  ">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        当日施工安排</div>
+                                </div>
+                            </div>
+                            <table id="table" style="width: 100%">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/echarts.min.js"></script>
+
+    <script src="js/index.js"></script>
+    <script src="js/bstable/js/bootstrap-table.js"></script>
+    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+    <script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5ieMMexWmzB9jivTq6oCRX9j&callback"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+    <script src="js/Home_page.js"></script>
+    <script src="js/artDialog/artDialog.js"></script>
+    <script src="js/artDialog/plugins/iframeTools.source.js"></script>
+    <script>
+        $(function () {
+            BindTZGG();
+           BootstrapTable();
+
+            EchartPies();
+
+            EchartPiesTwo();
+          
+        });
+
+
+        function BootstrapTable() {
+            $('#table').bootstrapTable({
+                method: "get",
+                striped: true,
+                singleSelect: false,
+                url: "json/index.json",
+                dataType: "json",
+                search: false, //显示搜索框
+                contentType: "application/x-www-form-urlencoded",
+                columns: [
+                {
+                    title: '序号',
+                    field: 'xh1',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '材料名称',
+                    field: 'clmc',
+                    align: 'center'
+                },
+                {
+                    title: '型号',
+                    field: 'xh',
+                    width: 80,
+                    height: 58,
+                    align: 'center'
+                },
+                {
+                    title: '进场日期',
+                    field: 'jcrq',
+                    width: 80,
+                    height: 58,
+                    align: 'center'
+                },
+                {
+                    title: '进场数量(万)',
+                    field: 'jcsl',
+                    width: 80,
+                    height: 58,
+                    align: 'center'
+                }
+            ]
+            });
+         
+        }
+
+        function BindTZGG() {
+            $('#tzgg').bootstrapTable({
+                method: "get",
+                striped: true,
+                singleSelect: false,
+                url: "json/tzgg.json",
+                dataType: "json",
+                search: false, //显示搜索框
+                contentType: "application/x-www-form-urlencoded",
+                columns: [
+                {
+                    title: '标题',
+                    field: 'bt',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '通知日期',
+                    field: 'tzrq',
+                    width: 180,
+                    align: 'center'
+                }
+            ]
+            });
+        }
+        function EchartPies() {
+            var myChart = echarts.init($("#buyTime1")[0]);
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                calculable: false,
+                legend: {
+                    //orient: 'vertical',
+                    textStyle: {
+                        color: '#fff'
+                    },
+
+                    bottom: 'bottom',
+                    //data: ['闲置', '维修', '在用']
+                    data: [{ name: '闲置', icon: 'rect' }, { name: '维修', icon: 'circle' }, { name: '在用', icon: 'circle'}]
+                },
+                series: [
+        {
+
+            type: 'pie',
+            "label": {
+                "normal": {
+                    "show": true,
+                    "textStyle": {
+                        "color": "#fff",
+                        "fontSize": 17
+                    }
+                },
+                "emphasis": {
+                    "show": true
+                }
+            },
+
+
+            funnelAlign: 'left',
+            max: 1048,
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: true,
+                        formatter: function (val) {
+                            return val.name + "(" + val.value + "%)";
+                        }
+                    }
+                }
+            },
+
+            data: [
+                { value: 38, name: '闲置' },
+                { value: 4, name: '维修' },
+                { value: 54, name: '在用' }
+            ]
+        }
+    ]
+            };
+            myChart.setOption(option);
+        }
+
+
+        function EchartPiesTwo() {
+            var myChart = echarts.init($("#buyTime2")[0]);
+            option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                calculable: false,
+                series: [
+        {
+            name: '设备种类分析',
+            type: 'pie',
+
+
+            funnelAlign: 'left',
+            max: 1048,
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: true,
+                        "textStyle": {
+                            "color": "#fff",
+                            "fontSize": 17
+                        },
+                        formatter: '{b} : {c} ({d}%)'
+                    }
+                }
+            },
+
+            data: [
+                { value: 39.8, name: '线路设备' },
+                { value: 60.2, name: '检测设备' },
+                { value: 39.8, name: '进切机车' },
+                { value: 39.8, name: '杜牧机械' },
+                { value: 39.8, name: '土方木机械' },
+                { value: 39.8, name: '起重机械' },
+                { value: 39.8, name: '运输机械' },
+                { value: 39.8, name: '方木机械' },
+                { value: 39.8, name: '重机械' },
+                { value: 39.8, name: '检测机械' }
+            ]
+        }
+    ]
+            };
+            myChart.setOption(option);
+        }
+    </script>
+    <script type="text/javascript">
+        var chartDom = document.getElementById('map');
+        var myChart = echarts.init(chartDom,null, {devicePixelRatio: 2.5});
+        var option;
+        var trainPath="path://M807.4 938.5c-139.5-8-250.2-31.7-250.2-173.2v-95.5c0-35.5 72.5-64.3 108-64.3h0.3l0.9-152.4c0-8.5-6.9-15.4-15.4-15.4H373.2c-8.5 0-15.4 6.9-15.4 15.4l0.6 148.7c33.6 2.1 103.8 30 103.8 64.1v95.5c0 142.2-111.8 168.4-252.3 175.3l-0.1 0.3 0.9 71.5c0 8.5 6.9 15.4 15.4 15.4h568.1c8.5 0 15.4-6.9 15.4-15.4l-0.8-69.8-1.4-0.2zM598.2 64.5V18.6c0-8.5-6.9-15.4-15.4-15.4H428.6c-8.5 0-15.4 6.9-15.4 15.4V67C212.1 111.8 61.7 291.3 61.7 506c0 153.6 77 289.2 194.4 370.3l42.7-136.7C236 681 196.7 597.4 196.7 504.7c0-177.4 143.8-321.3 321.3-321.3s321.3 143.8 321.3 321.3c0 97.9-43.8 185.5-112.8 244.5l40.1 127.4C884.2 795.4 961.4 659.7 961.4 506c0-218.8-156.2-401.1-363.2-441.5z";
+
+        var data = [
+            {name: '玉磨轨道车', value: 90}
+
+        ];
+        var trainLines=[
+            [102.4915401,24.27319314],
+            [102.468991,24.2448615],
+            [102.3955129,24.20184669],
+            [102.3712442,24.16349125],
+            [102.3330664,24.13620444],
+            [102.2977026,24.1054703888889],
+            [102.2628033,24.07414456],
+            [102.2286734,24.04418606],
+            [102.1978975,24.02291819],
+            [102.2286734,24.0441860555556],
+            [102.1903129,24.01767475],
+            [102.1514396,23.99078792],
+            [102.0510864,23.79714383],
+            [101.9883368,23.74573461],
+            [101.9438368,23.63736733],
+            [101.8917246,23.56478067],
+            [101.8856431,23.49196083],
+            [101.7937196,23.46035019],
+            [101.7127257,23.40338406],
+            [101.6763976,23.31939194],
+            [101.6080913,23.25706367],
+            [101.5296939,23.20952856],
+            [101.4607124,23.14905003],
+            [101.3630769,23.14205439],
+            [101.2675651,23.15463733],
+            [101.1710782,23.14040256],
+            [101.0888616,23.10857497],
+
+            [101.0598264,23.02577692],
+            [101.0077967,22.94228906],
+            [100.958856,22.86380206],
+            [100.9407668,22.78205483],
+            [100.9564149,22.69480956],
+            [100.9396657,22.60673669],
+            [100.9395843,22.52006294],
+            [100.9199995,22.43201644],
+            [100.8966451,22.34521075],
+            [100.899774,22.25783494],
+            [100.8790704,22.17264672],
+            [100.8445574,22.08840725],
+            [100.7739871,22.02750067],
+            [100.7987332,21.94946475],
+            [100.9495921,21.87404083],
+            [101.0385669,21.84786906],
+            [101.129952,21.82614714],
+            [101.2076813,21.78509589],
+            [101.2915099,21.74050136],
+            [101.359598,21.6847615],
+            [101.4057569,21.61518775],
+            [101.4690648,21.54711453],
+            [101.529259,21.47660189],
+            [101.6009149,21.42391028],
+            [101.6484221,21.35157122],
+            [101.7049228,21.28104597],
+            [101.7071659,21.19825342],
+            [101.6943226,21.18479453]
+            ,
+        ];
+        var geoCoordMap = {
+            '玉磨轨道车':[101.2915099,21.74050136]
+        };
+        var ress={
+            name:'玉磨轨道车',
+            value:[101.2915099,21.74050136,90]
+        }
+        ress=eval(ress);
+        var convertData = function (data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                var geoCoord = geoCoordMap[data[i].name];
+                if (geoCoord) {
+                    res.push({
+                        name: data[i].name,
+                        value: geoCoord.concat(data[i].value)
+                    });
+                }
+            }
+
+
+            return res;
+        };
+
+        option = {
+
+            tooltip : {
+                trigger: 'item'
+            },
+            bmap: {
+                center: [100.9564149,22.69480956],
+                zoom: 9,
+                roam: true,
+                visualMap: {
+
+
+                    color: ['red', '#E7E9F0'],
+                    seriesIndex: 2 // 仅使第一个series生效
+                },
+                mapStyle: {
+                    styleJson: [
+                        {
+                            "featureType": "water",
+                            "elementType": "all",
+                            "stylers": {
+                                "color": "#010c18"
+                            }
+                        },
+                        {
+                            "featureType": "land",
+                            "elementType": "all",
+                            "stylers": {
+                                "color": "#031b36"
+                            }
+                        },
+                        {
+                            "featureType": "boundary",
+                            "elementType": "geometry",
+                            "stylers": {
+                                "color": "#064f85"
+                            }
+                        },
+                        {
+                            "featureType": "railway",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "highway",
+                            "elementType": "geometry",
+                            "stylers": {
+                                "color": "#004981"
+                            }
+                        },
+
+                        {
+                            "featureType": "arterial",
+                            "elementType": "geometry",
+                            "stylers": {
+                                "color": "#004981"
+                            }
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "green",
+                            "elementType": "all",
+                            "stylers": {
+                                "color": "#056197",
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "subway",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "manmade",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "local",
+                            "elementType": "all",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "arterial",
+                            "elementType": "labels",
+                            "stylers": {
+                                "visibility": "off"
+                            }
+                        },
+                        {
+                            "featureType": "boundary",
+                            "elementType": "geometry.fill",
+                            "stylers": {
+                                "color": "#029fd4"
+                            }
+                        },
+                        {
+                            "featureType": "building",
+                            "elementType": "all",
+                            "stylers": {
+                                "color": "#1a5787"
+                            }
+                        },
+                        {
+                            'featureType': 'label',
+                            'elementType': 'labels.text.fill',
+                            'stylers': {
+                                'color': '#000000'
+                            }
+
+                        }
+                    ]
+                }
+            },
+            series : [
+                {
+                    name: 'pm2.5',
+                    type: 'scatter',
+
+                    coordinateSystem: 'bmap',
+                    data: convertData(data),
+                    symbolSize: function (val) {
+                        return val[2] / 10;
+                    },
+                    encode: {
+                        value: 2
+                    },
+                    label: {
+                        formatter: '{b}',
+                        position: 'right',
+                        show: false
+                    },
+                    emphasis: {
+                        label: {
+                            show: true
+                        }
+                    }
+                },
+                {type:"lines",//第二条虚线
+                    coordinateSystem: 'bmap',// 这句的意思是连线是基于地理坐标的,geo组件将在下面给出
+                    polyline: true,// 这表示连线是否为多端点的连线
+                    data: [{
+                        coords: trainLines
+                    }],
+
+                    lineStyle:{
+                        color:"#04fe00",
+                        borderRadius:15,
+                        width:20,
+                        type:"solid",
+                    },
+                    progressiveThreshold: 500,
+                    progressive: 200,
+                },
+                {
+                    name: '轨道车',
+                    type: 'effectScatter',
+                    coordinateSystem: 'bmap',
+                    data: convertData(data.sort(function (a, b) {
+                        return b.value - a.value;
+                    }).slice(0, 6)),
+                    symbolSize: function (val) {
+                        return val[2] / 3;
+                    },
+                    symbol:trainPath,
+                    encode: {
+                        value: 2
+                    },
+                    showEffectOn: 'render',
+                    rippleEffect: {
+                        brushType: 'stroke'
+                    },
+                    hoverAnimation: true,
+                    label: {
+                        formatter: '{b}',
+                        position: 'right',
+                        show: true
+                    },
+                    itemStyle: {
+                        shadowBlur: 10,
+                        color: '#3566e3',
+                        shadowColor: 'white'
+                    },
+                    zlevel: 1
+                }
+            ]
+        };
+
+        option && myChart.setOption(option);
+    </script>
+</body>
+</html>

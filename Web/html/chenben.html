@@ -1,0 +1,765 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="js/artDialog/skins/default.css" type="text/css" />
+    <meta charset="UTF-8">
+    <style type="text/css">
+        img
+        {
+            margin-top: 15px;
+        }
+    </style>
+   <title>中铁武汉电气化局调度指挥大数据平台-玉磨项目</title>
+        <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div class="data_bodey">
+   <div class="nav" style="font-size: 23px; letter-spacing: 0px">中铁武汉电气化局调度指挥大数据平台-玉磨项目</div>
+        <div class="nav_btn">
+       
+            <div class="btn_left">
+                <a href="">
+                    <div class="btn_list ">首页</div>
+                </a>
+                <a href="">
+                    <div class="btn_list">调度</div>
+                </a>
+                <a href="jindu.html">
+                    <div class="btn_list">进度</div>
+                </a>
+                <a href="anquan.html">
+                    <div class="btn_list">安全质量</div>
+                </a>
+                <a href="wuzi.html">
+                    <div class="btn_list">物资</div>
+                </a>
+            </div>
+            <div class="btn_right">
+                <a href="equipment.html">
+                    <div class="btn_list">机械设备</div>
+                </a>
+                <a href="wanbi.html">
+                    <div class="btn_list ">腕臂预配</div>
+                </a>
+                <a href="diaoxuan.html">
+                    <div class="btn_list">接触网吊弦</div>
+                </a>
+                <a href="chenben.html">
+                    <div class="btn_list listActive">成本</div>
+                </a>
+                <a href="work.html">
+                    <div class="btn_list">综合作业</div>
+                </a>
+            </div>
+        </div>
+        <div class="index_tabs">
+            <!--安防运作-->
+            <div class="inner" style="height: 109%;">
+                <div class="left_cage">
+                    <div class="dataAllBorder01 cage_cl" style=" height: 34%;
+                        position: relative;">
+                        <div class="dataAllBorder02">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        合同金额</div>
+                                </div>
+                            </div>
+                            <div style="height: 90%; margin-top: 15%;">
+                                <ul class="data_show_box" id="htje1111">
+                                    <!--<li class="data_cage" style="width: 15%">8</li>
+                                    <li class="data_cage" style="width: 15%">7</li>
+                                    <li class="data_cage" style="width: 15%">6</li>
+                                    <li class="data_cage" style="width: 15%">5</li>
+                                    <li class="data_cage" style="background-image: none;">.</li>
+                                    <li class="data_cage" style="width: 15%">2</li>-->
+                                  <li class="data_cage" style="width: 15%; vertical-align: middle;">8</li>
+                                     <li class="data_cage" style="width: 15%">7</li>
+                                        <li class="data_cage" style="width: 15%">6</li>
+                                           <li class="data_cage" style="width: 15%">5</li>
+                                              <li class="data_cage" style="width: 15%">4</li>
+                                  <li style="float: left; color: White; margin-top: 15%; font-size:20px">万元</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 29.5%;
+                        position: relative;">
+                        <div class="dataAllBorder02">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        合同占比</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 30%;
+                        position: relative;">
+                        <div class="dataAllBorder02">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        各类合同金额</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime3" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center_cage">
+                    <div class="dataAllBorder01 cage_cl" style=" height: 55%;
+                        position: relative;">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        各季度责任成本和实际成本对比图</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime4">
+                            </div>
+                        </div>
+                    </div>
+                    <!--                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.6% !important; height: 29.5%;">
+                      
+                    </div>-->
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.6% !important; height: 39.5%;">
+                        <div class="dataAllBorder02" id="map_title_innerbox">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        各类费用占比</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime5" style="width: 48%;height:80%; float: left">
+                            </div>
+                            <div class="data_chart" id="buyTime6" style="width: 48%;height:80%; float: right">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_cage">
+                    <!--顶部切换位置-->
+                    <div class="dataAllBorder01 cage_cl" style=" height: 34%">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        验工计价</div>
+                                </div>
+                            </div>
+                            <div class="data_cage_bj"  style="width:62%; height:30%;background-color:#3972b5;padding:6px; margin:6% auto; ">
+                            
+                            <table style="width:100%;   height:100%">
+                            <tr>
+                            <td  style="width:33%; text-align:center" rowspan="2">
+                            <img src="img/images/tj4.png" />
+                            </td >
+                                <td style="color:#ffffff; width:66%; font-size:12.0pt;">当期验工计价</td>
+                            </tr>
+                              <tr>
+                              <td style="color:Yellow;  width:66%; font-size:15.0pt;"><span id="dqygjj"> </span>万元</td>
+                            
+                            </tr>
+                            </table>
+                            </div>
+                                  <div  class="data_cage_bj" style="width:62%; height:30%;background-color:#3972b5;padding:6px; margin:8px auto; ">
+                                  
+                                        <table style="width:100%;  height:100%">
+                            <tr>
+                            <td  style="width:33%;text-align:center" rowspan="2">
+                            <img src="img/images/tj4.png" />
+                            </td>
+                                <td style="color:#ffffff;  width:66%; font-size:12.0pt; ">开累验工计价</td>
+                            </tr>
+                              <tr>
+                              <td style="color:Yellow;  width:66%; font-size:15.0pt; "><span id="klygjj"></span>万元</td>
+                            
+                            </tr>
+                            </table>
+                                  </div>
+                           <!-- <div class="danger_depart_box" style="margin-top: 10%; margin-left: 10%;">
+                                <ul class="danger_depart" style="float: none; margin-left: 10%; width: 80%">
+                                    <li class="danger_ico" style="background-image: url(img/images/pic_ico_01.png);">
+                                    </li>
+                                    <li class="data_name" style="font-size: 23px;">当前验工计价</li>
+                                    <li class="data data01" style="font-size: 23px;"><span id="dqygjj"> </span>万元</li>
+                                </ul>
+                                <ul class="danger_depart danger_depart01" style="float: none; margin-left: 10%; width: 80%">
+                                    <li class="danger_ico" style="background-image: url(img/images/pic_ico_03.png);">
+                                    </li>
+                                    <li class="data_name" style="font-size: 23px;">开累验工计价</li>
+                                    <li class="data data01" style="font-size: 23px;"><span id="klygjj"> </span>万元</li>
+                                </ul>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 1.5% !important;
+                        height: 29.5%; position: relative;">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        盈亏分析</div>
+                                </div>
+                            </div>
+                            <div class="danger_depart_box" style="margin-top: 10%; margin-left: 10%">
+                                <ul class="danger_depart">
+                                    <li class="danger_ico" style="background-image: url(img/images/pic_ico_01.png); background-position-x: 0px">
+                                    </li>
+                                    <li class="data_name">实际应付</li>
+                                    <li class="data data01"><span id="sjyf"> </span>万元</li>
+                                </ul>
+                                <ul class="danger_depart">
+                                    <li class="danger_ico" style="background-image: url(img/images/pic_ico_02.png); background-position-x: 0px">
+                                    </li>
+                                    <li class="data_name">利润率</li>
+                                    <li class="data data01"><span id="lrl"> </span></li>
+                                </ul>
+                                <ul class="danger_depart danger_depart01">
+                                    <li class="danger_ico" style="background-image: url(img/images/pic_ico_03.png); background-position-x: 0px">
+                                    </li>
+                                    <li class="data_name">实际应收</li>
+                                    <li class="data data01"><span id="sjys"> </span>万元</li>
+                                </ul>
+                                <ul class="danger_depart danger_depart01">
+                                    <li class="danger_ico" style="background-image: url(img/images/pic_ico_01.png); background-position-x: 0px">
+                                    </li>
+                                    <li class="data_name">实际盈亏</li>
+                                    <li class="data data01"><span id="sjyk"> </span>万元</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 1.5% !important;
+                        height: 29.5%; position: relative;">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        责任成本节超率</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime7">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/echarts-all.js" type="text/javascript"></script>
+    <script src="datajs/dataBycb.js" type="text/javascript"></script>
+    <script>
+        Get();
+        EchartBars();
+        Echarts();
+        EchartBarst();
+        Echartsone();
+        Echartstwo();
+        Echartsthr();
+
+        var myChart1;
+        var myChart2;
+        var myChart3;
+        var myChart4; var myChart5; var myChart6;
+        window.setInterval(function () {
+            Get();
+            refreshData1(myChart2, xdata);
+            refreshData2(myChart1, xxdata);
+            refreshData3(myChart3, xxxdata, yyydata, zzzdata);
+            refreshData4(myChart4, myChart5, danqidata, kaileidata, danqia, kailei);
+            refreshData5(myChart6, zrcbjcl, zrcbjcldata);
+        }, 10000);
+
+        function refreshData1(myChart, xdata) {
+            if (!myChart) {
+                return;
+            }
+            //更新数据
+            var option = myChart.getOption();
+            if (xdata.length > 0) {
+                option.series[0].data = xdata;
+            }
+            myChart.setOption(option, true); //不加true 原来的数据还会保留
+        }
+
+        function refreshData2(myChart, xxdata) {
+            if (!myChart) {
+                return;
+            }
+            //更新数据
+            var option = myChart.getOption();
+            if (xxdata.length > 0) {
+                option.series[0].data = xxdata;
+            }
+            myChart.setOption(option, true); //不加true 原来的数据还会保留
+        }
+
+        function refreshData3(myChart, xxxdata, yyydata, zzzdata) {
+            if (!myChart) {
+                return;
+            }
+            //更新数据
+            var option = myChart.getOption();
+            if (xxxdata.length > 0 && yyydata.length > 0 && zzzdata.length > 0) {
+                option.xAxis[0].data = xxxdata;
+                option.series[0].data = yyydata;
+                option.series[1].data = zzzdata;
+            }
+            myChart.setOption(option, true);
+        }
+
+        function refreshData4(myChart4, myChart5, danqidata, kaileidata, danqia, kailei) {
+            //更新数据
+            var option = myChart4.getOption();
+            if (kaileidata.length > 0) {
+                option.title.subtext = kailei;
+                option.series[0].data = kaileidata;
+            }
+            myChart4.setOption(option, true); //不加true 原来的数据还会保留
+
+            var option = myChart5.getOption();
+            if (danqidata.length > 0) {
+                option.title.subtext = danqia;
+                option.series[0].data = danqidata;
+            }
+            myChart5.setOption(option, true); //不加true 原来的数据还会保留
+        }
+
+        function refreshData5(myChart, zrcbjcl, zrcbjcldata) {
+            //更新数据
+            var option = myChart.getOption();
+            if (zrcbjcldata.length > 0) {
+                option.title.text = zrcbjcl;
+                option.series[0].data = zrcbjcldata;
+            }
+            myChart.setOption(option, true); //不加true 原来的数据还会保留
+        }
+
+        function EchartBars() {
+            //var myChart = echarts.init($("#buyTime3")[0]);
+            myChart1 = echarts.init($("#buyTime3")[0]);
+            option = {
+              
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: {
+                    y: 30,
+                    y2: 75,
+            
+                    borderWidth: 0
+                },
+                xAxis: [
+                {
+                    type: 'value',
+                    show: true, //去除X轴
+                    axisLine: {
+                        show: false //y轴线消失
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab',
+                            align: 'right'
+                        }
+                    },
+                    axisTick: {
+                        show: false//坐标点消失
+                    },
+                    splitLine: {
+                        show: false, //去掉分割线
+                        lineStyle: {
+                            color: "#57617B"
+                        }
+                    }
+                }
+            ],
+                yAxis: [
+                {
+                    type: 'category',
+                    axisLine: {
+                        show: true //X轴线消失
+                    },
+                    splitLine: {
+                        show: false//去掉分割线
+                    },
+                    data: ['机械租赁合同', '物资合同', '专业分包合同', '劳务分包合同'],
+                   axisLabel: {    //重点在这一块，其余可以忽略
+			interval: 0,   //这个一定要有，别忘记了
+
+			textStyle: {
+				color: '#fff',
+				fontSize: 12
+			}
+		}
+
+                }
+            ],
+                series: [
+               {
+                   data: xxdata,
+                   type: 'bar',
+                   barWidth: 19,
+                
+                  // barCategoryGap: '10%', /*多个并排柱子设置柱子之间的间距*/
+
+                   itemStyle: {
+                       normal: {
+                           label: {
+                               show: true, 	//开启显示
+                               position: 'right', //在上方显示
+                               textStyle: {	    //数值样式
+                                   color: 'white',
+                                   fontSize: 12
+                               }
+                           }
+                       }
+                   }
+               }
+            ]
+            };
+           myChart1.setOption(option);
+
+           myChart1.getDom().style.height = '270px';
+           myChart1.resize();
+       
+        }
+
+        function Echarts() {
+            //var myChart = echarts.init(document.getElementById('buyTime2')); //图表的ID
+            myChart2 = echarts.init(document.getElementById('buyTime2')); //图表的ID
+            var option = {
+                legend: {
+                    //orient : 'horizontal',
+                    //icon:'none',
+
+                    textStyle: {
+                        color: '#fff'
+                    },
+                    x: 'center',
+                    y: 'bottom',
+                    //data: ['主合同金额', '补充合同金额']
+                    data: [{ name: '主合同金额', icon: 'rect' }, { name: '补充合同金额', icon: 'circle'}]
+                },
+                series: [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: ['40%', '70%'],
+            itemStyle: {
+                normal: {
+                    //                    borderColor: '#fff',
+                    //                    borderWidth: 2
+                    label: {
+                        show: true,
+                        formatter: '{b} : \n {c} ({d}%)'
+                    }
+                }
+            },
+            data: xdata
+        }
+    ]
+            };
+
+            myChart2.setOption(option);
+
+        }
+
+
+        function EchartBarst() {
+            //var myChart = echarts.init($("#buyTime4")[0]);
+            myChart3 = echarts.init($("#buyTime4")[0]);
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: {
+                    x: 46,
+                    y: 50,
+                    x2: 30,
+                    y2: 70,
+                    borderWidth: 0
+                },
+                legend: {
+                    //                    data: ['初始合同验工计价', '补充合同验工计价'],
+                    data: ['责任成本', '实际成本'],
+                    x: 'right',
+                    textStyle: {
+                        color: "#e9ebee"
+                    }
+                },
+                calculable: false,
+                xAxis: [
+                {
+
+                    type: 'category',
+                    axisLine: {
+                        show: true //轴线消失
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                    data: xxxdata,
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab',
+                            align: 'center'
+                        },
+                        axisTick: {
+                            show: false
+                        }
+                    }
+                }
+
+            ],
+                yAxis: [
+                {
+                    name: '万元', //与轴线冲突
+                    type: 'value',
+                    axisLine: {
+                        show: true //轴线消失
+                    },
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '#a4a7ab',
+                            align: 'right'
+                        }
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    splitLine: {
+                        show: false,
+                        lineStyle: {
+                            color: "#57617B"
+                        }
+                    }
+                }
+            ],
+                series: [
+                {
+                    //                    name: '初始合同验工计价',
+                    name: '责任成本',
+                    type: 'bar',
+                    barWidth:79,
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: true, 	//开启显示
+                                position: 'top', //在上方显示
+                                textStyle: {	    //数值样式
+                                    color: 'white',
+                                    fontSize: 16
+                                },
+                                formatter: '{c} 万元'
+                            }
+                        }
+                    },
+                    data: yyydata
+                },
+                {
+                    //                    name: '补充合同验工计价',
+                    name: '实际成本',
+                    type: 'bar',
+                    barWidth: 79,
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: true, 	//开启显示
+                                position: 'top', //在上方显示
+                                textStyle: {	    //数值样式
+                                    color: 'white',
+                                    fontSize: 16
+                                },
+                                formatter: '{c} 万元'
+                            }
+                        }
+                    },
+                    data: zzzdata
+                }
+            ]
+            };
+            myChart3.setOption(option);
+        }
+
+        function Echartsone() {
+            //var myChart = echarts.init(document.getElementById('buyTime5')); //图表的ID
+            myChart4 = echarts.init(document.getElementById('buyTime5')); //图表的ID
+            var option = {
+                tooltip: {
+                    trigger: 'item'
+                },
+                title: {
+                    text: '开累各类费用总量',
+                    subtext: kailei,
+                    //                    subtext: '500',
+                    //itemGap: 30,
+                    x: 'center',
+                    y: 'center',
+                    textAlign: "center",
+                    textStyle: {
+                        fontWeight: 'normal',
+                        fontSize: 15,
+                        color: '#FFB6C1'
+                    },
+                    subtextStyle: {
+                        fontWeight: 'normal',
+                        fontSize: 15,
+                        color: '#FFFFFF',
+                        lineHeight: 14
+                    }
+                },
+                series: [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: ['56%', '89%'],
+         hoverAnimation:true,
+           
+
+itemStyle : {
+
+          normal : {
+            label : {
+              show : false
+             
+            },
+            labelLine : {
+              show : false
+            }
+          }
+
+  },
+
+            data: kaileidata
+        }
+    ]
+            };
+
+            myChart4.setOption(option);
+
+        }
+
+
+        function Echartstwo() {
+            //var myChart = echarts.init(document.getElementById('buyTime6')); //图表的ID
+            myChart5 = echarts.init(document.getElementById('buyTime6')); //图表的ID
+            var option = {
+                tooltip: {
+                    trigger: 'item'
+                },
+                title: {
+                    text: '当期各类费用总量',
+                    subtext: danqia,
+                    //subtext: '500',
+                    //itemGap: 30,
+                    x: 'center',
+                    y: 'center',
+                    textAlign: "center",
+                    textStyle: {
+                        fontWeight: 'normal',
+                        fontSize: 15,
+                        color: '#FFB6C1'
+                    },
+                    subtextStyle: {
+                        fontWeight: 'normal',
+                        fontSize: 15,
+                        color: '#FFFFFF',
+                        lineHeight: 14
+                    }
+                },
+                series: [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: ['56%', '89%'],
+            itemStyle: {
+
+                normal: {
+                    label: {
+                        show: false
+
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                }
+
+            },
+            data: danqidata
+        }
+    ]
+            };
+
+            myChart5.setOption(option);
+
+        }
+
+
+        function Echartsthr() {
+            //var myChart = echarts.init(document.getElementById('buyTime7')); //图表的ID
+            myChart6 = echarts.init(document.getElementById('buyTime7')); //图表的ID
+            var option = {
+                title: {
+                    //                    text: '80%',
+                    text: zrcbjcl,
+                    subtext: '责任成本节\n超率',
+                    x: 'center',
+                    y: 'center',
+                    textAlign: "center",
+                    textStyle: {
+                        fontWeight: 'normal',
+                        fontSize: 20,
+                        color: '#FFB6C1'
+                    },
+                    subtextStyle: {
+                        fontWeight: 'normal',
+                        fontSize: 20,
+                        color: '#FFFFFF',
+                        lineHeight: 14
+                    }
+                },
+                series: [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: ['56%', '89%'],
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: false
+                    },
+                    labelLine: {
+                        show: false
+                    }
+                }
+            },
+            data: zrcbjcldata
+        }
+    ]
+            };
+
+            myChart6.setOption(option);
+
+        }
+    </script>
+</body>
+</html>

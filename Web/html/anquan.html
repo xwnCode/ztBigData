@@ -1,0 +1,677 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="js/artDialog/skins/default.css" type="text/css" />
+    <script src="js/laydate.js"></script>
+    <script src="js/Home_page.js"></script>
+    <script src="js/miaov.js" type="text/javascript"></script>
+    <script src="js/echarts-wordcloud.js" type="text/javascript"></script>
+    <script src="datajs/databyAnquan.js" type="text/javascript"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/modules/wordcloud.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/themes/dark-unica.js"></script>
+    <title>中铁武汉电气化局调度指挥大数据平台-玉磨项目</title>
+    <!--标签云-->
+    <style>
+        #div1
+        {
+            position: relative;
+            width: 150px;
+            height: 250px;
+            margin: 20px auto 0;
+        }
+        
+        #div1 a
+        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-family: Microsoft YaHei;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 3px 6px;
+        }
+        
+        #div1 a:hover
+        {
+            border: 1px solid #eee;
+            background: #000;
+        }
+        
+        #div1 .blue
+        {
+            color: blue;
+        }
+        
+        #div1 .red
+        {
+            color: red;
+        }
+        
+        #div1 .yellow
+        {
+            color: yellow;
+        }
+        
+        p
+        {
+            font: 16px Microsoft YaHei;
+            text-align: center;
+            color: #ba0c0c;
+        }
+        
+        p a
+        {
+            font-size: 14px;
+            color: #ba0c0c;
+        }
+        
+        p a:hover
+        {
+            color: red;
+        }
+        
+        p a:hover
+        {
+            color: red;
+        }
+        .pic{position: absolute;width: 200px;height: 100px;background:red;}
+.pic2{position: absolute;width: 100px;height: 200px;background:blue;}
+
+.img{position: absolute;width: 200px;height: 100px;background:red;}
+.img3{position: absolute;width: 100px;height: 200px;background:blue;}
+    </style>
+</head>
+<body>
+    <div class="data_bodey">
+        <div class="nav" style="font-size: 23px; letter-spacing: 0px">中铁武汉电气化局调度指挥大数据平台-玉磨项目</div>
+        <div class="nav_btn">
+       
+            <div class="btn_left">
+                <a href="">
+                    <div class="btn_list ">首页</div>
+                </a>
+                <a href="">
+                    <div class="btn_list">调度</div>
+                </a>
+                <a href="jindu.html">
+                    <div class="btn_list">进度</div>
+                </a>
+                <a href="anquan.html">
+                    <div class="btn_list">安全质量</div>
+                </a>
+                <a href="wuzi.html">
+                    <div class="btn_list">物资</div>
+                </a>
+            </div>
+            <div class="btn_right">
+                <a href="equipment.html">
+                    <div class="btn_list">机械设备</div>
+                </a>
+                <a href="wanbi.html">
+                    <div class="btn_list listActive">腕臂预配</div>
+                </a>
+                <a href="diaoxuan.html">
+                    <div class="btn_list">接触网吊弦</div>
+                </a>
+                <a href="chenben.html">
+                    <div class="btn_list">成本</div>
+                </a>
+                <a href="work.html">
+                    <div class="btn_list">综合作业</div>
+                </a>
+            </div>
+        </div>
+        <div class="index_tabs" style="margin-top:-50px">
+            <div class="inner" style="height: 109%;">
+                <div class="left_cage">
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 5.5% !important; height: 34%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="font-size: 18px;">
+                                        各级别隐患数量
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 29.5%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="font-size: 18px;">
+                                        隐患排查数量趋势
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 30%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="font-size: 18px;">
+                                        常发隐患公示
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="container" style="width100%; height: 90%;margin-top: 2%;">
+                            </div>
+                            <!--<div style="width100%;height:90%">
+                                <div id="div1">
+                                    <a href="#">JS课程</a> <a href="#" class="red">教程</a> <a href="#">回头一眸</a> <a href="#">
+                                        精品</a> <a href="#" class="blue">源码下载</a> <a href="#">SEO</a> <a href="#" class="red">
+                                            特效</a> <a href="#">继承</a> <a href="#" class="red">脚本之家</a> <a href="#" class="blue">
+                                                OOP</a> <a href="#">XHTML</a> <a href="#">W3C</a> <a href="#">石川</a>
+                                    <a href="#" class="yellow">人生如歌</a> <a href="#">blue</a>
+                                </div>
+                            </div>-->
+                            <!--<div class="data_chart" id="bull" > </div> -->
+                            <!--  <div id="main" style="width: 100%; height: 100%;"></div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="center_cage">
+                    <div style="margin-top: 3.5% !important; height: 24%; position: relative;">
+                        <div style="position: absolute; margin-top: 8%">
+                            <img src="img/images/date.png" style="width: 100%; height: 100%;" />
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 8%;">
+                            <span style="color: White; font-size: 18px;">隐患排查数量</span><br />
+                            <div style="color: Yellow; font-size: 18px">
+                                <span id="PCSL"></span>&nbsp;条
+                            </div>
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 25%;">
+                            <img src="img/images/camerTotal.png" style="width: 100%; height: 100%;" />
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 33%;">
+                            <span style="color: White; font-size: 18px;">整改完成数量</span><br />
+                            <div style="color: Yellow; font-size: 18px">
+                                <span id="WCSL"></span>&nbsp;条
+                            </div>
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 56%;">
+                            <img src="img/images/pic_ico_03.png" style="width: 110%; height: 110%;" />
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 64%;">
+                            <span style="color: White; font-size: 18px;">整改完成比例</span><br />
+                            <div style="color: Yellow; font-size: 18px">
+                                <span id="WCBL"></span>
+                            </div>
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 82%;">
+                            <img src="img/images/pic_ico_01.png" style="width: 110%; height: 110%;" />
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 90%;">
+                            <span style="color: White; font-size: 18px;">考核分数</span><br />
+                            <div style="color: Yellow; font-size: 18px">
+                                <span id="KHFS"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 70%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 10%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="font-size: 18px;">
+                                        整改情况通告
+                                    </div>
+                                </div>
+                            </div>
+                            <!--                            <div id="container">
+                                <div class="sections">
+                                    <div class="section" id="section0"><h3>this is the page1</h3></div>
+                                    <div class="section" id="section1"><h3>this is the page2</h3></div>
+                                    <div class="section" id="section2"><h3>this is the page3</h3></div>
+                                    <div class="section" id="section3"><h3>this is the page4</h3></div>
+                                </div>
+                            </div>-->
+                            <div id="container1">
+                                <div class="sections">
+                                    <div class="section" id="section0">
+                                        <div style="width: 46%; height: 90%; float: left">
+                                            <div id="Div3" style="height: 40%; width: 100%; color: White; margin-left: 20px;
+                                                font-size: 19px;">
+                                                <h3 style="text-align: center;margin-top: 0px;">
+                                                    排查前</h3>
+                                                <span id="zgq" style="width: 20%; height: 20px; margin-left: 10px; color: White;
+                                                    font-size: 18px;margin-top: 40px;"></span>
+                                            </div>
+                                            <div id="img" style="height: 280px; width: 100%;margin-top: 40px;">
+                                                <ul id="img1" style="height: 90%; width: 90%; margin-left: 20px;">
+                                                </ul>
+                                            </div>
+                                             <div id="img3" style="margin-top: -170px;color: red;font-size: 30px;margin-left: 160px;">排查前</div>
+                                        </div>
+                                        <div style="width: 46%; height: 90%; float: right">
+                                            <div id="Div1" style="height: 40%; width: 100%; color: White; margin-left: 0px; font-size: 19px;">
+                                                <h3 style="text-align: center;margin-top: 0px;">
+                                                    问题描述</h3>
+                                                <span id="zgh" style="width: 20%; height: 20px; margin-left: 20px; color: White;
+                                                    font-size: 18px;"></span>
+                                            </div>
+                                            <div id="pic" style="height: 280px; width: 100%;margin-top: 40px;">
+                                                <ul id="img2" style="height: 90%; width: 90%; margin-left: 20px;">
+                                                </ul>
+                                            </div>
+                                            <div id="pic2" style="margin-top: -170px;color: red;font-size: 30px;margin-left: 130px;">排查后</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_cage">
+                    <div class="dataAllBorder01 cage_cl check_decrease" style="margin-top: 5.5% !important;
+                        height: 95.5%; position: relative;">
+                        <div class="dataAllBorder02 over_hide" style="padding: 1.2%;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="font-size: 18px;">
+                                        隐患排查列表
+                                    </div>
+                                </div>
+                            </div>
+                            <table id="table" style="width: 100%">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/echarts-all.js"></script>
+    <script src="js/bstable/js/bootstrap.min.js"></script>
+    <script src="js/bstable/js/bootstrap-table.js"></script>
+    <script type="text/javascript" src="js/jquery.pagination.js"></script>
+    <script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            BootstrapTable();
+
+            EchartBars();
+            EchartLines();
+
+         //  EchartWordclouds();
+           
+
+        });
+        Detail();
+         GetYhsj();
+         GetYhgsechart();
+
+        //获取大数据
+   function GetYhsj() {
+       $.ajax({
+           url: '../databyanquan/GetYhsj.ashx',
+           type: "get",
+           contentType: "application/x-www-form-urlencoded; ", //默认，表单提交格式
+           dataType: "json",
+           data: {},
+           success: function (data) {
+               var datas = JSON.stringify(data);
+               $("#PCSL").html(data[0].PCSL);
+               $("#WCSL").html(data[0].WCSL);
+               $("#WCBL").html(data[0].WCBL);
+               $("#KHFS").html(data[0].KHFS); 
+           }
+       });
+   }
+
+   function arrayBufferToBase64(buffer) {
+    var binary = '';
+    var bytes = new Uint8Array(buffer);
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+        binary += String.fromCharCode(bytes[i]);
+    }
+    return window.btoa(binary);
+}
+
+
+
+
+        function BootstrapTable() {
+            $('#table').bootstrapTable({
+                method: "get",
+                striped: true,
+                singleSelect: false,
+                url: "../databyanquan/GetYhlb.ashx",
+                dataType: "json",
+                search: false, //显示搜索框
+                contentType: "application/x-www-form-urlencoded",
+                columns: [
+                    {
+                        title: '序号',
+                        width: 20,
+                        align: 'center',
+                        valign: 'middle',
+                        formatter: function (value, row, index) {
+                        return index + 1;
+                    }
+                    },
+                    {
+                        title: '级别',
+                        field: 'YHJB',
+                        width: 20,
+                        align: 'center'
+                    },
+                    {
+                        title: '专业',
+                        field: 'ZY',
+                        align: 'center',
+                       
+                    },
+                    {
+                        title: '上报人',
+                        field: 'PCR',
+                        align: 'center',
+                       
+                    },
+                    {
+                        title: '上报时间',
+                        field: 'Updatetime',
+                        width: 20,
+                        align: 'center'
+                    },
+                    {
+                        title: '是否整改',
+                        field: 'ZG',
+                        align: 'center'
+                    },
+                    {
+                        field: 'Id',
+                        title: '操作',
+                        width: '50',
+                        formatter: function (value, row, index) {
+                            var result = "";
+                            result += '<a href="javascript:;" onclick="javascript:Detail(\'' + row.Id + '\')" title="详细">查看</a>';
+                            return result;
+                        }
+                    }
+                ]
+            });
+        }
+
+        function Detail(id) {
+
+            var html3 = "";
+var html4 = "";
+$.ajax({
+    url: '../databyanquan/GetPCLB.ashx',
+    async: false,
+    type: 'post',
+    data: { oper: id},
+    dataType: 'json',
+    success: function (data) {
+     
+        var datas = JSON.stringify(data[0]);
+        var src1 = 'data:image/png;base64,' + arrayBufferToBase64(data[0].PCQ); //转换字符串 
+        html3 += "<li class='carousel-item'><img src='" + src1 + "' style='width:390px;margin-left: 0px;' /><div style='position: absolute; bottom: -35%; width:100%;text-align:center; '></div></li>";
+        var src2 = 'data:image/png;base64,' + arrayBufferToBase64(data[0].PCH); //转换字符串 
+        html4 += "<li class='carousel-item'><img src='" + src2 + "' style='width:390px;margin-left: -30px;'/><div style='position: absolute; bottom: -35%; width:100%;text-align:center; '></div></li>";
+        //alert(html1);
+        //alert(html2);
+        $("#img1").empty();
+        $("#img2").empty();
+        $("#zgq").empty();
+        $("#zgh").empty();
+        $("#zgq").append(data[0].PCNRQ);
+        $("#zgh").append(data[0].PCNRH);
+        $("#img1").append(html3);
+        $("#img2").append(html4);
+    },
+    error: function (data) {
+        return "";
+    }
+});
+
+        }
+
+
+        function EchartBars() {
+        var sssss=[yhsldata1.toString(),yhsldata2.toString(),yhsldata3.toString(),yhsldata4.toString()];
+            var myChart = echarts.init($("#buyTime1")[0]);
+            option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                grid: {
+                    x: 86,
+                    y: 10,
+                    x2: 70,
+                    y2: 15,
+                    borderWidth: 0
+                },
+                 xAxis: [
+                    {
+                        type: 'category',
+                        axisLine: {
+                            show: false //X轴线消失
+                        },
+                        splitLine: {
+                            show: false//去掉分割线
+                        },
+                        data: ['I', 'II', 'III', 'IV'],
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'center'
+                            },
+                            axisTick: {
+                                show: false//坐标点消失
+                            }
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        axisLine: {
+                            show: false //y轴线消失
+                        },
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'right'
+                            },
+                            formatter:'{value} 条'
+                        },
+                        axisTick: {
+                            show: false//坐标点消失
+                        },
+                        splitLine: {
+                            show: false, //去掉分割线
+                            lineStyle: {
+                                color: "#57617B"
+                            }
+                        }
+                        
+                    }
+                ],
+                series: [
+                    {
+                        data: sssss,
+                        type: 'bar',
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: true, 	//开启显示
+                                    textStyle: {	    //数值样式
+                                        color: 'white',
+                                        fontSize: 16
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ]
+            };
+
+            myChart.setOption(option);
+        }
+
+
+        function EchartLines() {
+         var TTT=[YIYUE.toString(),ERYUE.toString(),SANYUE.toString(),SIYUE.toString(),WUYUE.toString(),LIUYUE.toString(),QIYUE.toString(),BAYUE.toString(),JIUYUE.toString(),SHIYUE.toString(),SHIYIYUE.toString(),SHIERYUE.toString()];
+            var myChart = echarts.init($("#buyTime2")[0]);
+            var option = {
+                tooltip: {   //提示框，鼠标悬浮交互时的信息提示
+                    show: true,
+                    trigger: 'axis'
+                },
+                grid: {
+                    x: 46,
+                    y: 30,
+                    x2: 30,
+                    y2: 40,
+                    borderWidth: 0
+                },
+                calculable: false,
+                xAxis: [
+                    {
+                        type: 'category',
+                        axisLine: {
+                            show: false //轴线消失
+                        },
+                        boundaryGap: false,
+                        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: true,
+                            //                        interval:0,
+                            rotate: 0, //字体倾斜
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'center'
+                            }
+                        }
+                    }
+
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        axisLine: {
+                            show: false //轴线消失
+                        },
+                        //                    splitLine: {
+                        //                        show: false
+                        //                    },
+                        axisLabel: {
+
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'right'
+                            },
+                            formatter:'{value} 次'}
+                        
+                    }
+                ],
+                series: [
+                    {
+                        name: '',
+                        type: 'line',
+                        data: TTT,
+                        areaStyle: {},
+                        itemStyle: {
+                            normal: {
+                                color: '#02bcbc'
+                            }
+                        }
+                    }
+                ]
+            };
+            myChart.setOption(option);
+        }
+
+        var items="";
+        function GetYhgsechart() {
+                $.ajax({
+                    url: '../databyanquan/GetYhgs.ashx',
+                    type: "get",
+                    contentType: "application/x-www-form-urlencoded; ", //默认，表单提交格式
+                    dataType: "json",
+                    data: {},
+                    success: function (data) {
+                        var datas = JSON.stringify(data);
+                        var aa=data.toString().length;
+                        var bb=data.valueOf();
+                        
+                        for(var i=0;i<data.length;i++)
+                        {
+                     
+                        var yhjb= parseInt(data[i].By1);
+                        for(var j=0;j<yhjb;j++){
+                        items=items+(data[i].YH)+",";
+                        }
+                        }
+                         //items=items+(data[0].YH);
+                         Yhgsechart(items);
+                    }
+                });
+            }
+
+        function Yhgsechart(items){
+        var data = items.split(/[,\. ]+/g)
+            .reduce(function (arr, word) {
+                var obj = arr.find(function (obj) {
+                    return obj.name === word;
+                });
+                if (obj) {
+                    obj.weight += 1;
+                } else {
+                    obj = {
+                        name: word,
+                        weight: 1
+                    };
+                    arr.push(obj);
+                }
+                return arr;
+            }, []);
+        Highcharts.chart('container', {
+            series: [{
+                type: 'wordcloud',
+                data: data
+            }],
+            title: {
+                text: ''
+            }
+        });
+        }
+
+        
+    </script>
+</body>
+</html>

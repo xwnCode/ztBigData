@@ -1,0 +1,55 @@
+﻿
+        input
+        {
+             border:none;
+            }
+        .title
+        {
+            color: White;
+            font-size: 30px;
+            line-height: 30px;
+        }
+        a, a:hover
+        {
+            color: #000;
+            text-decoration: none;
+        }
+        .tdleft
+        {
+            text-align: right;
+            padding-right: 10px;
+            height: 30px;
+            font-size: 10.0pt;
+            border-bottom: solid 1px #cccccc;
+            border-right: solid 1px #cccccc;
+        } 
+        .td
+        {
+            text-align: center;
+            font-size: 10.0pt;
+            height: 30px;
+            border-bottom: solid 1px #cccccc;
+            border-right: solid 1px #cccccc;
+        }
+        .textLong
+        {
+            border-bottom:solid 1px #9E9E9E; 
+            border-left-style: none;
+            border-left-color: inherit;
+            border-left-width: medium;
+            border-right-style: none;
+            border-right-color: inherit;
+            border-right-width: medium;
+            border-top-style: none;
+            border-top-color: inherit;
+            border-top-width: medium;
+        }
+        .textShort
+        {
+            border-left:none;
+            border-top:none; 
+            border-right:none; 
+            border-bottom:solid 1px #9E9E9E; 
+            width:50px;
+        }
+

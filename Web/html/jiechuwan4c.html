@@ -1,0 +1,610 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+   <meta charset="UTF-8">
+    <title>中铁武汉电气化局调度指挥大数据平台-玉磨项目</title>
+        <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div class="data_bodey">
+   <div class="nav" style="font-size: 23px; letter-spacing: 0px">中铁武汉电气化局调度指挥大数据平台-玉磨项目</div>
+        <div class="nav_btn">
+       
+            <div class="btn_left">
+                <a href="">
+                    <div class="btn_list ">首页</div>
+                </a>
+                <a href="">
+                    <div class="btn_list">调度</div>
+                </a>
+                <a href="jindu.html">
+                    <div class="btn_list">进度</div>
+                </a>
+                <a href="anquan.html">
+                    <div class="btn_list">安全质量</div>
+                </a>
+                <a href="wuzi.html">
+                    <div class="btn_list">物资</div>
+                </a>
+            </div>
+            <div class="btn_right">
+                <a href="equipment.html">
+                    <div class="btn_list">机械设备</div>
+                </a>
+                <a href="wanbi.html">
+                    <div class="btn_list listActive">腕臂预配</div>
+                </a>
+                <a href="diaoxuan.html">
+                    <div class="btn_list">接触网吊弦</div>
+                </a>
+                <a href="chenben.html">
+                    <div class="btn_list">成本</div>
+                </a>
+                <a href="work.html">
+                    <div class="btn_list">综合作业</div>
+                </a>
+            </div>
+        </div>
+        <div class="index_tabs">
+            <div class="map_title_innerbox">
+                <div style="background-image: url(img/pushmessage_level02.png); margin-top: 2%; margin-left: 45%;
+                    float: left">
+                    <a href="jiechuwan4c.html" style="color: Red;">4C检测车 </a>
+                </div>
+                <div style="background-image: url(img/pushmessage_level02.png); margin-top: 2%; margin-left: 2%;
+                    float: left">
+                    <a href="jiechuwancar.html" style="color: White;">智能检测小车 </a>
+                </div>
+            </div>
+            <!--安防运作-->
+            <div class="inner">
+                <div class="top_cage" style="width: 100%; height: 63%; margin-left: 0.3%;">
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 3% !important; width: 27.4%;
+                        float: left">
+                        <div class="dataAllBorder02" id="map_title_innerbox">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        设备实时运行信息</div>
+                                </div>
+                            </div>
+                            <div class="danger_depart_box">
+                                <ul class="danger_depart">
+                                    <img src="images/4c.png" style="height: 200%; width: 200%;" />
+                                    <!--<li class="danger_ico" style="background-image: url(images/4c.png); background-position-x: 0px;
+                                        width: 150%; height: 100%"></li>-->
+                                </ul>
+                            </div>
+                            <div class="danger_contain_box">
+                                <div id="Div1" style="color: White; margin-left: 20px; font-size: 19px; margin-top: 100px;">
+                                    今日测量区段：<span id="jrclqd"> </span>
+                                    <br />
+                                    今日测量时段：<span id="jrclsd"> </span>
+                                    <br />
+                                    当前速度：<span id="dqsd"> </span>KM/h
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 3% !important; width: 71.7%;
+                        margin-left: 0.3%; float: left">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        几何参数</div>
+                                </div>
+                            </div>
+                            <div style="width: 70%; height: 100%; float: left">
+                                <div class="data_chart" id="buyTime1">
+                                </div>
+                            </div>
+                            <div style="width: 30%; float: left">
+                                <div style="color: White">
+                                    悬挂点参数实时参数列表：</div>
+                                <table id="table1" style="width: 100%; margin-top: 2%">
+                                </table>
+                                <div style="color: White">
+                                    悬挂点参数超标记录列表：</div>
+                                <table id="table2" style="width: 100%; margin-top: 2%">
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttom_cage" style="width: 99.40%; height: 37%; margin-left: 0.3%;">
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.5% !important; width: 24.5%;
+                        float: left">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        支柱图片</div>
+                                </div>
+                            </div>
+                            <img id="zzop" src="img/WechatIMG1.jpg" style="height: 85%; width: 100%;" />
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.5% !important; width: 24.5%;
+                        margin-left: 0.7%; float: left">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        图片数量</div>
+                                </div>
+                            </div>
+                            <div style="height: 85%; width: 100%; font-size: 19px; color: White; text-align: center">
+                                <br />
+                                支柱图片：<span id="zzp"> </span>（张）<br />
+                                <br />
+                                腕臂图片：<span id="wbp"> </span>（张）<br />
+                                <br />
+                                吊弦图片：<span id="dxp"> </span>（张）<br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.5% !important; width: 24.5%;
+                        margin-left: 0.7%; float: left">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        腕臂图片</div>
+                                </div>
+                            </div>
+                            <img id="wbop" style="height: 85%; width: 100%;" />
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 0.5% !important; width: 24.5%;
+                        margin-left: 0.6%; float: left">
+                        <div class="dataAllBorder02">
+                            <div class="map_title_box">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title" style="background-image: url(img/second_title.png);">
+                                        吊玄图片</div>
+                                </div>
+                            </div>
+                            <img id="dxop" style="height: 85%; width: 100%;" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+    <script src="js/bstable/js/bootstrap-table.js" type="text/javascript"></script>
+    <script src="datajs/dataByfc.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        BootstrapTable();
+        Get();
+        function BootstrapTable() {
+            $('#table1').bootstrapTable({
+                method: "get",
+                striped: true,
+                singleSelect: false,
+                url: "../databyfc/GetGeometric.ashx",
+                dataType: "json",
+                search: false, //显示搜索框
+                contentType: "application/x-www-form-urlencoded",
+                queryParams: { operate: 'table1' },
+                columns: [
+                {
+                    title: '支柱号',
+                    field: 'poleName',
+                    //width: 80,
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '导高',
+                    field: 'hei1',
+                    align: 'center',
+                    valign: 'middle'
+                },
+
+                {
+                    title: '拉出值',
+                    field: 'zig1',
+                    align: 'center'
+                },
+
+                {
+                    title: '速度',
+                    field: 'speed',
+                    //width: 80,
+                    align: 'center'
+                }
+            ]
+            });
+
+
+            $('#table2').bootstrapTable({
+                method: "get",
+                striped: true,
+                singleSelect: false,
+                url: "../databyfc/GetGeometric.ashx",
+                dataType: "json",
+                search: false, //显示搜索框
+                contentType: "application/x-www-form-urlencoded",
+                queryParams: { operate: 'table2' },
+                columns: [
+                {
+                    title: '支柱号',
+                    field: 'poleName',
+                    //width: 80,
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '导高',
+                    field: 'hei1',
+                    align: 'center',
+                    valign: 'middle',
+                    formatter: function (value, row, index) {
+                        if (row['hei1'] > 30 || row['hei1'] < -30) {
+                            return '<span style="color:red;">' + value + '</span>';
+                        }
+                        return value;
+                    }
+                },
+
+                {
+                    title: '拉出值',
+                    field: 'zig1',
+                    align: 'center',
+                    formatter: function (value, row, index) {
+                        if (row['zig1'] > 400 || row['zig1'] < -400) {
+                            return '<span style="color:red;">' + value + '</span>';
+                        }
+                        return value;
+                    }
+                },
+
+                {
+                    title: '速度',
+                    field: 'speed',
+                    //width: 80,
+                    align: 'center'
+                }
+            ]
+            });
+        }
+
+        var dom = document.getElementById("buyTime1");
+        var myChart = echarts.init(dom);
+
+
+        var option;
+
+
+
+//        function randomData() {
+//            now = new Date(+now + oneDay);
+//            value = value + 1;
+//            return value;
+//        }
+//        var value = 1;
+//        var dateList = [];
+//        var valueList = [];
+//        var valueList2 = [];
+//        var data = [];
+//        var now = +new Date(1997, 9, 3);
+//        var oneDay = 24 * 3600 * 1000;
+//        for (var i = 0; i < 10; i++) {
+//            value = value + 1;
+//            dateList.push(value);
+//        }
+//        for (var i = 0; i < 10; i++) {
+//            valueList.push(Math.round(value));
+//            valueList2.push(Math.round(value));
+//        }
+        option = {
+            legend: {
+                data: ['导高', '拉出值', '速度'],
+                textStyle: { color: 'white' }
+            },
+            xAxis: [{
+                data: lc,
+                axisLabel: {
+                    show: false
+                }
+            }, {
+                data: lc,
+                axisLabel: {
+                    show: false
+                },
+                gridIndex: 1
+            }, {
+                data: lc,
+                gridIndex: 2,
+                axisLabel: {
+                    color: "white"
+                }
+
+            }],
+            yAxis: [{
+                name: '导高',
+                nameTextStyle: {
+                    interval: 20,
+                    color: "white",
+                    padding: [0, 0, -70, -90]    // 四个数字分别为上右下左与原位置距离
+                },
+                axisLabel: {
+                    color: "white"
+                },
+                splitLine: {
+                    show: false
+                }
+            }, {
+                name: '拉出值',
+                nameTextStyle: {
+                    interval: 20,
+                    color: "white",
+                    padding: [0, 0, -70, -90]    // 四个数字分别为上右下左与原位置距离
+                },
+                axisLabel: {
+                    color: "white"
+                }, splitLine: {
+                    show: false
+                },
+                gridIndex: 1
+            }, {
+                name: '速度',
+                nameTextStyle: {
+                    interval: 20,
+                    color: "white",
+                    padding: [0, 0, -70, -90]    // 四个数字分别为上右下左与原位置距离
+                },
+                axisLabel: {
+                    color: "white"
+                }, splitLine: {
+                    show: false
+                },
+                gridIndex: 2
+            }],
+            grid: [{
+                height: '25%'
+            }, {
+                height: '22%',
+                bottom: '34%'
+            }, {
+                height: '24%',
+                bottom: '5%'
+            }],
+            series: [{
+                name: '导高',
+                type: 'line',
+                data: dg,
+                showSymbol: false
+            }, {
+                name: '拉出值',
+                type: 'line',
+                data: lcz,
+                showSymbol: false,
+                xAxisIndex: 1,
+                yAxisIndex: 1
+            }, {
+                name: '速度',
+                type: 'line',
+                data: sd,
+                showSymbol: false, //去掉圆点
+                xAxisIndex: 2,
+                yAxisIndex: 2
+            }]
+        };
+
+        setInterval(function () {
+//            valueList.shift();
+//            valueList2.shift();
+//            dateList.shift();
+//            dateList.push(randomData());
+//            valueList.push(value + 2);
+            //            valueList2.push(value + 3);
+            
+//            lc.shift();
+//            dg.shift();
+//            lcz.shift();
+//            sd.shift();
+
+
+            BootstrapTable();
+            Get();
+
+            myChart.setOption({
+                xAxis: [{
+                    data: lc
+                }, {
+                    data: lc,
+                    gridIndex: 1
+                }, {
+                    data: lc,
+                    gridIndex: 2
+                }],
+                series: [{
+                    data: dg
+                }, {
+                    data: lcz
+                }, {
+                    data: sd
+                }]
+            });
+        }, 2000);
+
+        if (option && typeof option === 'object') {
+            myChart.setOption(option);
+        }
+
+
+        //        var dom = document.getElementById("buyTime1");
+        //        var myChart = echarts.init(dom);
+        //        var option;
+
+        //        function randomData() {
+        //            now = new Date(+now + oneDay);
+        //            value = value + 1;
+        //            return value;
+        //        }
+        //        var value = 1;
+        //        var dateList = [];
+        //        var valueList = [];
+        //        var valueList2 = [];
+        //        var data = [];
+        //        var now = +new Date(1997, 9, 3);
+        //        var oneDay = 24 * 3600 * 1000;
+
+        //        for (var i = 0; i < 10; i++) {
+        //            value = value + 1;
+        //            dateList.push(value);
+        //        }
+        //        for (var i = 0; i < 10; i++) {
+        //            valueList.push(Math.round(value));
+        //            valueList2.push(Math.round(value));
+        //        }
+        //        option = {
+        //            visualMap: [{
+        //                show: false,
+        //                type: 'continuous',
+        //                seriesIndex: 0,
+        //                min: 0,
+        //                max: 400
+        //            }, {
+        //                show: false,
+        //                type: 'continuous',
+        //                seriesIndex: 1,
+        //                dimension: 0,
+        //                min: 0,
+        //                max: dateList.length - 1
+        //            }],
+        //            //            title: [{
+        //            //                left: 'center',
+        //            //                text: 'Gradient along the y axis'
+        //            //            }],
+        //            tooltip: {
+        //                trigger: 'axis'
+        //            },
+        //            legend: {
+        //                data: ['导高', '拉出值', '速度'],
+        //                textStyle: { color: 'white' }
+        //            },
+        //            xAxis: [{
+        //                //show: false,
+        //                data: dateList,
+        //                axisLabel: {
+        //                    show: false
+        //                }
+        //            }, {
+        //                data: dateList,
+        //                axisLabel: {
+        //                    show: false
+        //                }
+        //            },{
+
+        //                data: dateList,
+        //                gridIndex: 1,
+        //                axisLabel: {
+        //                    color: "white"
+        //                }
+        //            }],
+
+
+        //            yAxis: [{ min: 10,
+        //                max: 80,
+        //                splitLine: {
+        //                    show: false
+        //                },
+        //                axisLabel: {
+        //                    color: "white"
+        //                },
+        //                 gridIndex: 0
+        //            }, { min: 10,
+        //                max: 80,
+        //                splitLine: {
+        //                    show: false
+        //                },
+        //                axisLabel: {
+        //                    color: "white"
+        //                },
+        //                gridIndex: 1
+        //            }, {
+        //                min: 10,
+        //                max: 100,
+        //                gridIndex: 1,
+        //                splitLine: {
+        //                    show: false
+        //                },
+        //                axisLabel: {
+        //                    color: "white"
+        //                },
+
+        //            }],
+        //            grid: [{
+        //                bottom: '52%'
+        //            }, {
+        //                top: '52%'
+        //            }],
+        //            series: [{
+        //                name: '导高',
+        //                type: 'line',
+        //                showSymbol: false,
+        //                data: valueList
+        //            }, {
+        //                name: '拉出值',
+        //                type: 'line',
+        //                showSymbol: false,
+        //                data: valueList
+        //            }, {
+        //                name: '速度',
+        //                type: 'line',
+        //                showSymbol: false,
+        //                data: valueList2,
+        //                xAxisIndex: 1,
+        //                yAxisIndex: 1
+        //            }]
+        //        };
+        //        setInterval(function () {
+        //            valueList.shift();
+        //            valueList2.shift();
+        //            dateList.shift();
+        //            dateList.push(randomData());
+        //            valueList.push(value + 2);
+        //            valueList2.push(value + 3);
+
+        //            myChart.setOption({
+        //                xAxis: [{
+        //                    data: dateList,
+        //                    gridIndex: 0
+        //                }, {
+        //                    data: dateList,
+        //                    gridIndex: 1
+        //                }, {
+        //                    data: dateList,
+        //                    gridIndex: 2
+        //                }],
+        //                series: [{
+        //                    data: valueList
+        //                },
+        //                {
+        //                    data: valueList
+        //                }, {
+        //                    data: valueList2
+        //                }]
+        //            });
+        //        }, 2000);
+
+        //        if (option && typeof option === 'object') {
+        //            myChart.setOption(option);
+        //        }
+
+    </script>
+</body>
+</html>

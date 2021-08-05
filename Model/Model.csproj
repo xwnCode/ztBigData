@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{53995DBB-9836-4647-AD22-865884FDEB9E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>Vline.Model</AssemblyName>
+    <RootNamespace>Vline.Model</RootNamespace>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DM_BUSI_AlarmData.cs" />
+    <Compile Include="DM_BUSI_BigAgreementBycb.cs" />
+    <Compile Include="DM_BUSI_BigCantilArmData.cs" />
+    <Compile Include="DM_BUSI_BigConSitePictByjd.cs" />
+    <Compile Include="DM_BUSI_BigCurrProDataBydx.cs" />
+    <Compile Include="DM_BUSI_BigDayProDetails.cs" />
+    <Compile Include="DM_BUSI_BigDayProDetailsBydx.cs" />
+    <Compile Include="DM_BUSI_BigDeviceFiles.cs" />
+    <Compile Include="DM_BUSI_BigDeviceFilesBydx.cs" />
+    <Compile Include="DM_BUSI_BigDeviceRunInf.cs" />
+    <Compile Include="DM_BUSI_BigDeviceRunInfBydx.cs" />
+    <Compile Include="DM_BUSI_BigDropData.cs" />
+    <Compile Include="DM_BUSI_BigFlatFixData.cs" />
+    <Compile Include="DM_BUSI_BigFtestEnd.cs" />
+    <Compile Include="DM_BUSI_BigFtestEndData.cs" />
+    <Compile Include="DM_BUSI_BigFtestPhoto.cs" />
+    <Compile Include="DM_BUSI_BigFtestPhotoData.cs" />
+    <Compile Include="DM_BUSI_BigFtestPupload.cs" />
+    <Compile Include="DM_BUSI_BigFtestPuploadData.cs" />
+    <Compile Include="DM_BUSI_BigFtestStart.cs" />
+    <Compile Include="DM_BUSI_BigFtestStartData.cs" />
+    <Compile Include="DM_BUSI_BigFtestUpload.cs" />
+    <Compile Include="DM_BUSI_BigFtestUploadData.cs" />
+    <Compile Include="DM_BUSI_BigGetProDataByBIM.cs" />
+    <Compile Include="DM_BUSI_BigGetProDataByBIMdx.cs" />
+    <Compile Include="DM_BUSI_BigGetProDataBydx.cs" />
+    <Compile Include="DM_BUSI_BigInspectionBycb.cs" />
+    <Compile Include="DM_BUSI_BigOutputValueByjd.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarBattery.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarBatteryData.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarEnd.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarEndData.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarPhoto.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarPhotoData.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarPupload.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarPuploadData.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarStart.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarStartData.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarUpload.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarUploadData.cs" />
+    <Compile Include="DM_BUSI_BigPatrolcarUploadDatas.cs" />
+    <Compile Include="DM_BUSI_BigPhyWorkByjd.cs" />
+    <Compile Include="DM_BUSI_BigPipeCutData.cs" />
+    <Compile Include="DM_BUSI_BigGetProData.cs" />
+    <Compile Include="DM_BUSI_BigPropData.cs" />
+    <Compile Include="DM_BUSI_BigTodayPlanByjd.cs" />
+    <Compile Include="DM_BUSI_BigWarnInf.cs" />
+    <Compile Include="DM_BUSI_BigWarnInfBydx.cs" />
+    <Compile Include="DM_BUSI_BXBL.cs" />
+    <Compile Include="DM_BUSI_CGHT.cs" />
+    <Compile Include="DM_BUSI_DeviceFiles.cs" />
+    <Compile Include="DM_BUSI_DeviceWork.cs" />
+    <Compile Include="DM_BUSI_DHQK.cs" />
+    <Compile Include="DM_BUSI_JCWZ.cs" />
+    <Compile Include="DM_BUSI_JQWZYJ.cs" />
+    <Compile Include="DM_BUSI_LLQK.cs" />
+    <Compile Include="DM_BUSI_ProduceQuantity.cs" />
+    <Compile Include="DM_BUSI_SLQS.cs" />
+    <Compile Include="DM_BUSI_WorkData.cs" />
+    <Compile Include="DM_BUSI_WZSJ.cs" />
+    <Compile Include="DM_BUSI_YHGS.cs" />
+    <Compile Include="DM_BUSI_YHLB.cs" />
+    <Compile Include="DM_BUSI_YHSJ.cs" />
+    <Compile Include="DM_BUSI_YHSL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="mssccprj.scc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

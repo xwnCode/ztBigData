@@ -1,0 +1,50 @@
+﻿{
+  "data": [
+    {
+      "id": "2020-12-17",
+      "ques": "问题描述1",
+      "carno": "红",
+      "company": "1",
+      "content": "切割机",
+      "speed": "25",
+      "load": "I"
+    },
+    {
+      "id": "2020-12-12",
+"ques": "问题描述2",
+      "carno": "黄",
+      "company": "2",
+      "content": "斜腕臂",
+      "speed": "68",
+      "load": "II"
+    },
+    {
+      "id": "2020-12-14",
+"ques": "问题描述3",
+      "carno": "红",
+      "company": "3",
+      "content": "平腕臂",
+      "speed": "31",
+      "load": "III"
+    },
+    {
+      "id": "2020-12-07",
+"ques": "问题描述4",
+      "carno": "黄",
+      "company": "4",
+      "content": "出料口",
+      "speed": "34",
+      "load": "III"
+    },
+   {
+      "id": "2020-12-27",
+"ques": "问题描述5",
+      "carno": "红",
+      "company": "5",
+      "content": "气泵",
+      "speed": "63",
+      "load": "IV"
+    }
+
+  ]
+}

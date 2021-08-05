@@ -1,0 +1,647 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/BigData.css" rel="stylesheet" type="text/css" />
+    <link href="css/index.css" rel="stylesheet" type="text/css" />
+    <link href="css/index01.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.js"></script>
+    <link href="js/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="js/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css" />
+    <link href="css/Security_operation.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="js/artDialog/skins/default.css" type="text/css" />
+    <script src="js/laydate.js"></script>
+    <script src="js/Home_page.js"></script>
+    <script type="text/javascript" src="js/miaov.js"></script>
+    <script type="text/javascript" src="js/echarts-wordcloud.js"></script>
+    <script type="text/javascript" src="js/echarts-wordcloud.min.js"></script>
+    <link rel="stylesheet" href="dist/pageSwitch.min.css">
+    <script src="dist/pageSwitch.min.js"></script>
+    <meta charset="UTF-8">
+    <title>中铁武汉电气化局调度指挥大数据平台-玉磨项目</title>
+    <!--标签云-->
+    <style>
+        #div1
+        {
+            position: relative;
+            width: 150px;
+            height: 250px;
+            margin: 20px auto 0;
+        }
+        #div1 a
+        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            font-family: Microsoft YaHei;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 3px 6px;
+        }
+        #div1 a:hover
+        {
+            border: 1px solid #eee;
+            background: #000;
+        }
+        #div1 .blue
+        {
+            color: blue;
+        }
+        #div1 .red
+        {
+            color: red;
+        }
+        #div1 .yellow
+        {
+            color: yellow;
+        }
+        p
+        {
+            font: 16px Microsoft YaHei;
+            text-align: center;
+            color: #ba0c0c;
+        }
+        p a
+        {
+            font-size: 14px;
+            color: #ba0c0c;
+        }
+        p a:hover
+        {
+            color: red;
+        }
+        p a:hover
+        {
+            color: red;
+        }
+    </style>
+
+
+        <link rel="stylesheet" href="css/reset.css">
+</head>
+<body>
+    <div class="data_bodey">
+   <div class="nav" style="font-size: 23px; letter-spacing: 0px">中铁武汉电气化局调度指挥大数据平台-玉磨项目</div>
+        <div class="nav_btn">
+       
+            <div class="btn_left">
+                <a href="">
+                    <div class="btn_list ">首页</div>
+                </a>
+                <a href="">
+                    <div class="btn_list">调度</div>
+                </a>
+                <a href="jindu.html">
+                    <div class="btn_list">进度</div>
+                </a>
+                <a href="anquan.html">
+                    <div class="btn_list">安全质量</div>
+                </a>
+                <a href="wuzi.html">
+                    <div class="btn_list listActive">物资</div>
+                </a>
+            </div>
+            <div class="btn_right">
+                <a href="equipment.html">
+                    <div class="btn_list">机械设备</div>
+                </a>
+                <a href="wanbi.html">
+                    <div class="btn_list ">腕臂预配</div>
+                </a>
+                <a href="diaoxuan.html">
+                    <div class="btn_list">接触网吊弦</div>
+                </a>
+                <a href="chenben.html">
+                    <div class="btn_list">成本</div>
+                </a>
+                <a href="work.html">
+                    <div class="btn_list">综合作业</div>
+                </a>
+            </div>
+        </div>
+        <div class="index_tabs">
+            <div class="inner" style="height: 109%;">
+                <div class="left_cage">
+                    <div class="dataAllBorder01 cage_cl" style="height: 34%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        到货情况</div>
+                                </div>
+                            </div>
+                            <div style="position: absolute; margin-top: 8%; margin-left: 8%;">
+                                <span style="color: White; font-size: 18px;">接触网</span><br />
+                                <span style="color: Yellow; font-size: 18px;">475个</span>
+                            </div>
+
+                            <div style="position: absolute; margin-top: 8%; margin-left: 28%;">
+                                <span style="color: White; font-size: 18px;">电力</span><br />
+                                <span style="color: Yellow; font-size: 18px;">475个</span>
+                            </div>
+
+                            <div style="position: absolute; margin-top: 8%; margin-left: 48%;">
+                                <span style="color: White; font-size: 18px;">变电</span><br />
+                                <span style="color: Yellow; font-size: 18px;">475个</span>
+                            </div>
+
+                            <div style="position: absolute; margin-top: 8%; margin-left: 68%;">
+                                <span style="color: White; font-size: 18px;">通信</span><br />
+                                <span style="color: Yellow; font-size: 18px;">475个</span>
+                            </div>
+               
+                            <div style="position: absolute; margin-top: 28%; margin-left: 8%;">
+                                <span style="color: White; font-size: 18px;">信息</span><br />
+                                <span style="color: Yellow; font-size: 18px;">475个</span>
+                            </div>
+
+                            <div style="position: absolute; margin-top: 28%; margin-left: 28%;">
+                                <span style="color: White; font-size: 18px;">信号</span><br />
+                                <span style="color: Yellow; font-size: 18px;">475个</span>
+                            </div>
+
+                            <div style="position: absolute; margin-top: 28%; margin-left: 48%;">
+                                <span style="color: White; font-size: 18px;">Fas</span><br />
+                                <span style="color: Yellow; font-size: 18px;">475个</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 29.5%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        物资报险比例</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 30%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        各专业物资采购合同情况</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="center_cage">
+                   <div class="dataAllBorder02 dataAllBorder01" style=" height: 24%;
+                        position: relative;">
+                        <div style="position: absolute; margin-top: 8%">
+                            <img src="img/images/pic_ico_03.png" style="width: 150%; height: 150%;" />
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 8%;">
+                            <span style="color: White; font-size: 18px;">采购总金额</span><br />
+                            <span style="color: Yellow; font-size: 18px;">475个</span>
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 25%;">
+                            <img src="img/images/pic_ico_03.png" style="width: 150%; height: 150%;" />
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 33%;">
+                            <span style="color: White; font-size: 18px;">到货情况</span><br />
+                            <span style="color: Yellow; font-size: 18px;">471个</span>
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 56%;">
+                            <img src="img/images/pic_ico_03.png" style="width: 150%; height: 150%;" />
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 64%;">
+                            <span style="color: White; font-size: 18px;">供应商数量</span><br />
+                            <span style="color: Yellow; font-size: 18px;">99.16%</span>
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 82%;">
+                            <img src="img/images/pic_ico_03.png" style="width: 150%; height: 150%;" />
+                        </div>
+                        <div style="position: absolute; margin-top: 8%; margin-left: 90%;">
+                            <span style="color: White; font-size: 18px;">报检比例</span><br />
+                            <span style="color: Yellow; font-size: 18px;">228.00</span>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 71.5%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 10%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        物资配置中心平面示意图</div>
+                                </div>
+                            </div>
+
+                            <div class="data_chart" id="buyTime3" style="margin-top:-10%;margin-left:-10%;height: 110%;width:120%;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_cage">
+                    <div class="dataAllBorder01 cage_cl" style=" height: 34%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        作业队领料情况</div>
+                                </div>
+                            </div>
+                            <div class="data_chart" id="buyTime4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 29.5%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        急缺物资预警</div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; height: 90%">
+                                <div id="div1">
+                                    <a href="#">JS课程</a> <a href="#" class="red">教程</a> <a href="#">回头一眸</a> <a href="#">
+                                        精品</a> <a href="#" class="blue">源码下载</a> <a href="#">SEO</a> <a href="#" class="red">
+                                            特效</a> <a href="#">继承</a> <a href="#" class="red">脚本之家</a> <a href="#" class="blue">
+                                                OOP</a> <a href="#">XHTML</a> <a href="#">W3C</a> <a href="#">石川</a>
+                                    <a href="#" class="yellow">人生如歌</a> <a href="#">blue</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dataAllBorder01 cage_cl" style="margin-top: 1.5% !important; height: 30%;
+                        position: relative;">
+                        <div class="dataAllBorder02" style="position: relative; overflow: hidden;">
+                            <!--标题栏-->
+                            <div class="map_title_box" style="height: 6%">
+                                <div class="map_title_innerbox">
+                                    <div class="map_title">
+                                        近7天进厂物资</div>
+                                </div>
+                            </div>
+                            <table id="table" style="width: 100%">
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/echarts-all.js"></script>
+        <script src="js/bstable/js/bootstrap.min.js"></script>
+        <script src="js/bstable/js/bootstrap-table.js"></script>
+        <script type="text/javascript" src="js/jquery.pagination.js"></script>
+        <script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+        <script>
+
+
+            BootstrapTable();
+
+            Echart1();
+            Echart2();
+            Echart3();
+            Echart4();
+
+            function BootstrapTable() {
+                $('#table').bootstrapTable({
+                    method: "get",
+                    striped: true,
+                    singleSelect: false,
+                    url: "json/ppp.json",
+                    dataType: "json",
+                    search: false, //显示搜索框
+                    contentType: "application/x-www-form-urlencoded",
+                    columns: [
+                {
+                    title: '序号',
+                    field: 'company',
+                    align: 'center',
+                    valign: 'middle'
+                },
+                {
+                    title: '物资名称',
+                    field: 'load',
+                    width: 80,
+                    align: 'center'
+                },
+                {
+                    title: '型号',
+                    field: 'content',
+                    align: 'center'
+                },
+                {
+                    title: '单位',
+                    field: 'speed',
+                    width: 80,
+                    align: 'center'
+                },
+                {
+                    title: '进场日期',
+                    field: 'id',
+                    width: 80,
+                    align: 'center'
+                },
+                {
+                    title: '进场数量',
+                    field: 'ques',
+                    width: 80,
+                    align: 'center'
+                }
+            ]
+                });
+            }
+
+
+            function Echart1() {
+                var myChart = echarts.init($("#buyTime1")[0]);
+                option = {
+                    grid: {
+                        x: 46,
+                        y: 30,
+                        x2: 30,
+                        y2: 40,
+                        borderWidth: 0
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: ['接触网', '电力', '变电', '通信', '信息', '信号', 'Fas', 'Bas'],
+                        axisLine: {
+                            show: false //轴线消失
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'center'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLine: {
+                            show: false //轴线消失
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'right'
+                            }
+                        }
+                    },
+                    series: [{
+                        data: [120, 200, 150, 80, 70, 110, 130, 130],
+                        type: 'bar'
+                    }]
+                };
+
+
+                myChart.setOption(option);
+            }
+
+
+            function Echart2() {
+                var myChart = echarts.init($("#buyTime2")[0]);
+                option = {
+                    grid: {
+                        x: 46,
+                        y: 30,
+                        x2: 30,
+                        y2: 40,
+                        borderWidth: 0
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: ['接触网', '电力', '变电', '通信', '信息', '信号', 'Fas', 'Bas'],
+                        axisLine: {
+                            show: false //轴线消失
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'center'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLine: {
+                            show: false //轴线消失
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'right'
+                            }
+                        }
+                    },
+                    series: [{
+                        data: [120, 200, 150, 80, 70, 110, 130, 130],
+                        type: 'bar'
+                    },
+    {
+        data: [120, 200, 150, 80, 70, 110, 130, 130],
+        type: 'bar'
+    },
+    {
+        data: [120, 200, 150, 80, 70, 110, 130, 130],
+        type: 'bar'
+    }]
+                };
+                myChart.setOption(option);
+            }
+
+            function Echart3() {
+                var myChart = echarts.init($("#buyTime3")[0]);
+                option = {
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{b}: {c}"
+                    },
+                    calculable: false,
+                    series: [
+        {
+            //            name: '矩形图',
+            name: '',
+            type: 'treemap',
+            itemStyle: {
+                normal: {
+                    label: {
+                        show: true,
+                        formatter: "{b}"
+                    },
+                    borderWidth: 1
+//                    borderColor: 'black'
+                },
+                emphasis: {
+                    label: {
+                        show: true
+                    }
+                }
+            },
+            data: [
+                {
+                    name: '电缆存放区',
+                    
+                                color: 'white',
+                               
+                     
+                     itemStyle: {
+                        normal: {
+                            color: '#9ACCFF'
+                        }
+                    },
+                    value: 6
+                },
+                {
+                    name: '成品回收区',
+                     itemStyle: {
+                        normal: {
+                            color: '#0091FE'
+                        }
+                    },
+                    value: 4
+                },
+                {
+                    name: '宿舍',
+                     itemStyle: {
+                        normal: {
+                            color: '#0080FF'
+                        }
+                    },
+                    value: 4
+                },
+                {
+                    name: '接触网设备存放区',
+                     itemStyle: {
+                        normal: {
+                            color: '#1751B2'
+                        }
+                    },
+                    value: 2
+                },
+                {
+                    name: '线材存放区',
+                     itemStyle: {
+                        normal: {
+                            color: '#013998'
+                        }
+                    },
+                    value: 2
+                },
+                {
+                    name: '办公室',
+                     itemStyle: {
+                        normal: {
+                            color: '#0080FF'
+                        }
+                    },
+                    value: 1
+                },
+                {
+                    name: '绝缘子存放区',
+                     itemStyle: {
+                        normal: {
+                            color: '#99ccff'
+                        }
+                    },
+                    value: 1
+                }
+            ]
+        }
+    ]
+                };
+                    
+                myChart.setOption(option);
+            }
+
+            function Echart4() {
+                var myChart = echarts.init($("#buyTime4")[0]);
+                option = {
+                    grid: {
+                        x: 46,
+                        y: 30,
+                        x2: 30,
+                        y2: 40,
+                        borderWidth: 0
+                    },
+                    xAxis: {
+                        type: 'value',
+                        axisLine: {
+                            show: false //轴线消失
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'center'
+                            }
+                        }
+                    },
+                    yAxis: {
+                        type: 'category',
+                        data: ['接触网', '电力', '变电', '通信', '信息', '信号', 'Fas', 'Bas'],
+                        axisLine: {
+                            show: false //轴线消失
+                        },
+                        splitLine: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: true,
+                            textStyle: {
+                                color: '#a4a7ab',
+                                align: 'right'
+                            }
+                        }
+                    },
+                    series: [
+        {
+            name: '2011年',
+            type: 'bar',
+            data: [18203, 23489, 29034, 104970, 131744, 630230, 630230, 630230]
+        }
+    ]
+                };
+                myChart.setOption(option);
+            }
+
+
+            $("#container").PageSwitch({
+                direction: 'horizontal',
+                easing: 'ease-in',
+                duration: 1000,
+                autoPlay: true,
+                loop: 'false'
+            });
+        </script>
+</body>
+</html>
